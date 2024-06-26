@@ -1,58 +1,42 @@
-name: Test and Evaluate Assignments
+name: Evaluate Assignment
 
 on:
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
+      - Emp-*-*-python
 
 jobs:
   test-and-evaluate:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 1
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Setup Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.12'  # Replace with your Python version
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt  # If you have any additional dependencies
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
 
-      - name: Initialize README if not exists
-        run: |
-          if [ ! -f README.md ]; then
-            echo -e "# Assignment Scores\n\n## Scores\n\n" > README.md
-          fi
+    - name: Create README if not exists
+      run: |
+        if [ ! -f README.md ]; then echo -e "# Assignment Scores\n\n## Scores\n\n" > README.md; fi
 
-      - name: Run pytest and collect results
-        run: |
-          pytest --junitxml=test-results.xml
+    - name: Run tests
+      run: pytest --junitxml=test-results.xml
 
-      - name: Parse test results and calculate scores
-        run: |
-          # Example script to parse JUnit XML and calculate scores
-          python parse_test_results.py test-results.xml > scores.json
+    - name: Evaluate and update README
+      run: python evaluate.py
 
-      - name: Publish scores to README.md
-        run: |
-          python update_readme.py scores.json README.md
-        if: success()  # Only publish scores if tests were successful
-
-      - name: Commit changes to repository
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@users.noreply.github.com"
-          git add README.md
-          git commit -m "Update scores"
-          git push origin HEAD:main
-        if: success()  # Commit changes only if previous steps were successful
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        git add README.md
+        git commit -m "Update scores in README.md"
+        git push
