@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.9'
+        python-version: '3.12'
 
     - name: Install dependencies
       run: |
@@ -28,6 +28,8 @@ jobs:
         if [ ! -f README.md ]; then echo -e "# Assignment Scores\n\n## Scores\n\n" > README.md; fi
 
     - name: Run tests
+      id: run-tests
+      continue-on-error: true
       run: pytest --junitxml=test-results.xml
 
     - name: Evaluate and update README
