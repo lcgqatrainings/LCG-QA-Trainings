@@ -8,28 +8,23 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout Main Branch
-      uses: actions/checkout@v3
-      with:
-        ref: main
+      - name: Checkout main branch
+        uses: actions/checkout@v3
+        with:
+          ref: main
 
-    - name: Fetch All Branches
-      run: git fetch --all
+      - name: Fetch all branches
+        run: git fetch --all
 
-    - name: Get All Branches
-      id: get_branches
-      run: |
-        echo "BRANCHES=$(git branch -r | grep -v '\->' | grep -v 'main' | sed 's/origin\///' | tr '\n' ' ')" >> $GITHUB_ENV
+      - name: Get branches
+        run: echo "BRANCHES=$(git branch -r | grep -v '\->' | grep -v 'main' | sed 's/origin\///' | tr '\n' ' ')" >> $GITHUB_ENV
 
-    - name: Sync Branches with Main
-      run: |
-        for branch in ${BRANCHES}; do
-          echo "Syncing branch $branch with main"
-          git checkout $branch
-          git merge --allow-unrelated-histories --ff-only origin/main || git merge --abort
-          git push origin $branch
-        done
-      env:
-        BRANCHES: ${{ env.BRANCHES }}
+      - name: Sync branches with main
+        run: |
+          for branch in ${BRANCHES}; do
+            echo "Syncing branch $branch with main"
+            git checkout $branch
+            git rebase origin/main || git rebase --abort
+            git push --force-with-lease origin $branch
+          done
