@@ -68,3 +68,4 @@ def update_readme_with_scores(test_results_file, readme_file):
 
 if __name__ == "__main__":
     update_readme_with_scores('test-results.xml', 'README.md')
+    update_readme_with_scores('test-results.xml', 'TestResults.md')
