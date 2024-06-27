@@ -1,4 +1,4 @@
-name: Sync branches with main
+name: Sync Branches with Main
 
 on:
   push:
@@ -10,24 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main branch
-        uses: actions/checkout@v3
-        with:
-          ref: main
+    - name: Checkout Main Branch
+      uses: actions/checkout@v3
+      with:
+        ref: main
 
-      - name: Fetch all branches
-        run: git fetch --all
+    - name: Fetch All Branches
+      run: git fetch --all
 
-      - name: List branches
-        id: list-branches
-        run: |
-          echo "::set-output name=branches::$(git branch -r | grep -v '\->' | grep -v 'main' | sed 's/origin\///' | tr '\n' ' ')"
+    - name: Get All Branches
+      id: get_branches
+      run: echo "BRANCHES=$(git branch -r | grep -v '\->' | grep -v 'main' | sed 's/origin\///' | tr '\n' ' ')" >> $GITHUB_ENV
 
-      - name: Sync branches
-        run: |
-          for branch in ${{ steps.list-branches.outputs.branches }}; do
-            echo "Syncing branch $branch with main"
-            git checkout $branch
-            git merge --ff-only origin/main || git merge --abort
-            git push origin $branch
-          done
+    - name: Sync Branches with Main
+      run: |
+        for branch in ${BRANCHES}; do
+          echo "Syncing branch $branch with main"
+          git checkout $branch
+          git merge --allow-unrelated-histories --ff-only origin/main || git merge --abort
+          git push origin $branch
+        done
+      env:
+        BRANCHES: ${{ env.BRANCHES }}
