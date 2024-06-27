@@ -20,7 +20,8 @@ jobs:
 
     - name: Get All Branches
       id: get_branches
-      run: echo "BRANCHES=$(git branch -r | grep -v '\->' | grep -v 'main' | sed 's/origin\///' | tr '\n' ' ')" >> $GITHUB_ENV
+      run: |
+        echo "BRANCHES=$(git branch -r | grep -v '\->' | grep -v 'main' | sed 's/origin\///' | tr '\n' ' ')" >> $GITHUB_ENV
 
     - name: Sync Branches with Main
       run: |
