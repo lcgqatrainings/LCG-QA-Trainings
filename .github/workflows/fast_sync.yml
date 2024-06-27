@@ -1,0 +1,38 @@
+name: Pull and Push Workflow
+
+on:
+  push:
+    branches:
+      - Emp-*-*-python
+
+jobs:
+  pull_commit_push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Pull latest changes
+        run: git pull origin ${{ github.ref }}
+
+      - name: Make changes (placeholder)
+        run: |
+          # Add your script or commands to modify files here
+          echo "Making changes to files..."
+
+      - name: Add changes
+        run: git add .
+
+      - name: Commit changes
+        run: git commit -m "Commit changes from workflow" || echo "No changes to commit"
+
+      - name: Push changes
+        run: git push origin ${{ github.ref }}
