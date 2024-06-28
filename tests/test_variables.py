@@ -1,7 +1,7 @@
 # test_assignment.py
 
 # Importing functions from the assignment file
-from python.variables.question1 import total_cost, total_distance, adjust_recipe, calculate_profit, distribute_candies
+from python.basics.question1 import total_cost, total_distance, adjust_recipe, calculate_profit, distribute_candies
 
 
 # Test cases for total_distance function

@@ -8,7 +8,8 @@ You have three segments of your trip:
 - The second segment is 150 miles.
 - The third segment is 200 miles.
 
-Write a function called total_distance that takes three arguments, each representing the distance of a segment, and returns the total distance of the trip.
+Write a function called total_distance that takes three arguments, each representing the distance of a segment,
+and returns the total distance of the trip.
 
 Example:
 total_distance(120, 150, 200) should return 470
@@ -22,7 +23,9 @@ def total_distance(segment1, segment2, segment3):
 
 """
 Problem 2:
-You want to evenly distribute 25 candies among 4 children. Write a function called distribute_candies that takes two arguments, the total number of candies and the number of children, and returns the number of candies each child will get and the number of leftover candies.
+You want to evenly distribute 25 candies among 4 children. Write a function called distribute_candies that 
+takes two arguments, the total number of candies and the number of children, and returns the number of candies each 
+child will get and the number of leftover candies.
 
 Example:
 distribute_candies(25, 4) should return (6, 1)
@@ -38,7 +41,8 @@ def distribute_candies(total_candies, number_of_children):
 Problem 3:
 You are baking cookies and need to adjust the recipe based on the number of people you are serving. 
 The original recipe calls for 2 cups of sugar and serves 4 people.
-Write a function called adjust_recipe that takes two arguments, the number of cups of sugar in the original recipe and the number of people you are serving, and returns the adjusted amount of sugar needed.
+Write a function called adjust_recipe that takes two arguments, the number of cups of sugar in the original 
+recipe and the number of people you are serving, and returns the adjusted amount of sugar needed.
 
 Example:
 adjust_recipe(2, 8) should return 4.0
@@ -58,7 +62,8 @@ You have the following expenses:
 - Decorations: $50
 - Entertainment: $75
 
-Write a function called total_cost that takes three arguments, each representing an expense, and returns the total cost of the party.
+Write a function called total_cost that takes three arguments, each representing an expense, 
+and returns the total cost of the party.
 
 Example:
 total_cost(100, 50, 75) should return 225
