@@ -11,8 +11,9 @@ import math
 
 def calculate_area_of_circle(radius):
     from math import pi
-    print("The area of the circle" +" " + str(radius) + "is : " +" "+ str(pi * radius ** 2))
-calculate_area_of_circle(1.1)
+    print("The area of the circle" + " " + str(radius) + "is : " + " " + str(pi * radius ** 2))
+
+
 
 
 """
@@ -28,7 +29,9 @@ def get_sphere_volume(radius):
     from math import pi
     V = 4.0 / 3.0 * pi * radius ** 3
     print('The volume of the sphere is: ', V)
-get_sphere_volume(6.0)
+
+
+
 
 """
 Problem 3:
@@ -43,10 +46,11 @@ difference_from_17(14) should return 3
 
 def difference_from_17(number):
     if number < 17:
-        return 17-number
+        return 17 - number
     else:
-        return (number-17) * 2
-print(difference_from_17(22))
+        return (number - 17) * 2
+
+
 
 
 """
@@ -62,9 +66,6 @@ within_100_of_1000_or_2000(100) should return False
 
 def within_100_of_1000_or_2000(number):
     return ((abs(1000 - number) <= 100) or (abs(2000 - number) <= 100))
-print(within_100_of_1000_or_2000(950))
-print(within_100_of_1000_or_2000(1050))
-print(within_100_of_1000_or_2000(100))
 
 
 """
@@ -79,14 +80,16 @@ sum_three_numbers(3, 3, 3) should return 27
 
 
 def sum_three_numbers(a, b, c):
-    if a == b == c:
-        sum = a + b + c
-        print(sum * 3)
-    else:
-        sum = a + b + c
-        print(sum)
-sum_three_numbers(1, 2, 3)
+    # if a == b == c:
+    #     sum = a + b + c
+    #     print(sum * 3)
+    # else:
+    #     sum = a + b + c
+    #     print(sum)
+    pass
 
+
+sum_three_numbers(1, 2, 3)
 
 """
 Problem 6:
@@ -104,7 +107,8 @@ def new_string_with_is(s):
         print(s)
     else:
         print("IS" + s)
-new_string_with_is("Empty")
+
+
 
 """
 Problem 7:
@@ -121,7 +125,8 @@ def repeat_string(s, n):
     for i in range(n):
         result = result + s
     return result
-print(repeat_string("abc", 2))
+
+
 
 
 """
@@ -140,7 +145,6 @@ def even_or_odd(number):
         print(f"{number} is Even Number")
     else:
         print(f"{number} is Odd Number")
-even_or_odd(11)
 
 
 """
@@ -158,8 +162,9 @@ def count_fours(lst):
         if num == 4:
             count = count + 1
     return count
-print(count_fours([1, 4, 6, 4, 7, 4]))
 
+
+print(count_fours([1, 4, 6, 4, 7, 4]))
 
 """
 Problem 10:
@@ -177,7 +182,7 @@ def repeat_first_two_chars(s, n):
     for i in range(n):
         result = result + s[0:2]
     return result
-print(repeat_first_two_chars("abcdef", 3))
+
 
 
 """
@@ -197,8 +202,4 @@ def is_vowel(char):
         print(f"The character '{char}' is a vowel!")
     else:
         print(f"The character '{char}' is a consonant!")
-
-is_vowel('e')
-
-
 
