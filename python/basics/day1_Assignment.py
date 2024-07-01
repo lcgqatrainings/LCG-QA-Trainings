@@ -10,7 +10,9 @@ import math
 
 def calculate_area_of_circle(radius):
     # Your code here
-    pass
+    return (22 / 7) * (radius ** 2)
+radius = float(input("Enter radius: "))
+print(calculate_area_of_circle(radius))
 
 
 """
@@ -23,7 +25,9 @@ get_sphere_volume(6) should return 904.7786842338603
 
 
 def get_sphere_volume(radius):
-    # Your code here
+    return (22 / 7) * (radius ** 2)
+    radius = float(input("Enter radius: "))
+    print(calculate_area_of_circle(radius))
     pass
 
 
