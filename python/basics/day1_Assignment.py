@@ -5,18 +5,13 @@ Write a Python program that calculates the area of a circle based on the radius 
 Example:
 calculate_area_of_circle(1.1) should return 3.8013271108436504
 """
-
 import math
 
 
-def area_of_the_circle(R):
-    area = R ** 2 * math.pi
-    return area
+def calculate_area_of_circle(radius):
+    # Your code here
+    pass
 
-
-# Radius = float(input("Please enter the radius of the given circle: "))
-print("Problem 1:")
-print(" calculate_area_of_circle(1.1) is: ", area_of_the_circle(1.1))
 
 """
 Problem 2:
@@ -27,18 +22,9 @@ get_sphere_volume(6) should return 904.7786842338603
 """
 
 
-def get_sphere_volume(R):
-    # radius=6
-    sphere = R ** 3 * math.pi
-    return sphere
-
-
-print("Problem 2:")
-print(get_sphere_volume(6))
-
-# Radius = float(input("Please enter the radius of the given sphere: "))
-print(" get_sphere_volume(6) is: ", get_sphere_volume(6))
-#   pass
+def get_sphere_volume(radius):
+    # Your code here
+    pass
 
 
 """
@@ -52,20 +38,9 @@ difference_from_17(14) should return 3
 """
 
 
-def difference_from_17(n):
+def difference_from_17(number):
     # Your code here
-    if n <= 17:
-        return 17 - n
-    else:
-        return (n - 17) * 2
-
-
-print("Problem 3:")
-print("difference_from_17(22) is: ", difference_from_17(22))
-print("difference_from_17(14) is: ", difference_from_17(14))
-# num = int(input("Please enter the number: "))
-# print(" difference_from_17: ", difference_from_17(num))
-# pass
+    pass
 
 
 """
@@ -79,20 +54,9 @@ within_100_of_1000_or_2000(100) should return False
 """
 
 
-def within_100_of_1000_or_2000(n):
+def within_100_of_1000_or_2000(number):
     # Your code here
-    if n in range(101, 2000):
-        return True
-    elif n <= 100:
-        return False
-
-
-print("Problem 4:")
-print("within_100_of_1000_or_2000(950) is: ", within_100_of_1000_or_2000(950))
-print("within_100_of_1000_or_2000(1050) is: ", within_100_of_1000_or_2000(1050))
-print("within_100_of_1000_or_2000(100) is: ", within_100_of_1000_or_2000(100))
-
-# pass
+    pass
 
 
 """
@@ -108,17 +72,7 @@ sum_three_numbers(3, 3, 3) should return 27
 
 def sum_three_numbers(a, b, c):
     # Your code here
-    sum = a + b + c
-    if a == b == c:
-        sum = sum * 3
-    return sum
-
-
-print("Problem 5:")
-print("sum_three_numbers(1, 2, 3) is: ", sum_three_numbers(1, 2, 3))
-print("sum_three_numbers(3, 3, 3) is: ", sum_three_numbers(3, 3, 3))
-
-# pass
+    pass
 
 
 """
@@ -134,18 +88,7 @@ new_string_with_is("IsEmpty") should return "IsEmpty"
 
 def new_string_with_is(s):
     # Your code here
-    if 'Is' in s:
-        text=s
-        return text
-    else:
-        text='Is'+s
-        return text
-
-print("Problem 6:")
-print("new_string_with_is(Array) is: ", new_string_with_is("Array"))
-print("new_string_with_is(IsEmpty) is: ", new_string_with_is("IsEmpty"))
-
-# pass
+    pass
 
 
 """
@@ -160,17 +103,7 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 
 def repeat_string(s, n):
     # Your code here
-    result = ""
-    for i in range(n):
-        result = result + s
-    return result
-  # a= (s*n)
-  # return a
-
-print("Problem 7:")
-print("repeat_string(abc, 2) is: ", repeat_string("abc", 2))
-print("repeat_string(xyz, 3) is: ", repeat_string("xyz", 3))
-# pass
+    pass
 
 
 """
@@ -186,19 +119,7 @@ even_or_odd(3) should return "3 is odd"
 
 def even_or_odd(number):
     # Your code here
-    mod = int(number) % 2
-    if mod > 0:
-        res = " is odd"
-
-    else:
-        res = " is even"
-    return str(number) + res
-
-
-print("Problem 8:")
-print("even_or_odd(10) is: ", even_or_odd(10))
-print("even_or_odd(3) is: ", even_or_odd(3))
-# pass
+    pass
 
 
 """
@@ -212,16 +133,7 @@ count_fours([1, 4, 6, 4, 7, 4]) should return 3
 
 def count_fours(lst):
     # Your code here
-    count = 0
-    for n in lst:
-        if n == 4:
-            count = count + 1
-    return count
-
-
-print("Problem 9:")
-print("count_fours([1, 4, 6, 4, 7, 4]) is: ", count_fours([1, 4, 6, 4, 7, 4]))
-# pass
+    pass
 
 
 """
@@ -237,21 +149,8 @@ repeat_first_two_chars("a", 3) should return "aaa"
 
 def repeat_first_two_chars(s, n):
     # Your code here
-    flen = 2
-    if flen > len(s):
-        flen = len(s)
-    substr = s[:flen]
-    result = ""
-    for i in range(n):
-        result = result + substr
-    return result
+    pass
 
-
-print("Problem 10:")
-print("repeat_first_two_chars(abcdef, 3) is: ", repeat_first_two_chars("abcdef", 3))
-print("repeat_first_two_chars(a, 3) is: ", repeat_first_two_chars("a", 3))
-
-pass
 
 """
 Problem 11:
@@ -265,14 +164,4 @@ is_vowel("b") should return False
 
 def is_vowel(char):
     # Your code here
-
-    if char in ('a', 'e', 'i', 'o', 'u'):
-        stmt = True
-    else:
-        stmt = False
-    return stmt
-
-
-print("Problem 11:")
-print("is_vowel(a) is: ", is_vowel("a"))
-print("is_vowel(b) is: ", is_vowel("b"))
+    pass
