@@ -1,4 +1,4 @@
-"""
+    """
 Problem 1:
 Write a Python program that calculates the area of a circle based on the radius entered by the user.
 
@@ -9,7 +9,8 @@ import math
 
 
 def calculate_area_of_circle(radius):
-    # Your code here
+    # Your code here okay
+    return math.pi*radius**2
     pass
 
 
