@@ -39,7 +39,17 @@ compute_lcm(12, 15) should return 60
 
 def compute_lcm(x, y):
     # Your code here
-    pass
+    if x>y:
+        greater=x
+    else:
+        greater=y
+    if greater%x==0 and greater%y==0:
+
+
+pass
+    print("LCM of ", "n1", "and", "n2", "is ", greater)
+    x=int(input("enter x number"))
+    y = int(input("enter y number"))
 
 
 """
@@ -68,7 +78,7 @@ sum_two_integers(10, 2) should return 12
 
 
 def sum_two_integers(a, b):
-    # Your code here
+    # Your code hereewqgit
     pass
 
 
