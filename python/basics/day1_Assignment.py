@@ -7,9 +7,11 @@ calculate_area_of_circle(1.1) should return 3.8013271108436504
 """
 import math
 
-
 def calculate_area_of_circle(radius):
     # Your code here
+    a=10
+
+
     pass
 
 
