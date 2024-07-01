@@ -6,9 +6,11 @@ Example:
 calculate_area_of_circle(1.1) should return 3.8013271108436504
 """
 import math
+
+
 def calculate_area_of_circle(radius):
-   area = math.pi * radius ** 2
-   return area
+    area = math.pi * radius ** 2
+    return area
 
 
 """
@@ -19,9 +21,11 @@ Example:
 get_sphere_volume(6) should return 904.7786842338603
 """
 
+
 def get_sphere_volume(radius):
-    v = 4.0/3.0 * math.pi * radius ** 3
+    v = 4.0 / 3.0 * math.pi * radius ** 3
     return v
+
 
 """
 Problem 3:
@@ -36,9 +40,9 @@ difference_from_17(14) should return 3
 
 def difference_from_17(number):
     # Your code here
-    number=22
+    number = 22
 
-    if number>=17:
+    if number >= 17:
         print("Given number is greater than 17")
 
     pass
@@ -56,11 +60,11 @@ within_100_of_1000_or_2000(100) should return False
 
 
 def within_100_of_1000_or_2000(number):
-    number=int(input("Enter Number:"))
-    if number in range(1000,2000):
-       print(True)
+    number = int(input("Enter Number:"))
+    if number in range(1000, 2000):
+        print(True)
     else:
-       print(False)
+        print(False)
 
 
 """
@@ -76,10 +80,10 @@ sum_three_numbers(3, 3, 3) should return 27
 
 def sum_three_numbers(a, b, c):
     # Your code here
-    a=1
-    b=2
-    c=3
-    print(a+b+c)
+    a = 1
+    b = 2
+    c = 3
+    print(a + b + c)
     pass
 
 
@@ -111,11 +115,11 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 
 def repeat_string(s, n):
     # Your code here
-   a="abc"
-   b="xyz"
-   print(a*2)
-   print(b*3)
-   pass
+    a = "abc"
+    b = "xyz"
+    print(a * 2)
+    print(b * 3)
+    pass
 
 
 """
@@ -128,16 +132,18 @@ even_or_odd(10) should return "10 is even"
 even_or_odd(3) should return "3 is odd"
 """
 
+
 def even_or_odd(number):
- if(number%2==0):
-    return "number is even"
- else:
-    return "number is odd"
-  # number=int(input("Please enter number:"))
-  # print(even_or_odd(number))
-  #ternary operator
-  #number=int(input("Please enter number:"))
-  # {print(number,"is even") if(number%2==0) else print(number,"is odd")}
+    if (number % 2 == 0):
+        return "number is even"
+    else:
+        return "number is odd"
+    # number=int(input("Please enter number:"))
+    # print(even_or_odd(number))
+    #ternary operator
+    #number=int(input("Please enter number:"))
+    # {print(number,"is even") if(number%2==0) else print(number,"is odd")}
+
 
 """
 Problem 9:
@@ -180,11 +186,11 @@ is_vowel("b") should return False
 
 
 def is_vowel(char):
- # char=print(input("Enter Letter:"))
- while True:
-    if char=="a":
-        print(True)
-    else:
-        print(False)
-        break
- pass
+    # char=print(input("Enter Letter:"))
+    while True:
+        if char == "a":
+            print(True)
+        else:
+            print(False)
+            break
+    pass
