@@ -9,8 +9,10 @@ import math
 
 
 def calculate_area_of_circle(radius):
-    # Your code here
-    pass
+  calculate_area_of_circle = math.pi * pow(radius, 2)
+  return print('Area of circle is:', calculate_area_of_circle)
+calculate_area_of_circle(1.1)
+pass
 
 
 """
@@ -24,6 +26,7 @@ get_sphere_volume(6) should return 904.7786842338603
 
 def get_sphere_volume(radius):
     # Your code here
+
     pass
 
 
@@ -38,9 +41,16 @@ difference_from_17(14) should return 3
 """
 
 
-def difference_from_17(number):
+def difference_from_17(a):
     # Your code here
-    pass
+    # Check if n is less than or equal to 17
+   if a <= 17:
+        return 17 - a
+   else:
+        return (a - 17) * 2
+print(difference_from_17(22))
+print(difference_from_17(14))
+pass
 
 
 """
@@ -54,9 +64,14 @@ within_100_of_1000_or_2000(100) should return False
 """
 
 
-def within_100_of_1000_or_2000(number):
+def within_100_of_1000_or_2000(n):
     # Your code here
-    pass
+    #checking the number is within 100 of 1000 or 2000
+   return (((1000 - n) <= 100) or ((2000 - n) <= 100))
+print(within_100_of_1000_or_2000(950))
+print(within_100_of_1000_or_2000(1050))
+print(within_100_of_1000_or_2000(100))
+pass
 
 
 """
@@ -72,8 +87,13 @@ sum_three_numbers(3, 3, 3) should return 27
 
 def sum_three_numbers(a, b, c):
     # Your code here
-    pass
-
+    #calculate the sum of a,b and c
+   sum = a + b + c
+    # Check if x, y, and z are all equal
+   if a == b == c:
+        summrry = sum * 3
+        return summrry
+pass
 
 """
 Problem 6:
@@ -88,7 +108,15 @@ new_string_with_is("IsEmpty") should return "IsEmpty"
 
 def new_string_with_is(s):
     # Your code here
-    pass
+    if "Is" in s:
+        text = s
+        return s
+    else:
+        text = "Is" + s
+        return s
+print(new_string_with_is("Array"))
+print(new_string_with_is("IsEmpty"))
+pass
 
 
 """
@@ -103,7 +131,12 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 
 def repeat_string(s, n):
     # Your code here
-    pass
+   text =(s * n)
+   return text
+s=str(input("please enter string"))
+n =int(input("pleas enter number"))
+print(repeat_string(s,n))
+pass
 
 
 """
@@ -119,7 +152,15 @@ even_or_odd(3) should return "3 is odd"
 
 def even_or_odd(number):
     # Your code here
-    pass
+  if number%2 == 0:
+     print("Is even")
+     return number
+  else:
+      print("Is odd")
+      return number
+print(even_or_odd(10))
+print(even_or_odd(3))
+pass
 
 
 """
@@ -164,4 +205,11 @@ is_vowel("b") should return False
 
 def is_vowel(char):
     # Your code here
-    pass
+    vowel = ('a','e','i','o','u')
+    if char in vowel:
+            print("is vowel")
+    else:
+        print("is not vowel")
+char=str(input("Enter the character"))
+print(is_vowel(char))
+pass
