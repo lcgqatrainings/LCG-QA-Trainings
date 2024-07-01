@@ -8,12 +8,8 @@ calculate_area_of_circle(1.1) should return 3.8013271108436504
 #Test
 import math
 
-
 def calculate_area_of_circle(radius):
     return math.pi * radius ** 2
-pass
-calculate_area_of_circle()
-
 
 
 """
@@ -26,8 +22,7 @@ get_sphere_volume(6) should return 904.7786842338603
 
 
 def get_sphere_volume(radius):
-    from math import pi
-    return 4.0 / 3.0 * pi * radius ** 3
+    return 4.0 / 3.0 * math.pi * radius ** 3
 
 
 """
@@ -61,7 +56,7 @@ within_100_of_1000_or_2000(100) should return False
 
 
 def within_100_of_1000_or_2000(number):
-    return ((abs(1000 - number) <= 100) or (abs(2000 - number) <= 100))
+    return (abs(1000 - number) <= 100) or (abs(2000 - number) <= 100)
 
 
 
@@ -77,11 +72,11 @@ sum_three_numbers(3, 3, 3) should return 27
 
 
 def sum_three_numbers(a, b, c):
+    result = a + b + c
     if a == b == c:
-        sum = a + b + c
-        return sum * 3
+        return result * 3
     else:
-        return sum = a + b + c
+        return result
 
 
 """
@@ -181,6 +176,5 @@ is_vowel("b") should return False
 
 
 def is_vowel(char):
-    #character = input("Enter a character: ")
     vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
     return char in vowels
