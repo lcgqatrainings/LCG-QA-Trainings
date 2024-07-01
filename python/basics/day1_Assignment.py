@@ -9,8 +9,9 @@ import math
 
 
 def calculate_area_of_circle(radius):
-    # Your code here
+    # Your cPIode herewety
     pass
+print(calculate_area_of_circle)
 
 
 """
@@ -24,7 +25,12 @@ get_sphere_volume(6) should return 904.7786842338603
 
 def get_sphere_volume(radius):
     # Your code here
-    pass
+#     PI=3.14
+#     r=6
+#     volume=4*PI*r*r*r
+#
+#     pass
+# print(get_sphere_volume(radius))
 
 
 """
@@ -35,11 +41,19 @@ If the number is greater than 17, return twice the absolute difference.
 Example:
 difference_from_17(22) should return 10
 difference_from_17(14) should return 3
-"""
+#"""
 
 
 def difference_from_17(number):
     # Your code here
+    a=int(input('please enter a number:'))
+    d=a-17
+    if a>17:
+        s=2*d
+        return s
+    else
+        return d
+
     pass
 
 
@@ -72,8 +86,12 @@ sum_three_numbers(3, 3, 3) should return 27
 
 def sum_three_numbers(a, b, c):
     # Your code here
+    a=1
+    b=2
+    c=3
+    sum=int(a+b+c)
     pass
-
+print(sum)
 
 """
 Problem 6:
