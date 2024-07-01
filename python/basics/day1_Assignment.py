@@ -10,10 +10,15 @@ import math
 
 def calculate_area_of_circle(radius):
     # Your code here
-    pass
+    _area = math.pi * radius**2
+    return _area
+radius = float (input ("Please enter the radius of the given circle: "))
+print(calculate_area_of_circle(radius))
+pass
 
 
 """
+
 Problem 2:
 Write a Python program to get the volume of a sphere with radius six.
 
@@ -24,7 +29,11 @@ get_sphere_volume(6) should return 904.7786842338603
 
 def get_sphere_volume(radius):
     # Your code here
-    pass
+    volume = 4/3*math.pi * radius**3
+    return volume
+radius=float(input ("Please enter the volue of the given sphere: "))
+print(get_sphere_volume(radius))
+pass
 
 
 """
@@ -40,7 +49,14 @@ difference_from_17(14) should return 3
 
 def difference_from_17(number):
     # Your code here
-    pass
+    if number > 17:
+      difference = (number - 17)*2
+    else:
+      difference = (17-number)
+    return difference
+number = int(input("Please enter the number: "))
+print(difference_from_17(number))
+pass
 
 
 """
@@ -56,7 +72,14 @@ within_100_of_1000_or_2000(100) should return False
 
 def within_100_of_1000_or_2000(number):
     # Your code here
-    pass
+    n=1
+    if number in  range(100+n,2000) :
+       return True
+    elif number<=100 :
+       return False
+number = int(input("Please enter the number:"))
+print(within_100_of_1000_or_2000(number))
+pass
 
 
 """
@@ -72,7 +95,17 @@ sum_three_numbers(3, 3, 3) should return 27
 
 def sum_three_numbers(a, b, c):
     # Your code here
-    pass
+    if(a==b and b==c and c==a):
+     sum=3*(a+b+c)
+     return sum
+    else:
+     sum=a+b+c
+     return sum
+a=int(input("Please enter the first number: "))
+b=int(input("Please enter the second number: "))
+c=int(input("Please enter the third number: "))
+print(sum_three_numbers(a,b,c))
+pass
 
 
 """
@@ -88,7 +121,15 @@ new_string_with_is("IsEmpty") should return "IsEmpty"
 
 def new_string_with_is(s):
     # Your code here
-    pass
+    if "Is" in s:
+        text= s
+        return text
+    else:
+        text= "Is"+ s
+        return text
+s=str(input("Please enter a string: "))
+print(new_string_with_is(s))
+pass
 
 
 """
@@ -103,7 +144,12 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 
 def repeat_string(s, n):
     # Your code here
-    pass
+    text= (s*n)
+    return text
+s= str(input("Please enter a string: "))
+n=int(input("Please enter n: "))
+print(repeat_string(s, n))
+pass
 
 
 """
@@ -119,7 +165,15 @@ even_or_odd(3) should return "3 is odd"
 
 def even_or_odd(number):
     # Your code here
-    pass
+    if number%2 == 0 :
+     print("even")
+     return number
+    else:
+        print("odd")
+        return number
+number=int(input("Please enter number: "))
+print(even_or_odd(number))
+pass
 
 
 """
@@ -133,7 +187,18 @@ count_fours([1, 4, 6, 4, 7, 4]) should return 3
 
 def count_fours(lst):
     # Your code here
-    pass
+    for i in range(len(lst)):
+        if(lst[i]==4):
+            count=1
+            count+=1
+            print(count)
+        else:
+            count=0
+            print(count)
+
+int=input("Please enter a number: ")
+print(count_fours(int))
+pass
 
 
 """
@@ -149,7 +214,18 @@ repeat_first_two_chars("a", 3) should return "aaa"
 
 def repeat_first_two_chars(s, n):
     # Your code here
-    pass
+    if(len(s)<=2):
+        print(s*n)
+    else:
+        print(s)
+s=str(input("Please enter a string: "))
+n=int(input("Please enter n: "))
+print(repeat_first_two_chars(s, n))
+pass
+
+
+
+
 
 
 """
@@ -164,4 +240,12 @@ is_vowel("b") should return False
 
 def is_vowel(char):
     # Your code here
-    pass
+    vowels=['a','e','i','o','u']
+    if char in vowels :
+        print((char),"is_vowel")
+        return True
+    else:
+        return False
+char = str(input("Please enter a string: "))
+print(is_vowel(char))
+pass
