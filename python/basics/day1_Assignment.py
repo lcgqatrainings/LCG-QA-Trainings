@@ -9,8 +9,9 @@ import math
 
 
 def calculate_area_of_circle(radius):
-    # Your code here
-    pass
+    from math import pi
+    print("The area of the circle" +" " + str(radius) + "is : " +" "+ str(pi * radius ** 2))
+calculate_area_of_circle(1.1)
 
 
 """
@@ -23,9 +24,10 @@ get_sphere_volume(6) should return 904.7786842338603
 
 
 def get_sphere_volume(radius):
-    # Your code here
-    pass
-
+    from math import pi
+    V = 4.0 / 3.0 * pi * radius ** 3
+    print('The volume of the sphere is: ', V)
+get_sphere_volume(6.0)
 
 """
 Problem 3:
@@ -39,8 +41,11 @@ difference_from_17(14) should return 3
 
 
 def difference_from_17(number):
-    # Your code here
-    pass
+    if number < 17:
+        return 17-number
+    else:
+        return (number-17) * 2
+print(difference_from_17(22))
 
 
 """
@@ -55,8 +60,10 @@ within_100_of_1000_or_2000(100) should return False
 
 
 def within_100_of_1000_or_2000(number):
-    # Your code here
-    pass
+    return ((abs(1000 - number) <= 100) or (abs(2000 - number) <= 100))
+print(within_100_of_1000_or_2000(950))
+print(within_100_of_1000_or_2000(1050))
+print(within_100_of_1000_or_2000(100))
 
 
 """
@@ -71,8 +78,13 @@ sum_three_numbers(3, 3, 3) should return 27
 
 
 def sum_three_numbers(a, b, c):
-    # Your code here
-    pass
+    if a == b == c:
+        sum = a + b + c
+        print(sum * 3)
+    else:
+        sum = a + b + c
+        print(sum)
+sum_three_numbers(1, 2, 3)
 
 
 """
@@ -87,9 +99,11 @@ new_string_with_is("IsEmpty") should return "IsEmpty"
 
 
 def new_string_with_is(s):
-    # Your code here
-    pass
-
+    if s[0:2] == "IS":
+        print(s)
+    else:
+        print("IS" + s)
+new_string_with_is("Empty")
 
 """
 Problem 7:
@@ -102,8 +116,11 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 
 
 def repeat_string(s, n):
-    # Your code here
-    pass
+    result = ""
+    for i in range(n):
+        result = result + s
+    return result
+print(repeat_string("abc", 2))
 
 
 """
@@ -118,8 +135,11 @@ even_or_odd(3) should return "3 is odd"
 
 
 def even_or_odd(number):
-    # Your code here
-    pass
+    if number % 2 == 0:
+        print(f"{number} is Even Number")
+    else:
+        print(f"{number} is Odd Number")
+even_or_odd(11)
 
 
 """
@@ -132,8 +152,12 @@ count_fours([1, 4, 6, 4, 7, 4]) should return 3
 
 
 def count_fours(lst):
-    # Your code here
-    pass
+    count = 0
+    for num in lst:
+        if num == 4:
+            count = count + 1
+    return count
+print(count_fours([1, 4, 6, 4, 7, 4]))
 
 
 """
@@ -148,8 +172,11 @@ repeat_first_two_chars("a", 3) should return "aaa"
 
 
 def repeat_first_two_chars(s, n):
-    # Your code here
-    pass
+    result = ""
+    for i in range(n):
+        result = result + s[0:2]
+    return result
+print(repeat_first_two_chars("abcdef", 3))
 
 
 """
@@ -163,5 +190,14 @@ is_vowel("b") should return False
 
 
 def is_vowel(char):
-    # Your code here
-    pass
+    #character = input("Enter a character: ")
+    vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    if char in vowels:
+        print(f"The character '{char}' is a vowel!")
+    else:
+        print(f"The character '{char}' is a consonant!")
+
+is_vowel('e')
+
+
+
