@@ -5,12 +5,14 @@ Write a Python program that calculates the area of a circle based on the radius 
 Example:
 calculate_area_of_circle(1.1) should return 3.8013271108436504
 """
-import math
+# import math
 
 
-def calculate_area_of_circle(radius):
-    # Your code here
-    pass
+# def calculate_area_of_circle(radius):
+#       area = math.pi * pow(radius,2)
+#       print("the area of circle",area)
+#       return area
+# calculate_area_of_circle(radius=1.1)
 
 
 """
@@ -22,9 +24,13 @@ get_sphere_volume(6) should return 904.7786842338603
 """
 
 
-def get_sphere_volume(radius):
-    # Your code here
-    pass
+# def get_sphere_volume(radius):
+#     # Your code here
+#     volume = 4 / 3 * math.pi * pow(radius, 3)
+#     print("volume of sphere",volume)
+#     return volume
+# get_sphere_volume(radius=6)
+
 
 
 """
@@ -118,9 +124,12 @@ even_or_odd(3) should return "3 is odd"
 
 
 def even_or_odd(number):
-    # Your code here
-    pass
-
+    # Your code her
+    if number%2 == 0:
+        print("number is even", number)
+    else:
+        print('number is odd', number)
+even_or_odd(10)
 
 """
 Problem 9:
