@@ -6,25 +6,25 @@ Example:
 calculate_area_of_circle(1.1) should return 3.8013271108436504
 """
 import math
-
-
 def calculate_area_of_circle(radius):
     # Your code here
+    a = math.pi*radius**2
+    print(a)
     pass
-
 
 """
 Problem 2:
 Write a Python program to get the volume of a sphere with radius six.
-
 Example:
 get_sphere_volume(6) should return 904.7786842338603
 """
 
 
+import math
 def get_sphere_volume(radius):
-    # Your code here
+    V = 4/3*math.pi*radius**3
     pass
+get_sphere_volume(6)
 
 
 """
@@ -37,10 +37,19 @@ difference_from_17(22) should return 10
 difference_from_17(14) should return 3
 """
 
+a = int(input("Enter a Value "))
 
-def difference_from_17(number):
+
+def difference_from_17(a):
     # Your code here
-    pass
+    diff = a - 17
+    if diff >= 0:
+        print(2*diff)
+    else:
+        print(diff)
+
+
+difference_from_17(a)
 
 
 """
@@ -53,10 +62,18 @@ within_100_of_1000_or_2000(1050) should return True
 within_100_of_1000_or_2000(100) should return False
 """
 
-
-def within_100_of_1000_or_2000(number):
+def within_100_of_1000_or_2000(number = int(input("Enter a Number "))):
     # Your code here
-    pass
+    if number in range(900,1100):
+        print(True)
+    elif number in range(1900,2100):
+        print(True)
+    else:
+        print(False)
+within_100_of_1000_or_2000()
+
+
+
 
 
 """
