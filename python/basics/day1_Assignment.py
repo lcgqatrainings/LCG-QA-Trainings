@@ -91,10 +91,10 @@ new_string_with_is("IsEmpty") should return "IsEmpty"
 
 
 def new_string_with_is(s):
-    if s[0:2] == "IS":
+    if s[0:2] == "Is":
         return s
     else:
-        return "IS" + s
+        return "Is" + s
 
 """
 Problem 7:
@@ -124,8 +124,9 @@ even_or_odd(3) should return "3 is odd"
 
 
 def even_or_odd(number):
-    return number % 2 == 0
-
+    if number % 2 == 0:
+        return str(number)+" is even"
+    return str(number)+" is odd"
 
 
 """
