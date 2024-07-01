@@ -10,7 +10,11 @@ import math
 
 def calculate_area_of_circle(radius):
     # Your code here
-    pass
+    area = math.pi*radius**2
+    print("area of circle =",area)
+    return area
+calculate_area_of_circle(radius=1.1)
+
 
 
 """
@@ -23,8 +27,10 @@ get_sphere_volume(6) should return 904.7786842338603
 
 
 def get_sphere_volume(radius):
-    # Your code here
-    pass
+    volume = 4/3*math.pi*radius**3
+    print("volume of sphere =",volume)
+    return volume
+get_sphere_volume(radius=6)
 
 
 """
@@ -39,8 +45,16 @@ difference_from_17(14) should return 3
 
 
 def difference_from_17(number):
-    # Your code here
-    pass
+    if number>17:
+        value=number-17
+        print(value+value)
+    if number<17:
+        value=17-number
+        print(value)
+    return value
+
+difference_from_17(number=22)
+difference_from_17(number=14)
 
 
 """
@@ -55,9 +69,14 @@ within_100_of_1000_or_2000(100) should return False
 
 
 def within_100_of_1000_or_2000(number):
-    # Your code here
-    pass
+    if number>2000 or number>1000 or number>100:
+        print("True")
+    else:
+        print("False")
 
+within_100_of_1000_or_2000(number=950)
+within_100_of_1000_or_2000(number=1050)
+within_100_of_1000_or_2000(number=100)
 
 """
 Problem 5:
@@ -71,8 +90,18 @@ sum_three_numbers(3, 3, 3) should return 27
 
 
 def sum_three_numbers(a, b, c):
-    # Your code here
-    pass
+    if a==b==c:
+        sum=a*b*c
+        print(sum)
+    else:
+        sum = a+b+c
+        print(sum)
+    return sum
+
+sum_three_numbers(a=1, b=2, c=3)
+sum_three_numbers(a=3, b=3, c=3)
+
+
 
 
 """
@@ -87,8 +116,12 @@ new_string_with_is("IsEmpty") should return "IsEmpty"
 
 
 def new_string_with_is(s):
-    # Your code here
-    pass
+    if s.startswith("Is"):
+        print(s)
+    else:
+        print("is"+s)
+new_string_with_is(s="Array")
+new_string_with_is(s="IsEmpty")
 
 
 """
@@ -118,9 +151,13 @@ even_or_odd(3) should return "3 is odd"
 
 
 def even_or_odd(number):
-    # Your code here
-    pass
+    if number % 2 == 0:
+        print("is even")
+    else:
+        print("is odd")
 
+even_or_odd(number=int(input()))
+even_or_odd(number=int(input()))
 
 """
 Problem 9:
@@ -132,7 +169,6 @@ count_fours([1, 4, 6, 4, 7, 4]) should return 3
 
 
 def count_fours(lst):
-    # Your code here
     pass
 
 
@@ -164,4 +200,11 @@ is_vowel("b") should return False
 
 def is_vowel(char):
     # Your code here
-    pass
+    a = ["a","e","i","o","u","A","E","I","O","U"]
+    if char in a:
+        print("True")
+    else:
+        print("False")
+is_vowel(char= "b")
+
+
