@@ -27,10 +27,6 @@ jobs:
       run: |
         if [ ! -f README.md ]; then echo -e "# Assignment Scores\n\n## Scores\n\n" > README.md; fi
 
-    - name: Create README if not exists
-      run: |
-        if [ ! -f TESTRESULT.md ]; then echo -e "# Assignment Scores\n\n## Scores\n\n" > TESTRESULT.md; fi
-
     - name: Run tests
       id: run-tests
       continue-on-error: true
