@@ -10,8 +10,13 @@ import math
 
 def calculate_area_of_circle(radius):
     # Your code here
-    pass
+    area = math.pi * radius * radius
+    return area
 
+
+radius = 1.1
+area = calculate_area_of_circle(radius)
+print('area of circle', area)
 
 """
 Problem 2:
