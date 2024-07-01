@@ -10,8 +10,8 @@ import math
 
 def calculate_area_of_circle(radius):
     # Your code here
-    area = math.pi*radius**2
-    print(area)
+    circle_area = math.pi*radius**2
+    print(circle_area)
 calculate_area_of_circle(5)
 
 
