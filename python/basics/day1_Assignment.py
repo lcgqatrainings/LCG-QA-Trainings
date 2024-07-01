@@ -10,6 +10,7 @@ import math
 
 def calculate_area_of_circle(radius):
     # Your code here
+    return math.pi * radius**2
     pass
 
 
@@ -23,7 +24,8 @@ get_sphere_volume(6) should return 904.7786842338603
 
 
 def get_sphere_volume(radius):
-    # Your code here
+    sphere_volume = (4/3)*(math.pi * radius**3)
+    return sphere_volume
     pass
 
 
@@ -39,7 +41,12 @@ difference_from_17(14) should return 3
 
 
 def difference_from_17(number):
-    # Your code here
+    difference = 17 - number
+    if number > 17:
+        return abs(difference*2)
+    else:
+        return difference
+
     pass
 
 
@@ -56,6 +63,7 @@ within_100_of_1000_or_2000(100) should return False
 
 def within_100_of_1000_or_2000(number):
     # Your code here
+
     pass
 
 
@@ -72,6 +80,11 @@ sum_three_numbers(3, 3, 3) should return 27
 
 def sum_three_numbers(a, b, c):
     # Your code here
+    total = a + b + c
+    if (a==b==c):
+        return 3*total
+    else:
+        return total
     pass
 
 
