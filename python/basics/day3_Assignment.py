@@ -135,6 +135,6 @@ def sum_of_digits(number):
     sum=int(num1[0])+int(num1[1])+int(num1[2])+int(num1[3])
     return sum
     pass
-num=1234
+num = 1234
 num1=str(1234)
 print(sum_of_digits(num1))
