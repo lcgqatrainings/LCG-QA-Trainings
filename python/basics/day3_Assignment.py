@@ -10,10 +10,10 @@ sum_first_n_integers(5) should return 15
 
 def sum_first_n_integers(n):
     # Your code here
-    sum=n*(n+1)/2
+    sum = n*(n+1)/2
     return sum
     pass
-n=5
+n = 5
 print(sum_first_n_integers(n))
 
 
