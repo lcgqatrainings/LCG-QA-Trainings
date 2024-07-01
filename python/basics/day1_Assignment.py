@@ -204,4 +204,3 @@ def is_vowel(char):
     else: return False
 c = str(input("Enter a character: "))
 print(is_vowel(c))
-
