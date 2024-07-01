@@ -9,9 +9,10 @@ import math
 
 
 def calculate_area_of_circle(radius):
-    # Your code here
-    pass
-
+    pi = 3.14
+    r = float(input("Input of circle is :"))
+    Area = str(pi * (r * r))
+    print("Area of the circle is : " + Area)
 
 """
 Problem 2:
@@ -23,7 +24,10 @@ get_sphere_volume(6) should return 904.7786842338603
 
 
 def get_sphere_volume(radius):
-    # Your code here
+    pi = 3.14
+    r = float(input("Input of radius is :"))
+    Spere_volume = str((4 / 3) * (pi * (r ** 3)))
+    print("Area of the circle is : " + Spere_volume)
     pass
 
 
@@ -39,7 +43,14 @@ difference_from_17(14) should return 3
 
 
 def difference_from_17(number):
-    # Your code here
+    v1 = int(input("First number : "))
+    v2 = 17
+    v3 = v1 - v2
+    if (v1 > 17):
+        print(v3 + v3)
+    else:
+        print(v3)
+
     pass
 
 
@@ -53,6 +64,11 @@ within_100_of_1000_or_2000(1050) should return True
 within_100_of_1000_or_2000(100) should return False
 """
 
+input1 = int(input("Enter your Number : "))
+if (input1>100) and (input1<2000):
+    print("True")
+else:
+    print("False")
 
 def within_100_of_1000_or_2000(number):
     # Your code here
@@ -68,7 +84,15 @@ Example:
 sum_three_numbers(1, 2, 3) should return 6
 sum_three_numbers(3, 3, 3) should return 27
 """
+def sum_three_numbers(a,b,c):
+  if a==b==c:
 
+      print((a+b+c)*3)
+  else:
+
+      print((a+b+c))
+sum_three_numbers(1,2,3)
+sum_three_numbers(3,3,3)
 
 def sum_three_numbers(a, b, c):
     # Your code here
@@ -84,7 +108,14 @@ Example:
 new_string_with_is("Array") should return "IsArray"
 new_string_with_is("IsEmpty") should return "IsEmpty"
 """
-
+def new_string_with_is(str):
+    if str.startswith("Is"):
+        print(str)
+    else:
+        print("Is"+str)
+new_string_with_is("IsEmpty")
+new_string_with_is("Array")
+new_string_with_is("Isit")
 
 def new_string_with_is(s):
     # Your code here
@@ -102,7 +133,11 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 
 
 def repeat_string(s, n):
-    # Your code here
+    def repeat_string(str, int):
+        print(str * 2)
+
+    repeat_string("abc", 2)
+    repeat_string("xyz", 3)
     pass
 
 
@@ -118,7 +153,11 @@ even_or_odd(3) should return "3 is odd"
 
 
 def even_or_odd(number):
-    # Your code here
+    Number = float(input("Enter the number :"))
+    if ((Number % 2) == 0):
+        print("Given Number is Even")
+    else:
+        print("Given Number is odd")
     pass
 
 
@@ -132,8 +171,7 @@ count_fours([1, 4, 6, 4, 7, 4]) should return 3
 
 
 def count_fours(lst):
-    # Your code here
-    pass
+    return lst.count("4")
 
 
 """
