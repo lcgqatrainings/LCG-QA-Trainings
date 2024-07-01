@@ -39,9 +39,10 @@ difference_from_17(14) should return 3
 
 
 def difference_from_17(number):
-    # Your code here
     pass
 
+
+print(difference_from_17(number=56))
 
 """
 Problem 4:
