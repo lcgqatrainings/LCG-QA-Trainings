@@ -16,9 +16,6 @@ def sum_first_n_integers(n):
 n = 5
 print(sum_first_n_integers(n))
 
-
-
-
 """
 Problem 59:
 Write a Python program to convert height (in feet and inches) to centimeters.
