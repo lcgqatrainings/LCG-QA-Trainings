@@ -10,6 +10,7 @@ import math
 
 def calculate_area_of_circle(radius):
     # Your code her    a=10
+    a=10
 
 
 """
