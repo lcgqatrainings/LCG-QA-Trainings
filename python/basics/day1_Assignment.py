@@ -10,6 +10,7 @@ import math
 
 def calculate_area_of_circle(radius):
     # Your code here
+    return math.pi * radius**2
     pass
 
 
@@ -20,10 +21,17 @@ Write a Python program to get the volume of a sphere with radius six.
 Example:
 get_sphere_volume(6) should return 904.7786842338603
 """
-
+"volume of radius is V=4/3Pir3"
+import math
+def sphere_volume(radius):
+volume =(4/3) * math.pi * radius**3
+return volume
 
 def get_sphere_volume(radius):
     # Your code here
+volume=(4/3) * math.pi * radius**3
+return volume
+
     pass
 
 
