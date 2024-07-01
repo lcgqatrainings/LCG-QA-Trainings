@@ -9,9 +9,10 @@ import math
 
 
 def calculate_area_of_circle(radius):
-    # Your code here
-    pass
-
+        area_of_cirle = math.pi * radius ** 2
+        return area_of_cirle
+radius = int(input("enter radius:"))
+print("area of cirle is", calculate_area_of_circle(radius))
 
 """
 Problem 2:
@@ -21,10 +22,13 @@ Example:
 get_sphere_volume(6) should return 904.7786842338603
 """
 
-
-def get_sphere_volume(radius):
-    # Your code here
-    pass
+import math
+import math
+def get_sphere_volume(volume):
+    radius=int(input("enter radius:"))
+    volume_of_sphere=(4/3)* math.pi * radius**3
+    print(volume_of_sphere)
+get_sphere_volume('volume')
 
 
 """
@@ -39,8 +43,12 @@ difference_from_17(14) should return 3
 
 
 def difference_from_17(number):
-    # Your code here
-    pass
+        number = int(input("enter number:"))
+        if number > 17:
+            print("twice the difference", (number - 17) + (number - 17))
+        else:
+            print("if number is greater than 17, difference of 17 and", number, "is", 17 - number)
+difference_from_17("number")
 
 
 """
@@ -71,8 +79,14 @@ sum_three_numbers(3, 3, 3) should return 27
 
 
 def sum_three_numbers(a, b, c):
-    # Your code here
-    pass
+    a = int(input("enter number a:"))
+    b = int(input("enter number b:"))
+    c = int(input("enter number c:"))
+    if a==b and b==c:
+        print("if numbers are same,return number to power 3", a*b*c)
+    else:
+        print("If numbers are different,return sum of numbers", a+b+c)
+sum_three_numbers('a', 'b', 'c')
 
 
 """
@@ -85,10 +99,13 @@ new_string_with_is("Array") should return "IsArray"
 new_string_with_is("IsEmpty") should return "IsEmpty"
 """
 
-
-def new_string_with_is(s):
-    # Your code here
-    pass
+def new_string_with_is(Array):
+    string = input("enter string:")
+    if string.startswith("is"):
+        print ("string")
+    else:
+        print("is"+string)
+new_string_with_is("Array")
 
 
 """
@@ -102,8 +119,11 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 
 
 def repeat_string(s, n):
-    # Your code here
-    pass
+    s_repeated = s * n
+    return s_repeated
+s = str(input("enter string:"))
+n = int(input("enter n times string to be repeated:"))
+print(repeat_string(s,n))
 
 
 """
@@ -118,9 +138,12 @@ even_or_odd(3) should return "3 is odd"
 
 
 def even_or_odd(number):
-    # Your code here
-    pass
-
+    num = int(input("enter any number"))
+    if num % 2 == 0:
+        print(num,"is even number")
+    else:
+        print(num,"is odd number")
+even_or_odd('number')
 
 """
 Problem 9:
