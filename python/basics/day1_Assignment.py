@@ -73,9 +73,6 @@ def within_100_of_1000_or_2000(number = int(input("Enter a Number "))):
 within_100_of_1000_or_2000()
 
 
-
-
-
 """
 Problem 5:
 Write a Python program to calculate the sum of three given numbers. 
