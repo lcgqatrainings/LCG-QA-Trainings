@@ -156,8 +156,8 @@ def even_or_odd(number):
     else:
         print("is odd")
 
-even_or_odd(number=int(input()))
-even_or_odd(number=int(input()))
+even_or_odd(number=10)
+even_or_odd(number=3)
 
 """
 Problem 9:
