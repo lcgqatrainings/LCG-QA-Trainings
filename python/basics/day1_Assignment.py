@@ -187,10 +187,10 @@ is_vowel("b") should return False
 
 def is_vowel(char):
     # char=print(input("Enter Letter:"))
-    while True:
-        if char == "a":
-            print(True)
-        else:
-            print(False)
-            break
+    # while True:
+    #     if char == "a":
+    #         print(True)
+    #     else:
+    #         print(False)
+    #         break
     pass
