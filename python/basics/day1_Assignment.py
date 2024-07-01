@@ -10,6 +10,7 @@ import math
 
 def calculate_area_of_circle(radius):
     # Your code here my chng
+    return math.pi * radius ** 2
     pass
 
 
