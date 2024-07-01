@@ -9,10 +9,12 @@ import math
 
 
 def calculate_area_of_circle(radius):
-  calculate_area_of_circle = math.pi * pow(radius, 2)
-  return print('Area of circle is:', calculate_area_of_circle)
-calculate_area_of_circle(1.1)
-pass
+    # calculate_area_of_circle = math.pi * pow(radius, 2)
+    # return print('Area of circle is:', calculate_area_of_circle)
+    pass
+
+
+
 
 
 """
@@ -44,14 +46,10 @@ difference_from_17(14) should return 3
 def difference_from_17(a):
     # Your code here
     # Check if n is less than or equal to 17
-   if a <= 17:
+    if a <= 17:
         return 17 - a
-   else:
+    else:
         return (a - 17) * 2
-print(difference_from_17(22))
-print(difference_from_17(14))
-pass
-
 
 """
 Problem 4:
@@ -67,12 +65,7 @@ within_100_of_1000_or_2000(100) should return False
 def within_100_of_1000_or_2000(n):
     # Your code here
     #checking the number is within 100 of 1000 or 2000
-   return (((1000 - n) <= 100) or ((2000 - n) <= 100))
-print(within_100_of_1000_or_2000(950))
-print(within_100_of_1000_or_2000(1050))
-print(within_100_of_1000_or_2000(100))
-pass
-
+    return (((1000 - n) <= 100) or ((2000 - n) <= 100))
 
 """
 Problem 5:
@@ -88,12 +81,11 @@ sum_three_numbers(3, 3, 3) should return 27
 def sum_three_numbers(a, b, c):
     # Your code here
     #calculate the sum of a,b and c
-   sum = a + b + c
+    sum = a + b + c
     # Check if x, y, and z are all equal
-   if a == b == c:
+    if a == b == c:
         summrry = sum * 3
         return summrry
-pass
 
 """
 Problem 6:
@@ -114,9 +106,6 @@ def new_string_with_is(s):
     else:
         text = "Is" + s
         return s
-print(new_string_with_is("Array"))
-print(new_string_with_is("IsEmpty"))
-pass
 
 
 """
@@ -131,12 +120,8 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 
 def repeat_string(s, n):
     # Your code here
-   text =(s * n)
-   return text
-s=str(input("please enter string"))
-n =int(input("pleas enter number"))
-print(repeat_string(s,n))
-pass
+    text = (s * n)
+    return text
 
 
 """
@@ -152,15 +137,12 @@ even_or_odd(3) should return "3 is odd"
 
 def even_or_odd(number):
     # Your code here
-  if number%2 == 0:
-     print("Is even")
-     return number
-  else:
-      print("Is odd")
-      return number
-print(even_or_odd(10))
-print(even_or_odd(3))
-pass
+    if number % 2 == 0:
+        print("Is even")
+        return number
+    else:
+        print("Is odd")
+        return number
 
 
 """
@@ -205,11 +187,10 @@ is_vowel("b") should return False
 
 def is_vowel(char):
     # Your code here
-    vowel = ('a','e','i','o','u')
+    vowel = ('a', 'e', 'i', 'o', 'u')
     if char in vowel:
-            print("is vowel")
+        print("is vowel")
     else:
         print("is not vowel")
-char=str(input("Enter the character"))
-print(is_vowel(char))
-pass
+
+
