@@ -24,7 +24,9 @@ get_sphere_volume(6) should return 904.7786842338603
 
 def get_sphere_volume(radius):
     # Your code here
-    pass
+    p = round(22/7, 2)
+    volume = 4/3 * p * radius ** 3
+    return volume
 
 
 """
@@ -40,7 +42,11 @@ difference_from_17(14) should return 3
 
 def difference_from_17(number):
     # Your code here
-    pass
+    if number > 17:
+        diff = 2*(number-17)
+    else:
+        diff = 17-number
+    return diff
 
 
 """
@@ -72,7 +78,7 @@ sum_three_numbers(3, 3, 3) should return 27
 
 def sum_three_numbers(a, b, c):
     # Your code here
-    pass
+    return a + b + c
 
 
 """
@@ -103,7 +109,7 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 
 def repeat_string(s, n):
     # Your code here
-    pass
+    return s * n
 
 
 """
@@ -119,7 +125,11 @@ even_or_odd(3) should return "3 is odd"
 
 def even_or_odd(number):
     # Your code here
-    pass
+    number = int(input('Enter any number:'))
+    if number % 2 == 0:
+        return f'Given Number {number} is even'
+    else:
+        return f'Given Number {number} is Odd'
 
 
 """
@@ -164,4 +174,10 @@ is_vowel("b") should return False
 
 def is_vowel(char):
     # Your code here
-    pass
+    char = char.lower()
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    if char in vowels:
+        return f'Given Char {char} is vowel'
+    else:
+        return f'Given Char {char} is Consonant'
+
