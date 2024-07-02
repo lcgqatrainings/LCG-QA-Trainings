@@ -9,10 +9,8 @@ import math
 
 
 def calculate_area_of_circle(radius):
-    # Your code here
-    return pi* radius**2
-    pass
-
+    area=math.pi*(radius**2)
+    return area
 
 """
 Problem 2:
@@ -24,8 +22,8 @@ get_sphere_volume(6) should return 904.7786842338603
 
 
 def get_sphere_volume(radius):
-    # Your code here
-    pass
+    volume=((4/3)*(math.pi)*(radius**3))
+    return volume
 
 
 """
@@ -40,9 +38,8 @@ difference_from_17(14) should return 3
 
 
 def difference_from_17(number):
-    # Your code here
-    pass
-
+    print(17-number) if number<=17 else print(number*2)
+difference_from_17(20)
 
 """
 Problem 4:
@@ -72,8 +69,11 @@ sum_three_numbers(3, 3, 3) should return 27
 
 
 def sum_three_numbers(a, b, c):
-    # Your code here
-    pass
+   if a!=b!=c:
+       print(a+b+c)
+   else:
+       print(a**3)
+sum_three_numbers(3,4,5)
 
 
 """
@@ -88,8 +88,11 @@ new_string_with_is("IsEmpty") should return "IsEmpty"
 
 
 def new_string_with_is(s):
-    # Your code here
-    pass
+    if s.startswith("Is"):
+    # if s[0:2]==Is:
+        print(s)
+    else:
+        print("Is"+s)
 
 
 """
@@ -103,8 +106,11 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 
 
 def repeat_string(s, n):
-    # Your code here
-    pass
+    str1=(s*2)
+    return str1
+    str2=(n*3)
+    return str2
+repeat_string("abc","xyz")
 
 
 """
@@ -119,8 +125,13 @@ even_or_odd(3) should return "3 is odd"
 
 
 def even_or_odd(number):
-    # Your code here
-    pass
+
+    if number % 2 == 0:
+        print("given number is Even")
+    else:
+        print("given number is odd")
+
+even_or_odd(16)
 
 
 """
@@ -133,8 +144,12 @@ count_fours([1, 4, 6, 4, 7, 4]) should return 3
 
 
 def count_fours(lst):
-    # Your code here
-    pass
+    count = 0
+    for i in x:
+        if i == 4:
+            count = count + 1
+    return count
+
 
 
 """
@@ -149,9 +164,13 @@ repeat_first_two_chars("a", 3) should return "aaa"
 
 
 def repeat_first_two_chars(s, n):
-    # Your code here
-    pass
-
+    if len(s)>2:
+        z=s[:2]
+        print(z*n)
+    else:
+        print(s*n)
+repeat_first_two_chars("abcdef", 3)
+repeat_first_two_chars("a", 3)
 
 """
 Problem 11:
@@ -164,5 +183,11 @@ is_vowel("b") should return False
 
 
 def is_vowel(char):
-    # Your code here
-    pass
+    list1 = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+    if char in list1:
+        return True
+    else:
+        return False
+
+
+print(is_vowel("s"))
