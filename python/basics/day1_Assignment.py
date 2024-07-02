@@ -25,6 +25,7 @@ get_sphere_volume(6) should return 904.7786842338603
 
 def get_sphere_volume(radius):
     # Your code here
+
     pass
 
 
@@ -41,8 +42,12 @@ difference_from_17(14) should return 3
 
 def difference_from_17(number):
     # Your code here
+    if number >17:
+        diff = 17-number
+        return diff*2
+    else:
+        return 17-number
     pass
-
 
 """
 Problem 4:
