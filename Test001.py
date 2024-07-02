@@ -17,6 +17,7 @@ n1=input("Enter first number:")
 n2=input("Enter second number:")
 print(10)
 print(20)
+print(100)
 
 
 
