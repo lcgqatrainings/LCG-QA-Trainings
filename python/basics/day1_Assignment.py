@@ -122,8 +122,10 @@ even_or_odd(3) should return "3 is odd"
 
 
 def even_or_odd(number):
-    if number%2==0: print(number," is even")
-    else: print(number," is odd")
+    if number%2==0:
+        return f"{number} is even"
+    else:
+        return f"{number} is odd"
 
 
 """
@@ -158,7 +160,7 @@ def repeat_first_two_chars(s, n):
             n=n-1
         return temp
     else:
-        return s**3
+        return s**n
 
 
 """
