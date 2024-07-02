@@ -10,7 +10,7 @@ import math
 
 def calculate_area_of_circle(radius):
     # Your code here
-    print("statement is added")
+    return math.pi * radius**2
     pass
 
 
