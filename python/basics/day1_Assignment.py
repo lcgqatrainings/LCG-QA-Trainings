@@ -9,10 +9,9 @@ import math
 
 
 def calculate_area_of_circle(radius):
+    area = math.pi*radius**2
+    return area
 
-    area=math.pi*radius**2
-    print(area)
-calculate_area_of_circle(1.1)
 
 
 
@@ -27,9 +26,11 @@ get_sphere_volume(6) should return 904.7786842338603
 """
 
 
+import math
 def get_sphere_volume(radius):
-    # Your code here
-    pass
+    volume=4/3*math.pi*radius**3
+    return volume
+
 
 
 """
@@ -44,8 +45,14 @@ difference_from_17(14) should return 3
 
 
 def difference_from_17(number):
-    # Your code here
-    pass
+    difference=abs(number-17)
+    if number>17:
+        return 2*difference
+    else:
+        return difference
+
+
+
 
 
 """
@@ -60,8 +67,17 @@ within_100_of_1000_or_2000(100) should return False
 
 
 def within_100_of_1000_or_2000(number):
-    # Your code here
-    pass
+    difference1=abs(number-1000)
+    difference2=abs(number-2000)
+    if difference1<100 or difference2<100:
+        return True
+    else:
+        return False
+
+
+
+
+
 
 
 """
@@ -76,8 +92,12 @@ sum_three_numbers(3, 3, 3) should return 27
 
 
 def sum_three_numbers(a, b, c):
-    # Your code here
-    pass
+    sum=a+b+c
+    if a==b==c:
+        return 3*sum
+    else:
+        return sum
+
 
 
 """
@@ -92,8 +112,13 @@ new_string_with_is("IsEmpty") should return "IsEmpty"
 
 
 def new_string_with_is(s):
-    # Your code here
-    pass
+    if "Is" not in s:
+        return f'Is{s}'
+    else:
+        return s
+
+
+
 
 
 """
@@ -107,8 +132,8 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 
 
 def repeat_string(s, n):
-    # Your code here
-    pass
+    return s*n
+
 
 
 """
@@ -123,8 +148,12 @@ even_or_odd(3) should return "3 is odd"
 
 
 def even_or_odd(number):
-    # Your code here
-    pass
+    if number%2==0:
+        return f'{number} is even'
+    else:
+        return f"{number} is odd"
+
+
 
 
 """
@@ -137,8 +166,11 @@ count_fours([1, 4, 6, 4, 7, 4]) should return 3
 
 
 def count_fours(lst):
-    # Your code here
-    pass
+    count=lst.count(4)
+    return count
+
+
+
 
 
 """
@@ -153,8 +185,10 @@ repeat_first_two_chars("a", 3) should return "aaa"
 
 
 def repeat_first_two_chars(s, n):
-    # Your code here
-    pass
+    result=n*s[0:2]
+    return result
+
+
 
 
 """
@@ -168,5 +202,12 @@ is_vowel("b") should return False
 
 
 def is_vowel(char):
-    # Your code here
-    pass
+    if char in "aeiou":
+        return True
+    else:
+        return False
+
+
+
+
+
