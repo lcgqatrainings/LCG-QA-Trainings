@@ -87,9 +87,8 @@ convert_pressure(100) should return (14.5038, 750.062, 0.986923)
 
 
 def convert_pressure(kpa):
-    # Your code here
-    pass
-
+    pressure=((0.145038*kpa),(7.50062*kpa),(0.00986923*kpa))
+    return pressure
 
 """
 Problem 68:
@@ -101,5 +100,10 @@ sum_of_digits(1234) should return 10
 
 
 def sum_of_digits(number):
-    # Your code here
-    pass
+    sum = 0
+    while number != 0:
+        digit = number % 10
+        sum = sum + digit
+        number = number // 10
+    print(sum)
+sum_of_digits(1234)
