@@ -139,9 +139,9 @@ even_or_odd(3) should return "3 is odd"
 def even_or_odd(number):
     # Your code here
     if number%2==0:
-        print(f"{number} is even")
+        return f"{number} is even"
     else:
-        print(f"{number} is odd")
+        return f"{number} is odd"
     pass
 
 
