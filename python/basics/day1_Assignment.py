@@ -78,8 +78,7 @@ sum_three_numbers(3, 3, 3) should return 27
 
 def sum_three_numbers(a, b, c):
     # Your code here
-    sum = a + b + c
-    return sum
+    return a+b+c
 
 
 """
