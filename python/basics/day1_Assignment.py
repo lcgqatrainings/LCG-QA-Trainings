@@ -160,7 +160,11 @@ def repeat_first_two_chars(s, n):
             n=n-1
         return temp
     else:
-        return s**n
+        while (n != 0):
+            temp = temp + s
+            n = n - 1
+        return temp
+
 
 """
 Problem 11:
