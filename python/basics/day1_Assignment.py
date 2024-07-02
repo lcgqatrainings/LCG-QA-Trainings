@@ -93,8 +93,11 @@ new_string_with_is("IsEmpty") should return "IsEmpty"
 
 
 def new_string_with_is(s):
-    # Your code here
-    pass
+    if "Is" in s[0:2].title():
+        return s
+    else:
+        s = 'Is'+s
+        return s
 
 
 """
@@ -160,8 +163,10 @@ repeat_first_two_chars("a", 3) should return "aaa"
 
 
 def repeat_first_two_chars(s, n):
-    # Your code here
-    pass
+    if len(s) >= 2:
+        return s[0:2]*n
+    else:
+        return s*n
 
 
 """
