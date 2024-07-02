@@ -156,12 +156,11 @@ def repeat_first_two_chars(s, n):
     temp=""
     if len(s)>1:
         while(n!=0):
-            temp=temp+s
+            temp=temp+s[0]+s[1]
             n=n-1
         return temp
     else:
         return s**n
-
 
 """
 Problem 11:
