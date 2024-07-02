@@ -25,6 +25,7 @@ get_sphere_volume(6) should return 904.7786842338603
 
 def get_sphere_volume(radius):
     # Your code here
+    return 4/3 * math.pi * radius**3
     pass
 
 
@@ -41,6 +42,12 @@ difference_from_17(14) should return 3
 
 def difference_from_17(number):
     # Your code here
+    if number>17:
+        a=number-17
+        return(a*2)
+    else:
+        a=17-number
+        return(a)
     pass
 
 
@@ -73,6 +80,10 @@ sum_three_numbers(3, 3, 3) should return 27
 
 def sum_three_numbers(a, b, c):
     # Your code here
+    if a==b==c:
+        return (3*(a+b+c))
+    else:
+        return (a+b+c)
     pass
 
 
@@ -89,7 +100,11 @@ new_string_with_is("IsEmpty") should return "IsEmpty"
 
 def new_string_with_is(s):
     # Your code here
-    pass
+    if s.startswith("Is"):
+        return s
+    else:
+        return "Is"+s
+
 
 
 """
@@ -120,8 +135,10 @@ even_or_odd(3) should return "3 is odd"
 
 def even_or_odd(number):
     # Your code here
-    pass
-
+    if number % 2 == 0:
+        return f'{number} is even'
+    else:
+        return f'{number} is odd'
 
 """
 Problem 9:
@@ -134,7 +151,13 @@ count_fours([1, 4, 6, 4, 7, 4]) should return 3
 
 def count_fours(lst):
     # Your code here
-    pass
+    count=0
+    for num in lst:
+        if num == 4:
+            count +=1
+    return count
+
+
 
 
 """
@@ -165,4 +188,8 @@ is_vowel("b") should return False
 
 def is_vowel(char):
     # Your code here
+    vowel = "aeiouAEIOU"
+    a=char in vowel
+    return (a)
+
     pass
