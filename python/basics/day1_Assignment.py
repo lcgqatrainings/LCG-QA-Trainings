@@ -6,12 +6,8 @@ Example:
 calculate_area_of_circle(1.1) should return 3.8013271108436504
 """
 import math
-
-
 def calculate_area_of_circle(radius):
-    # Your code here
-    pass
-
+    return math.pi*radius**2
 
 """
 Problem 2:
@@ -23,8 +19,7 @@ get_sphere_volume(6) should return 904.7786842338603
 
 
 def get_sphere_volume(radius):
-    # Your code here
-    pass
+    return (4/3)*math.pi*radius**3
 
 
 """
@@ -39,8 +34,11 @@ difference_from_17(14) should return 3
 
 
 def difference_from_17(number):
-    # Your code here
-    pass
+    if number > 17:
+        return (number-17)+(number-17)
+    else:
+        return 17-number
+
 
 
 """
@@ -53,11 +51,10 @@ within_100_of_1000_or_2000(1050) should return True
 within_100_of_1000_or_2000(100) should return False
 """
 
-
 def within_100_of_1000_or_2000(number):
-    # Your code here
-    pass
-
+    if (number>900 and number<1100) or (number>1900 and number<2100):
+        return True
+    else: return False
 
 """
 Problem 5:
@@ -71,8 +68,9 @@ sum_three_numbers(3, 3, 3) should return 27
 
 
 def sum_three_numbers(a, b, c):
-    # Your code here
-    pass
+    if a!=b!=c:
+        return a+b+c
+    else: return (a+b+c)*3
 
 
 """
@@ -87,8 +85,11 @@ new_string_with_is("IsEmpty") should return "IsEmpty"
 
 
 def new_string_with_is(s):
-    # Your code here
-    pass
+    if s.startswith("is") or s.startswith("Is") or s.startswith("IS") or s.startswith("iS"):
+        return s
+    else:
+        str="Is"+s
+        return str
 
 
 """
@@ -102,8 +103,11 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 
 
 def repeat_string(s, n):
-    # Your code here
-    pass
+    temp = ""
+    while n!=0:
+        temp=temp+s
+        n=n-1
+    return temp
 
 
 """
@@ -118,8 +122,8 @@ even_or_odd(3) should return "3 is odd"
 
 
 def even_or_odd(number):
-    # Your code here
-    pass
+    if number%2==0: print(number," is even")
+    else: print(number," is odd")
 
 
 """
@@ -132,8 +136,7 @@ count_fours([1, 4, 6, 4, 7, 4]) should return 3
 
 
 def count_fours(lst):
-    # Your code here
-    pass
+    return lst.count(4)
 
 
 """
@@ -148,8 +151,14 @@ repeat_first_two_chars("a", 3) should return "aaa"
 
 
 def repeat_first_two_chars(s, n):
-    # Your code here
-    pass
+    temp=""
+    if len(s)>1:
+        while(n!=0):
+            temp=temp+s
+            n=n-1
+        return temp
+    else:
+        return s**3
 
 
 """
@@ -163,5 +172,6 @@ is_vowel("b") should return False
 
 
 def is_vowel(char):
-    # Your code here
-    pass
+    if char=='a' or char=='e' or char=='i' or char=='o' or char=='u' or char=='A' or char=='E' or char=='I' or char=='O' or char=='U':
+        return True
+    else: return False
