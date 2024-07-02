@@ -10,6 +10,7 @@ import math
 def calculate_area_of_circle(radius):
     print(f'radius of circle is' {radius})
 calculate_area_of_circle()
+    a=10
 
     pass
 
