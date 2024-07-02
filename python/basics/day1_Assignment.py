@@ -78,7 +78,8 @@ sum_three_numbers(3, 3, 3) should return 27
 
 def sum_three_numbers(a, b, c):
     # Your code here
-    return a + b + c
+    sum = a + b + c
+    return sum
 
 
 """
@@ -127,9 +128,11 @@ def even_or_odd(number):
     # Your code here
     number = int(input('Enter any number:'))
     if number % 2 == 0:
-        return f'Given Number {number} is even'
+        result = f'Given Number {number} is even'
+        return result
     else:
-        return f'Given Number {number} is Odd'
+        result = f'Given Number {number} is Odd'
+        return result
 
 
 """
