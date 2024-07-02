@@ -10,7 +10,10 @@ import math
 
 def calculate_area_of_circle(radius):
     # Your code here
-    pass
+    area = 3.14*radius**2
+    return area
+vishnu = calculate_area_of_circle(1.1)
+print(vishnu)
 
 
 """
