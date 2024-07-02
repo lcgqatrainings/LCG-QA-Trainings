@@ -25,7 +25,7 @@ get_sphere_volume(6) should return 904.7786842338603
 
 def get_sphere_volume(radius):
     # Your code here
-
+    return 4/3*math.pi * (radius*radius*radius)
     pass
 
 
@@ -62,6 +62,10 @@ within_100_of_1000_or_2000(100) should return False
 
 def within_100_of_1000_or_2000(number):
     # Your code here
+    if number>100 and number<2000:
+        return True
+    else:
+        return False
     pass
 
 
@@ -78,6 +82,10 @@ sum_three_numbers(3, 3, 3) should return 27
 
 def sum_three_numbers(a, b, c):
     # Your code here
+    if a==b and a==c:
+        return a*b*c
+    else:
+        return a+b+c
     pass
 
 
@@ -94,6 +102,10 @@ new_string_with_is("IsEmpty") should return "IsEmpty"
 
 def new_string_with_is(s):
     # Your code here
+    if "Is" in s:
+        return s
+    else:
+        return "Is"+s
     pass
 
 
@@ -109,6 +121,7 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 
 def repeat_string(s, n):
     # Your code here
+    return s*n
     pass
 
 
@@ -125,6 +138,10 @@ even_or_odd(3) should return "3 is odd"
 
 def even_or_odd(number):
     # Your code here
+    if number%2==0:
+        print(f"{number} is even")
+    else:
+        print(f"{number} is odd")
     pass
 
 
@@ -139,6 +156,7 @@ count_fours([1, 4, 6, 4, 7, 4]) should return 3
 
 def count_fours(lst):
     # Your code here
+    return lst.count(4)
     pass
 
 
@@ -155,6 +173,10 @@ repeat_first_two_chars("a", 3) should return "aaa"
 
 def repeat_first_two_chars(s, n):
     # Your code here
+    if len(s)<1:
+        return s*n
+    else:
+        return s[:2]*n
     pass
 
 
@@ -170,4 +192,9 @@ is_vowel("b") should return False
 
 def is_vowel(char):
     # Your code here
+    list=["a","e","i","o","u"]
+    if char in list:
+        return True
+    else:
+        return False
     pass
