@@ -24,8 +24,7 @@ get_sphere_volume(6) should return 904.7786842338603
 
 def get_sphere_volume(radius):
     # Your code here
-    p = round(22/7, 2)
-    volume = 4/3 * p * radius ** 3
+    volume = 4/3 * math.pi * radius ** 3
     return volume
 
 
@@ -78,7 +77,10 @@ sum_three_numbers(3, 3, 3) should return 27
 
 def sum_three_numbers(a, b, c):
     # Your code here
-    return a+b+c
+    if a == b == c:
+        return (a+b+c)*3
+    else:
+        return a+b+c
 
 
 """
@@ -141,7 +143,11 @@ count_fours([1, 4, 6, 4, 7, 4]) should return 3
 
 def count_fours(lst):
     # Your code here
-    pass
+    count = 0
+    for i in range(0, len(lst)):
+        if lst[i] == 4:
+            count += 1
+    return count
 
 
 """
