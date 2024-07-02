@@ -35,11 +35,12 @@ difference_from_17(14) should return 3
 
 
 def difference_from_17(number):
-    result=number-17
-    return result
-    if result
-    pass
-
+    difference=abs(number-17)
+    if number>17:
+        return 2*difference
+    else:
+        return difference
+pass
 """
 Problem 4:
 Write a Python program to test whether a number is within 100 of 1000 or 2000.
@@ -52,10 +53,12 @@ within_100_of_1000_or_2000(100) should return False
 
 
 def within_100_of_1000_or_2000(number):
-    # Your code here
+    if abs(number-1000)<100 or abs(number-2000)<100:
+        return True
+    else:
+        return False
+
     pass
-
-
 """
 Problem 5:
 Write a Python program to calculate the sum of three given numbers. 
@@ -69,7 +72,10 @@ sum_three_numbers(3, 3, 3) should return 27
 
 def sum_three_numbers(a, b, c):
     sum = a + b + c
-    return sum
+    if (a == b) and (b == c):
+        return 3 * sum
+    else:
+        return sum
 
 """
 Problem 6:
@@ -83,14 +89,11 @@ new_string_with_is("IsEmpty") should return "IsEmpty"
 
 
 def new_string_with_is(s):
-    # string = input("enter the string: ")
-    # if string.startswith("is"):
-    #     print(string)
-    # else:
-    #     print("is" + string)
+    if s.startswith("is"):
+        return s
+    else:
+        return "is" + s
     pass
-
-
 
 """
 Problem 7:
@@ -106,8 +109,6 @@ def repeat_string(s, n):
     r_string = (s) * n
     return r_string
 
-
-
 """
 Problem 8:
 Write a Python program that determines whether a given number (accepted from the user) is even or odd, 
@@ -120,14 +121,10 @@ even_or_odd(3) should return "3 is odd"
 
 
 def even_or_odd(number):
-    # number = int(input("enter number:"))
     if number % 2 == 0:
-        print(f"{number} is even")
+        return f"{number} is even"
     else:
-        print(f"{number} is odd")
-
-
-
+        return f"{number} is odd"
 
 """
 Problem 9:
@@ -139,10 +136,8 @@ count_fours(=[1, 4, 6, 4, 7, 4]) should return 3
 
 
 def count_fours(lst):
-    x = lst.count(1)
-    return x
-
-
+    result = lst.count(1)
+    return result
 """
 Problem 10:
 Write a Python program to get n (non-negative integer) copies of the first 2 characters of a given string. 
@@ -155,7 +150,9 @@ repeat_first_two_chars("a", 3) should return "aaa"
 
 
 def repeat_first_two_chars(s, n):
-    # Your code here
+    repeat_s=s[:2]*n
+    return repeat_s
+
     pass
 
 
@@ -170,10 +167,9 @@ is_vowel("b") should return False
 
 
 def is_vowel(Char):
-    # vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
-    # Char = input("enter char")
-    # if Char in vowels:
-    #     print('True')
-    # else:
-    #     print('False')
+    vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    if Char in vowels:
+        return True
+    else:
+        return False
     pass
