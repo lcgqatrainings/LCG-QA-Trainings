@@ -6,16 +6,10 @@ Example:
 calculate_area_of_circle(1.1) should return 3.8013271108436504
 """
 import math
-
-
 def calculate_area_of_circle(radius):
-    # radius = int(input("enter"))
-    # v = math.pi * radius ** 2
-    # print(v)
-    pass
-
-
-
+     result = math.pi*radius**2
+     return result
+     pass
 
 """
 Problem 2:
@@ -24,20 +18,11 @@ Write a Python program to get the volume of a sphere with radius six.
 Example:
 get_sphere_volume(6) should return 904.7786842338603
 """
-
 import math
-
-
 def get_sphere_volume(volume):
-    # from math import pi
-    # radius = int(input("enter"))
-    # v = (4 / 3) * pi * radius ** 3
-    # print(v)
+    result=4/3*math.pi*volume**3
+    return result
     pass
-
-
-
-
 """
 Problem 3:
 Write a Python program to calculate the difference between a given number and 17. 
@@ -50,11 +35,9 @@ difference_from_17(14) should return 3
 
 
 def difference_from_17(number):
-    # number = int(input("enter: "))
-    # if number > 17:
-    #     print(2 * (number - 17))
-    # else:
-    #     print(17 - number)
+    result=number-17
+    return result
+    if result
     pass
 
 """
@@ -122,6 +105,7 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 def repeat_string(s, n):
     r_string = (s) * n
     return r_string
+
 
 
 """
