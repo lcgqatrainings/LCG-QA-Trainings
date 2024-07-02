@@ -38,8 +38,11 @@ difference_from_17(14) should return 3
 
 
 def difference_from_17(number):
-    print(17-number) if number<=17 else print(number*2)
-difference_from_17(20)
+    if number<=17:
+        return (17-number)
+    else:
+        return (number*2)
+
 
 """
 Problem 4:
@@ -53,9 +56,10 @@ within_100_of_1000_or_2000(100) should return False
 
 
 def within_100_of_1000_or_2000(number):
-    # Your code here
-    pass
-
+    if 900<number<1000 or 1900<number<2100:
+       return True
+    else:
+        return False
 
 """
 Problem 5:
@@ -70,10 +74,9 @@ sum_three_numbers(3, 3, 3) should return 27
 
 def sum_three_numbers(a, b, c):
    if a!=b!=c:
-       print(a+b+c)
+       return (a+b+c)
    else:
-       print(a**3)
-sum_three_numbers(3,4,5)
+       return (a**3)
 
 
 """
@@ -89,10 +92,10 @@ new_string_with_is("IsEmpty") should return "IsEmpty"
 
 def new_string_with_is(s):
     if s.startswith("Is"):
-    # if s[0:2]==Is:
-        print(s)
+        return (s)
     else:
-        print("Is"+s)
+        return ("Is"+s)
+
 
 
 """
@@ -106,12 +109,11 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 
 
 def repeat_string(s, n):
-    str1=(s*2)
-    return str1
-    str2=(n*3)
-    return str2
-repeat_string("abc","xyz")
-
+    # str1=(s*2)
+    # return str1
+    # str2=(n*3)
+    # return str2
+    pass
 
 """
 Problem 8:
@@ -127,11 +129,10 @@ even_or_odd(3) should return "3 is odd"
 def even_or_odd(number):
 
     if number % 2 == 0:
-        print("given number is Even")
+        return ("given number is Even")
     else:
-        print("given number is odd")
+        return ("given number is odd")
 
-even_or_odd(16)
 
 
 """
@@ -145,7 +146,7 @@ count_fours([1, 4, 6, 4, 7, 4]) should return 3
 
 def count_fours(lst):
     count = 0
-    for i in x:
+    for i in lst:
         if i == 4:
             count = count + 1
     return count
@@ -166,11 +167,9 @@ repeat_first_two_chars("a", 3) should return "aaa"
 def repeat_first_two_chars(s, n):
     if len(s)>2:
         z=s[:2]
-        print(z*n)
+        return (z*n)
     else:
-        print(s*n)
-repeat_first_two_chars("abcdef", 3)
-repeat_first_two_chars("a", 3)
+        return (s*n)
 
 """
 Problem 11:
@@ -188,6 +187,3 @@ def is_vowel(char):
         return True
     else:
         return False
-
-
-print(is_vowel("s"))
