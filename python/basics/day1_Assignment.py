@@ -44,7 +44,7 @@ def difference_from_17(number):
     # Your code here
     if number >17:
         diff = 17-number
-        return diff*2
+        return abs(diff*2)
     else:
         return 17-number
     pass
