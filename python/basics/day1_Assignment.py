@@ -8,9 +8,11 @@ calculate_area_of_circle(1.1) should return 3.8013271108436504
 import math
 
 
-def calculate_area_of_circle(radius):
+
+def calculate_area_of_circle(radius=2):
     # Your code here
     area = math.pi*radius**2
+    print("radius:", radius)
     print("area of circle =",area)
     return area
 calculate_area_of_circle(radius=1.1)
@@ -45,13 +47,14 @@ difference_from_17(14) should return 3
 
 
 def difference_from_17(number):
-    if number>17:
+    v = None
+    if number>=17:
         value=number-17
-        print(value+value)
-    if number<17:
-        value=17-number
-        print(value)
-    return value
+        v = value+value
+    if number<=17:
+        v=17-number
+        print(v)
+    return v
 
 difference_from_17(number=22)
 difference_from_17(number=14)
@@ -70,9 +73,9 @@ within_100_of_1000_or_2000(100) should return False
 
 def within_100_of_1000_or_2000(number):
     if number>2000 or number>1000 or number>100:
-        print("True")
+        return True
     else:
-        print("False")
+        return False
 
 within_100_of_1000_or_2000(number=950)
 within_100_of_1000_or_2000(number=1050)
@@ -116,10 +119,14 @@ new_string_with_is("IsEmpty") should return "IsEmpty"
 
 
 def new_string_with_is(s):
+    string=None
     if s.startswith("Is"):
-        print(s)
+        string=s
+        print(string)
     else:
-        print("is"+s)
+        string = "Is"+s
+        print("Is"+s)
+    return string
 new_string_with_is(s="Array")
 new_string_with_is(s="IsEmpty")
 
@@ -135,8 +142,8 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 
 
 def repeat_string(s, n):
-    # Your code here
-    pass
+    return s*n
+
 
 
 """
@@ -152,9 +159,9 @@ even_or_odd(3) should return "3 is odd"
 
 def even_or_odd(number):
     if number % 2 == 0:
-        print("is even")
+        return f"{number} is even"
     else:
-        print("is odd")
+        return "{} is odd".format(number)
 
 even_or_odd(number=10)
 even_or_odd(number=3)
@@ -169,8 +176,7 @@ count_fours([1, 4, 6, 4, 7, 4]) should return 3
 
 
 def count_fours(lst):
-    pass
-
+    return lst.count(4)
 
 """
 Problem 10:
@@ -184,8 +190,10 @@ repeat_first_two_chars("a", 3) should return "aaa"
 
 
 def repeat_first_two_chars(s, n):
-    # Your code here
-    pass
+    if len(s)>2:
+        return s[:2]*n
+    else:
+        return s*n
 
 
 """
@@ -202,9 +210,9 @@ def is_vowel(char):
     # Your code here
     a = ["a","e","i","o","u","A","E","I","O","U"]
     if char in a:
-        print("True")
+        return True
     else:
-        print("False")
+        return False
 is_vowel(char= "b")
 
 
