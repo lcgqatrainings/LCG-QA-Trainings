@@ -9,8 +9,7 @@ import math
 
 
 def calculate_area_of_circle(radius):
-    # Your code here
-    pass
+    return math.pi * radius ** 2
 
 
 """
@@ -23,8 +22,7 @@ get_sphere_volume(6) should return 904.7786842338603
 
 
 def get_sphere_volume(radius):
-    # Your code here
-    pass
+    return 4/3 * math.pi * radius * 3
 
 
 """
@@ -39,9 +37,7 @@ difference_from_17(14) should return 3
 
 
 def difference_from_17(number):
-    # Your code here
     pass
-
 
 """
 Problem 4:
