@@ -125,14 +125,10 @@ even_or_odd(3) should return "3 is odd"
 
 
 def even_or_odd(number):
-    # Your code here
-    number = int(input('Enter any number:'))
     if number % 2 == 0:
-        result = f'Given Number {number} is even'
-        return result
+        return f'{number} is even'
     else:
-        result = f'Given Number {number} is Odd'
-        return result
+        return f'{number} is Odd'
 
 
 """
@@ -180,7 +176,7 @@ def is_vowel(char):
     char = char.lower()
     vowels = ['a', 'e', 'i', 'o', 'u']
     if char in vowels:
-        return f'Given Char {char} is vowel'
+        return True
     else:
-        return f'Given Char {char} is Consonant'
+        return False
 
