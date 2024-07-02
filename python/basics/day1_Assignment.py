@@ -8,11 +8,10 @@ calculate_area_of_circle(1.1) should return 3.8013271108436504
 # import math
 
 
-# def calculate_area_of_circle(radius):
-#       area = math.pi * pow(radius,2)
-#       print("the area of circle",area)
-#       return area
-# calculate_area_of_circle(radius=1.1)
+def calculate_area_of_circle(radius):
+      area = math.pi * pow(radius,2)
+      return area
+calculate_area_of_circle(radius=1.1)
 
 
 """
@@ -24,12 +23,11 @@ get_sphere_volume(6) should return 904.7786842338603
 """
 
 
-# def get_sphere_volume(radius):
-#     # Your code here
-#     volume = 4 / 3 * math.pi * pow(radius, 3)
-#     print("volume of sphere",volume)
-#     return volume
-# get_sphere_volume(radius=6)
+def get_sphere_volume(radius):
+    # Your code here
+    volume = 4 / 3 * math.pi * pow(radius, 3)
+    return volume
+get_sphere_volume(radius=6)
 
 
 
@@ -46,6 +44,10 @@ difference_from_17(14) should return 3
 
 def difference_from_17(number):
     # Your code here
+    if number=number-17:
+        return number*2
+
+        return
     pass
 
 
