@@ -10,7 +10,12 @@ import math
 
 def calculate_area_of_circle(radius):
     # Your ccode her
-    pass
+    radius=input("Enter the radius")
+    print("Hello")
+    sqr=radius**2
+    return sqr
+    print("Area of circle is: "+math.pi*sqr)
+
 
 
 """
