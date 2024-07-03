@@ -9,8 +9,14 @@ calculate_triangle_area(10, 5) should return 25.0
 
 
 def calculate_triangle_area(base, height):
-    # Your code here
-    pass
+    # Your code here is
+    area=1/2*base*height
+    return area
+
+
+
+
+
 
 
 """
@@ -23,7 +29,7 @@ compute_gcd(48, 64) should return 16
 
 
 def compute_gcd(x, y):
-    # Your code here
+
     pass
 
 
@@ -38,11 +44,10 @@ compute_lcm(12, 15) should return 60
 
 
 def compute_lcm(x, y):
-    # Your code here
-    pass
 
 
-"""
+
+ """
 Problem 33:
 Write a Python program to sum three given integers. However, if two values are equal, the sum will be zero.
 
@@ -52,9 +57,17 @@ sum_three_numbers(2, 2, 3) should return 0
 """
 
 
+
 def sum_three_numbers(a, b, c):
-    # Your code here
-    pass
+    sum=a+b+c
+    if a==b or b==c or c==a:
+        return 0
+    else:
+        return sum
+
+
+
+
 
 
 """
@@ -68,8 +81,12 @@ sum_two_integers(10, 2) should return 12
 
 
 def sum_two_integers(a, b):
-    # Your code here
-    pass
+    sum=a+b
+    if sum>=15 and sum<=20:
+        return 20
+    else:
+        return sum
+
 
 
 """
@@ -84,8 +101,11 @@ check_values(3, 8) should return False
 
 
 def check_values(a, b):
-    # Your code here
-    pass
+    if a==b or a+b==5 or a-b==5:
+        return True
+    else:
+        return False
+
 
 
 """
@@ -99,8 +119,9 @@ add_objects(10, "20") should return None
 
 
 def add_objects(a, b):
-    # Your code here
-    pass
+    if type(a)==int and type(b)==int:
+        return a+b
+
 
 
 """
@@ -117,8 +138,8 @@ Address: 123 Main St
 
 
 def display_personal_info(name, age, address):
-    # Your code here
-    pass
+    return f'Name: {name}\nAge: {age}\nAddress: {address}'
+
 
 
 """

@@ -9,9 +9,8 @@ import math
 
 
 def calculate_area_of_circle(radius):
-    area = math.pi*radius**2
+    area = math.pi * radius ** 2
     return area
-#
 
 
 
@@ -26,7 +25,6 @@ get_sphere_volume(6) should return 904.7786842338603
 """
 
 
-import math
 def get_sphere_volume(radius):
     volume=4/3*math.pi*radius**3
     return volume

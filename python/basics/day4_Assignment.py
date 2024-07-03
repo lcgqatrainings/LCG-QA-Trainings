@@ -8,7 +8,7 @@ replicate_string("Hello", 3) should return "HelloHelloHello"
 
 
 def replicate_string(s, n):
-    # Your code here
+    # Your code here is
     pass
 
 
