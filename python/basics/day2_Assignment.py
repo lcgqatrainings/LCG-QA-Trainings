@@ -9,12 +9,10 @@ calculate_triangle_area(10, 5) should return 25.0
 
 
 # area of a rectangle_triangle
-def calculate_rect_triangle_area(base, height):
+def calculate_triangle_area(base, height):
     Area=base*height*0.5
     return Area
-
-
-
+    pass
 """
 Problem 31:
 Write a Python program that computes the greatest common divisor (GCD) of two positive integers.
@@ -29,13 +27,10 @@ that can perfectly divide the two numbers. A GCD is also known as the Highest Co
 import math
 def compute_gcd(x, y):
     # Your code here
-    gcd=int(math.gcd(x, y))
-    return gcd
+    GCD=math.gcd(x,y)
+    return GCD
 
     pass
-
-
-
 """
 Problem 32:
 Write a Python program to find the least common multiple (LCM) of two positive integers.
@@ -47,13 +42,19 @@ compute_lcm(12, 15) should return 60
 
 import math
 def compute_lcm(x, y):
-    # Your code here
-    lcm=math.lcm(x,y)
-    return lcm
-    pass
+    for i in range(2,min(x,y)-1):
+        if x%i==0 and y%i==0:
 
 
-
+                for j in range(2,min(x,y)-1):
+                    if i*j==x:
+                       for k in range(2, min(x, y) - 1):
+                           if i*k==y:
+                             L=i*j*k
+                             return L
+    else:
+        return x*y
+pass
 """
 Problem 33:
 Write a Python program to sum three given integers. However, if two values are equal, the sum will be zero.
@@ -89,7 +90,7 @@ sum_two_integers(10, 2) should return 12
 def sum_two_integers(a, b):
     # Your code here
 
-    if a>=15 and b<=20:
+    if a+b in range(15,21):
 
         return 20
     else:
@@ -150,11 +151,9 @@ Address: 123 Main St
 
 def display_personal_info(name, age, address):
     # Your code here
-    return name,age,address
+    test=f"Name: {name}\nAge: {age}\nAddress: {address}"
+    return test
     pass
-
-
-
 """
 Problem 38:
 Write a Python program to solve (x + y) * (x + y).
@@ -186,14 +185,10 @@ compute_future_value(10000, 3.5, 7) should return 12722.79
 
 def compute_future_value(principal, rate, years):
     # Your code here
-    Future_value=principal*(1+rate/100)**years
-    return '%.2f'%Future_value
+    future_value=principal*(1+rate/100)**years
+
+    return future_value
     pass
-
-
-
-
-
 """
 Problem 40:
 Write a Python program to calculate the distance between the points (x1, y1) and (x2, y2).
