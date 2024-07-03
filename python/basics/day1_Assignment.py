@@ -7,17 +7,11 @@ calculate_area_of_circle(1.1) should return 3.8013271108436504
 """
 import math
 
-def calculate_area_of_circle(radius=4):
+def calculate_area_of_circle(radius):
     # Your code here
 
     return math.pi * radius ** 2
     pass
-
-
-#Method 2:
-def calculate_area_of_circle(radius):
-   area = 3.14 * radius ** 2
-   return area
 
 
 """
@@ -31,17 +25,11 @@ get_sphere_volume(6) should return 904.7786842338603
 
 def get_sphere_volume(radius):
     # Your code here
-    radius=6
+
     sphere_volume = 4 / 3 * math.pi * radius ** 3
     return sphere_volume
     pass
 
-#Method 2:
-def get_sphere_volume(radius):
-    radius=6
-    volume=4/3*3.14159265359*radius**3
-    return volume
-    pass
 
 
 """
@@ -118,10 +106,10 @@ new_string_with_is("IsEmpty") should return "IsEmpty"
 
 def new_string_with_is(s="Array"):
     # Your code here
-    if s[0:2]=="is":
+    if s[0:2]=="Is":
         return s
     else:
-        return "is"+s
+        return "Is"+s
 
 
 
@@ -161,9 +149,9 @@ def even_or_odd(number=10):
     # Your code here
 
     if number%2==0:
-        return number
+        return f"{number} is even"
     else:
-        return number
+        return "{} is odd".format(number)
     pass
 
 
@@ -215,7 +203,8 @@ is_vowel("b") should return False
 
 def is_vowel(char):
     # Your code here
-   if char=="a":
+   if char=="a" or char=="e" or char=="o" or char=="i" or char=="u":
+
        return True
    else:
         return False
