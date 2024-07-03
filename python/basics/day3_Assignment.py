@@ -9,8 +9,11 @@ sum_first_n_integers(5) should return 15
 
 
 def sum_first_n_integers(n):
-    # Your code here
-    pass
+    result = 0
+    for i in range(n+1):
+        result += i
+    return result
+    # return n * (n+1)/2
 
 
 """
@@ -24,8 +27,7 @@ convert_height_to_cm(5, 7) should return 170.18
 
 
 def convert_height_to_cm(feet, inches):
-    # Your code here
-    pass
+    return feet * 30.48 + inches * 2.54
 
 
 """
@@ -39,8 +41,7 @@ calculate_hypotenuse(3, 4) should return 5.0
 
 
 def calculate_hypotenuse(base, height):
-    # Your code here
-    pass
+    return (base**2 + height ** 2) ** 0.5
 
 
 """
@@ -69,8 +70,7 @@ calculate_bmi(70, 1.75) should return 22.86
 
 
 def calculate_bmi(weight, height):
-    # Your code here
-    pass
+    return round((weight/(height ** 2)), 2)
 
 
 """
@@ -87,8 +87,7 @@ convert_pressure(100) should return (14.5038, 750.062, 0.986923)
 
 
 def convert_pressure(kpa):
-    # Your code here
-    pass
+    return 0.145038 * kpa, 7.50062 * kpa, 0.00986923 * kpa
 
 
 """
@@ -101,5 +100,9 @@ sum_of_digits(1234) should return 10
 
 
 def sum_of_digits(number):
-    # Your code here
-    pass
+    number = str(number)
+    result = 0
+    for i in range(len(number)):
+        result += int(number[i])
+    return result
+

@@ -35,8 +35,6 @@ def compute_gcd(x, y):
     return gcd
 
 
-print(compute_gcd(12, 15))
-
 """
 Problem 32:
 Write a Python program to find the least common multiple (LCM) of two positive integers.
@@ -48,7 +46,6 @@ compute_lcm(12, 15) should return 60
 
 
 def compute_lcm(x, y):
-
     pass
 
 
@@ -80,7 +77,7 @@ sum_two_integers(10, 2) should return 12
 
 
 def sum_two_integers(a, b):
-    if a + b in range(15,21):
+    if a + b in range(15, 21):
         return 20
     else:
         return a + b
@@ -115,14 +112,13 @@ add_objects(10, "20") should return None
 
 
 def add_objects(a, b):
-    # if a is int and b is int:
-    #     return a + b
-    if type(a) == int and type(b) == int:
+    if isinstance(a, int) and isinstance(b, int):
         return a + b
     else:
         return None
 
-print(add_objects(6,9))
+
+print(add_objects(7, 9))
 
 """
 Problem 37:
@@ -168,7 +164,7 @@ compute_future_value(10000, 3.5, 7) should return 12722.79
 
 
 def compute_future_value(principal, rate, years):
-    return round((principal * (1 + rate/100) ** years), 2)
+    return round((principal * (1 + rate / 100) ** years), 2)
 
 
 """
@@ -182,7 +178,4 @@ calculate_distance(1, 2, 4, 6) should return 5.0
 
 
 def calculate_distance(x1, y1, x2, y2):
-    return (x2 - x1) + (y2 - y1)
-
-
-print(calculate_distance(1,2,4,6))
+    return ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5

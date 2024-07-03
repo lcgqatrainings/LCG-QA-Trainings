@@ -130,7 +130,7 @@ def even_or_odd(number):
     if number % 2 == 0:
         return f'{number} is even'
     else:
-        return f'{number} is Odd'
+        return f'{number} is odd'
 
 
 """
