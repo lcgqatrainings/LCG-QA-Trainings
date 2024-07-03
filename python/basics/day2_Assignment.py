@@ -29,7 +29,6 @@ compute_gcd(48, 64) should return 16
 
 
 def compute_gcd(x, y):
-
     pass
 
 
