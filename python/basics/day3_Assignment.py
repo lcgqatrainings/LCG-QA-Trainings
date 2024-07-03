@@ -9,8 +9,10 @@ sum_first_n_integers(5) should return 15
 
 
 def sum_first_n_integers(n):
-    # Your code her
-    pass
+   sum=n*(n+1)//2
+   return sum
+#print(sum_first_n_integers(5))
+
 
 
 """
@@ -24,8 +26,12 @@ convert_height_to_cm(5, 7) should return 170.18
 
 
 def convert_height_to_cm(feet, inches):
-    # Your code here
-    pass
+    feet_in_cm=feet*30.48
+    inch_in_cm=inches*2.54
+    height=feet_in_cm+inch_in_cm
+    return height
+#print(convert_height_to_cm(5,7))
+
 
 
 """
@@ -37,10 +43,11 @@ Example:
 calculate_hypotenuse(3, 4) should return 5.0
 """
 
-
+import math
 def calculate_hypotenuse(base, height):
-    # Your code here
-    pass
+    Hypotenuse=math.sqrt(base**2+height**2)
+    return Hypotenuse
+#print(calculate_hypotenuse(3,4))
 
 
 """
@@ -54,8 +61,12 @@ convert_distance(5280) should return (63360, 1760, 1.0)
 
 
 def convert_distance(feet):
-    # Your code here
-    pass
+    distance_in_inches=round(feet*12)
+    distance_in_yards=round(feet*0.333333)
+    distance_in_miles=round(feet*0.000189394,1)
+    return distance_in_inches,distance_in_yards,distance_in_miles
+#print(convert_distance(5280))
+
 
 
 """
@@ -69,8 +80,10 @@ calculate_bmi(70, 1.75) should return 22.86
 
 
 def calculate_bmi(weight, height):
-    # Your code here
-    pass
+    BMI=round(weight/height**2,2)
+    return BMI
+#print(calculate_bmi(70,1.75))
+
 
 
 """
@@ -87,8 +100,11 @@ convert_pressure(100) should return (14.5038, 750.062, 0.986923)
 
 
 def convert_pressure(kpa):
-    # Your code here
-    pass
+    psi=kpa*0.145038
+    mmHg=kpa*7.50062
+    atm=kpa*0.00986923
+    return psi,mmHg,atm
+#print(convert_pressure(100))
 
 
 """
@@ -101,5 +117,14 @@ sum_of_digits(1234) should return 10
 
 
 def sum_of_digits(number):
-    # Your code here
-    pass
+    sum=0
+    for digit in str(number):
+        sum += int(digit)
+    return sum
+
+#print(sum_of_digits(1234))
+
+
+
+
+
