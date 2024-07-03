@@ -8,8 +8,7 @@ replicate_string("Hello", 3) should return "HelloHelloHello"
 
 
 def replicate_string(s, n):
-    # Your code here
-    pass
+    return s * n
 
 
 """
@@ -22,8 +21,7 @@ concatenate_strings("Alice", "Bob") should return "AliceBob"
 
 
 def concatenate_strings(s1, s2):
-    # Your code here
-    pass
+    return s1 + s2
 
 
 """
@@ -37,8 +35,10 @@ contains_substring("Hello, world!", "Python") should return False
 
 
 def contains_substring(s, sub):
-    # Your code here
-    pass
+    if sub in s:
+        return True
+    else:
+        return False
 
 
 """
@@ -51,8 +51,7 @@ string_to_int("123") should return 123
 
 
 def string_to_int(s):
-    # Your code here
-    pass
+    return int(s)
 
 
 """
@@ -65,8 +64,7 @@ list_length([1, 2, 3, 4, 5]) should return 5
 
 
 def list_length(lst):
-    # Your code here
-    pass
+    return len(lst)
 
 
 """
@@ -79,8 +77,9 @@ increment_list([1, 2, 3]) should return [2, 3, 4]
 
 
 def increment_list(lst):
-    # Your code here
-    pass
+    for i in range(len(lst)):
+        lst[i] = lst[i] + 1
+    return lst
 
 
 """
@@ -103,8 +102,10 @@ print_numbers_while() should print:
 
 
 def print_numbers_while():
-    # Your code here
-    pass
+    i = 1
+    while i <= 10:
+        print(i)
+        i += 1
 
 
 """
