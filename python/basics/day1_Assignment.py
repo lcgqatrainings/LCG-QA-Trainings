@@ -6,10 +6,12 @@ Example:
 calculate_area_of_circle(1.1) should return 3.8013271108436504
 """
 import math
+
+
 def calculate_area_of_circle(radius):
-     result = math.pi*radius**2
-     return result
-     pass
+    result = math.pi * radius ** 2
+    return result
+
 
 """
 Problem 2:
@@ -19,10 +21,12 @@ Example:
 get_sphere_volume(6) should return 904.7786842338603
 """
 import math
+
+
 def get_sphere_volume(volume):
-    result=4/3*math.pi*volume**3
-    return result
-    pass
+    return 4 / 3 * math.pi * volume ** 3
+
+
 """
 Problem 3:
 Write a Python program to calculate the difference between a given number and 17. 
@@ -35,12 +39,12 @@ difference_from_17(14) should return 3
 
 
 def difference_from_17(number):
-    difference=abs(number-17)
-    if number>17:
-        return 2*difference
+    difference = abs(number - 17)
+    if number > 17:
+        return 2 * difference
     else:
         return difference
-pass
+
 """
 Problem 4:
 Write a Python program to test whether a number is within 100 of 1000 or 2000.
@@ -53,12 +57,12 @@ within_100_of_1000_or_2000(100) should return False
 
 
 def within_100_of_1000_or_2000(number):
-    if abs(number-1000)<100 or abs(number-2000)<100:
+    if abs(number - 1000) < 100 or abs(number - 2000) < 100:
         return True
     else:
         return False
 
-    pass
+
 """
 Problem 5:
 Write a Python program to calculate the sum of three given numbers. 
@@ -77,6 +81,7 @@ def sum_three_numbers(a, b, c):
     else:
         return sum
 
+
 """
 Problem 6:
 Write a Python program to get a newly-generated string from a given string where "Is" has been added to the front. 
@@ -93,7 +98,7 @@ def new_string_with_is(s):
         return s
     else:
         return "is" + s
-    pass
+
 
 """
 Problem 7:
@@ -108,6 +113,7 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 def repeat_string(s, n):
     r_string = (s) * n
     return r_string
+
 
 """
 Problem 8:
@@ -126,6 +132,7 @@ def even_or_odd(number):
     else:
         return f"{number} is odd"
 
+
 """
 Problem 9:
 Write a Python program to count the number 4 in a given list.
@@ -138,6 +145,8 @@ count_fours(=[1, 4, 6, 4, 7, 4]) should return 3
 def count_fours(lst):
     result = lst.count(1)
     return result
+
+
 """
 Problem 10:
 Write a Python program to get n (non-negative integer) copies of the first 2 characters of a given string. 
@@ -150,10 +159,8 @@ repeat_first_two_chars("a", 3) should return "aaa"
 
 
 def repeat_first_two_chars(s, n):
-    repeat_s=s[:2]*n
+    repeat_s = s[:2] * n
     return repeat_s
-
-    pass
 
 
 """
@@ -172,4 +179,3 @@ def is_vowel(Char):
         return True
     else:
         return False
-    pass
