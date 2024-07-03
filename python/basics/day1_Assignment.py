@@ -43,10 +43,11 @@ difference_from_17(14) should return 3
 
 
 def difference_from_17(number):
-    if number > 17:
+    value = None
+    if number >= 17:
         value = number - 17
-        print(value + value)
-    if number < 17:
+        value=value + value
+    if number <= 17:
         value = 17 - number
         print(value)
     return value

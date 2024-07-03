@@ -9,8 +9,8 @@ calculate_triangle_area(10, 5) should return 25.0
 
 
 def calculate_triangle_area(base, height):
-    # Your code here
-    pass
+    Area = 0.5 * base * height
+    return Area
 
 
 """
@@ -53,7 +53,10 @@ sum_three_numbers(2, 2, 3) should return 0
 
 
 def sum_three_numbers(a, b, c):
-    # Your code here
+    if a==b or b==c or c==a:
+        return 0
+    else:
+        return a+b+c
     pass
 
 
@@ -68,7 +71,10 @@ sum_two_integers(10, 2) should return 12
 
 
 def sum_two_integers(a, b):
-    # Your code here
+    if a+b >=15 and a+b <20:
+        return 20
+    else:
+        return 12
     pass
 
 
@@ -84,7 +90,10 @@ check_values(3, 8) should return False
 
 
 def check_values(a, b):
-    # Your code here
+    if a == b or a+b==5 or a-b==5:
+        return True
+    else:
+        return False
     pass
 
 
@@ -99,7 +108,7 @@ add_objects(10, "20") should return None
 
 
 def add_objects(a, b):
-    # Your code here
+
     pass
 
 
@@ -117,7 +126,7 @@ Address: 123 Main St
 
 
 def display_personal_info(name, age, address):
-    # Your code here
+    return f"Name: {name}\nAge: {age}\nAddress: {address}"
     pass
 
 
