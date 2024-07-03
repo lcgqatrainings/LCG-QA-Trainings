@@ -28,8 +28,14 @@ compute_gcd(48, 64) should return 16
 """
 
 
+import math
 def compute_gcd(x, y):
-    pass
+    gcd=math.gcd(x,y)
+    return gcd
+
+
+
+
 
 
 """
@@ -42,11 +48,17 @@ compute_lcm(12, 15) should return 60
 """
 
 
+import math
 def compute_lcm(x, y):
+    lcm=abs(x*y)//math.gcd(x,y)
+    return lcm
+#print(compute_lcm(12,15))
 
 
 
- """
+
+
+"""
 Problem 33:
 Write a Python program to sum three given integers. However, if two values are equal, the sum will be zero.
 
@@ -153,8 +165,11 @@ compute_expression(4, 3) should return 49
 
 
 def compute_expression(x, y):
-    # Your code here
-    pass
+    c=(x+y)**2
+    return c
+#print(compute_expression(4,3))
+
+
 
 
 """
@@ -169,8 +184,11 @@ compute_future_value(10000, 3.5, 7) should return 12722.79
 
 
 def compute_future_value(principal, rate, years):
-    # Your code here
-    pass
+    future_value=principal *(1+rate/100)**years
+    return future_value
+#print(compute_future_value(10000,3.5,7))
+
+
 
 
 """
@@ -183,6 +201,12 @@ calculate_distance(1, 2, 4, 6) should return 5.0
 """
 
 
+import math
 def calculate_distance(x1, y1, x2, y2):
-    # Your code here
-    pass
+    Distance =math.sqrt((x2-x1)**2+(y2-y1)**2)
+    return Distance
+#print(calculate_distance(1,2,4,6))
+
+
+
+
