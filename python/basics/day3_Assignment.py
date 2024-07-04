@@ -56,7 +56,7 @@ convert_distance(5280) should return (63360, 1760, 1.0)
 
 def convert_distance(feet):
     # Your code here
-    return feet * 12, round(feet * 0.333333), round(feet * 0.000189394, 2)
+    return feet * 12, round(feet * 0.333333), round(feet * 0.000189394, 1)
 
 
 """

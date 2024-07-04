@@ -119,8 +119,10 @@ is_even_or_odd(7) should return "Odd"
 
 
 def is_even_or_odd(n):
-    # Your code here
-    pass
+    if n % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
 
 
 """
@@ -143,8 +145,9 @@ print_even_numbers() should print:
 
 
 def print_even_numbers():
-    # Your code here
-    pass
+    for i in range(1, 21):
+        if i % 2 == 0:
+            print(i)
 
 
 """
@@ -158,8 +161,7 @@ check_positive(10) should return "Positive"
 
 
 def check_positive(n):
-    # Your code here
-    pass
+    return 'Positive' if n > 0 else "Non-positive"
 
 
 """

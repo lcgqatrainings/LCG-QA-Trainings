@@ -22,15 +22,9 @@ compute_gcd(48, 64) should return 16
 
 
 def compute_gcd(x, y):
-    if x < y:
-        n = x
-        m = y
-    else:
-        n = y
-        m = x
     gcd = 1
-    for i in range(1, n):
-        if n % i == 0 and gcd <= i and m % i == 0:
+    for i in range(1, x+1 if x < y else y + 1):
+        if x % i == 0 and y % i == 0 and gcd <= i:
             gcd = i
     return gcd
 
