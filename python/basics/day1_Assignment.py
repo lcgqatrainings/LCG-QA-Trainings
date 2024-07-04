@@ -9,8 +9,7 @@ import math
 def calculate_area_of_circle(radius):
     # Your code here
     a = math.pi*radius**2
-    print(a)
-calculate_area_of_circle(5)
+    return a
 
 """
 Problem 2:
@@ -22,8 +21,7 @@ get_sphere_volume(6) should return 904.7786842338603
 
 def get_sphere_volume(radius):
     v = 4/3*math.pi*radius**3
-    print(v)
-get_sphere_volume(6)
+    return v
 
 
 """
@@ -42,11 +40,10 @@ def difference_from_17(a):
     diff = a - 17
     if diff >= 0:
         print(2*diff)
+        return 2*diff
     else:
         print(diff)
-
-
-difference_from_17(49)
+        return diff
 
 
 """
@@ -69,8 +66,6 @@ def within_100_of_1000_or_2000(number):
     else:
         print(False)
 
-
-within_100_of_1000_or_2000(777)
 
 
 """
@@ -122,7 +117,7 @@ def new_string_with_is(s):
         print("Is", s, sep="")
 
 
-new_string_with_is("Kamal")
+
 
 
 """
@@ -142,7 +137,6 @@ def repeat_string(s, n):
     else:
         print("n Should be a +ve values and should be an integer")
 
-repeat_string('kamal', 1)
 
 
 """
@@ -183,7 +177,6 @@ def count_fours(lst):
             count = count + 1
     print("The count of number of 4's in the list is ", count)
 
-count_fours(lst)
 
 
 """
@@ -224,6 +217,3 @@ def is_vowel(char):
         print(char, " is Vowel")
     else:
         print(char, " is not a Vowel")
-
-
-is_vowel(char)
