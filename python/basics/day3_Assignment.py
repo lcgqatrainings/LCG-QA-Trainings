@@ -65,7 +65,7 @@ def convert_distance(feet):
     distance_in_yards=round(feet*0.333333)
     distance_in_miles=round(feet*0.000189394,1)
     return distance_in_inches,distance_in_yards,distance_in_miles
-print(convert_distance(5280))
+#print(convert_distance(5280))
 
 
 

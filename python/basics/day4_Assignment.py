@@ -81,12 +81,13 @@ Example:
 increment_list([1, 2, 3]) should return [2, 3, 4]
 """
 
-number=0
+
 def increment_list(lst):
     for number in lst:
-        number+=1
+        print(number)
+        number = number + 1
     return lst
-print(increment_list())
+print(increment_list([1,2,3]))
 
 
 
