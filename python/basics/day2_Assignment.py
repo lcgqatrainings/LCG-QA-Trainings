@@ -13,6 +13,7 @@ def calculate_triangle_area(base, height):
     Area=base*height*0.5
     return Area
     pass
+
 """
 Problem 31:
 Write a Python program that computes the greatest common divisor (GCD) of two positive integers.
