@@ -26,8 +26,9 @@ get_sphere_volume(6) should return 904.7786842338603
 
 
 def get_sphere_volume(radius):
-    # Your code here
-    pass
+    volume= 4/3 * math.pi *radius**3
+    return volume
+
 
 
 """
