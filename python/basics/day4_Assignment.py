@@ -8,8 +8,9 @@ replicate_string("Hello", 3) should return "HelloHelloHello"
 
 
 def replicate_string(s, n):
-    # Your code here is
-    pass
+    replicate_string=s*n
+    return replicate_string
+#print(replicate_string("Hello",3))
 
 
 """
@@ -22,8 +23,9 @@ concatenate_strings("Alice", "Bob") should return "AliceBob"
 
 
 def concatenate_strings(s1, s2):
-    # Your code here
-    pass
+    concatenate_strings=s1+s2
+    return concatenate_strings
+#print(concatenate_strings("Alice","Bob"))
 
 
 """
@@ -37,8 +39,11 @@ contains_substring("Hello, world!", "Python") should return False
 
 
 def contains_substring(s, sub):
-    # Your code here
-    pass
+    if sub in s:
+        return True
+    else:
+        return False
+#print(contains_substring("Hello, world!", "world"))
 
 
 """
@@ -51,9 +56,8 @@ string_to_int("123") should return 123
 
 
 def string_to_int(s):
-    # Your code here
-    pass
-
+    return int(s)
+#print(string_to_int("123"))
 
 """
 Problem 73:
@@ -65,8 +69,8 @@ list_length([1, 2, 3, 4, 5]) should return 5
 
 
 def list_length(lst):
-    # Your code here
-    pass
+    return len(lst)
+#print(list_length([1,2,3,5]))
 
 
 """
@@ -77,10 +81,13 @@ Example:
 increment_list([1, 2, 3]) should return [2, 3, 4]
 """
 
-
+number=0
 def increment_list(lst):
-    # Your code here
-    pass
+    for number in lst:
+        number+=1
+    return lst
+print(increment_list())
+
 
 
 """
