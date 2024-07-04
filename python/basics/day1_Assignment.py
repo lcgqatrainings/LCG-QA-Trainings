@@ -43,9 +43,10 @@ difference_from_17(14) should return 3
 
 
 def difference_from_17(number):
-    # Your code here
-    pass
-
+    if number > 17:
+        return number-17 + number-17
+    else:
+        return 17-number
 
 """
 Problem 4:
@@ -75,9 +76,10 @@ sum_three_numbers(3, 3, 3) should return 27
 
 
 def sum_three_numbers(a, b, c):
-    # Your code here
-    pass
-
+    if a==b and b==c:
+        return a*b*c
+    else:
+        return a+b+c
 
 """
 Problem 6:
@@ -91,8 +93,10 @@ new_string_with_is("IsEmpty") should return "IsEmpty"
 
 
 def new_string_with_is(s):
-    # Your code here
-    pass
+    if "Is" in s:
+        return s
+    else:
+        return(f"Is{s}")
 
 
 """
@@ -106,9 +110,7 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 
 
 def repeat_string(s, n):
-    # Your code here
-    pass
-
+    return s*n
 
 """
 Problem 8:
@@ -122,9 +124,10 @@ even_or_odd(3) should return "3 is odd"
 
 
 def even_or_odd(number):
-    # Your code here
-    pass
-
+    if number%2==0:
+        return(f"{number} is even")
+    else:
+        return(f"{number} is odd")
 
 """
 Problem 9:
@@ -136,8 +139,7 @@ count_fours([1, 4, 6, 4, 7, 4]) should return 3
 
 
 def count_fours(lst):
-    # Your code here
-    pass
+    if 
 
 
 """
