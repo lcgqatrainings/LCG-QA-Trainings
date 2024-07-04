@@ -199,8 +199,10 @@ skip_number_five() should print:
 
 
 def skip_number_five():
-    # Your code here
-    pass
+    for i in range(1, 11):
+        if i == 5:
+            continue
+        print(i)
 
 
 """
@@ -217,8 +219,10 @@ break_at_five() should print:
 
 
 def break_at_five():
-    # Your code here
-    pass
+    for i in range(1, 11):
+        if i == 5:
+            break
+        print(i)
 
 
 """
@@ -232,8 +236,11 @@ search_list([1, 2, 3, 4, 5], 6) should return "Not found"
 
 
 def search_list(lst, target):
-    # Your code here
-    pass
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return "Found"
+    else:
+        return 'Not found'
 
 
 """
@@ -248,5 +255,7 @@ import sys
 
 
 def end_program_if_negative(n):
-    # Your code here
-    pass
+    if n < 0:
+        sys.exit()
+    else:
+        print(n)

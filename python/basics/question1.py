@@ -17,8 +17,7 @@ total_distance(120, 150, 200) should return 470
 
 
 def total_distance(segment1, segment2, segment3):
-    # Your code here
-    pass
+    return segment1 + segment2 + segment3
 
 
 """
@@ -33,8 +32,10 @@ distribute_candies(25, 4) should return (6, 1)
 
 
 def distribute_candies(total_candies, number_of_children):
-    # Your code here
-    pass
+    if total_candies % number_of_children == 0:
+        return total_candies/number_of_children, 0
+    else:
+        return total_candies//number_of_children, total_candies % number_of_children
 
 
 """
@@ -50,8 +51,7 @@ adjust_recipe(2, 8) should return 4.0
 
 
 def adjust_recipe(original_sugar, people_served):
-    # Your code here
-    pass
+    return people_served / original_sugar
 
 
 """
@@ -71,8 +71,7 @@ total_cost(100, 50, 75) should return 225
 
 
 def total_cost(food_expense, decorations_expense, entertainment_expense):
-    # Your code here
-    pass
+    return food_expense + decorations_expense + entertainment_expense
 
 
 """
@@ -87,5 +86,4 @@ calculate_profit(1500, 1200) should return 300
 
 
 def calculate_profit(revenue, expenses):
-    # Your code here
-    pass
+    return revenue - expenses
