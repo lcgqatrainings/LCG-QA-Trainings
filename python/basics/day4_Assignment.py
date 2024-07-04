@@ -84,10 +84,13 @@ increment_list([1, 2, 3]) should return [2, 3, 4]
 
 def increment_list(lst):
     for number in lst:
-        print(number)
-        number = number + 1
+        num=number+1
     return lst
-print(increment_list([1,2,3]))
+#print(increment_list([1,2,3]))
+
+
+
+
 
 
 
@@ -109,10 +112,17 @@ print_numbers_while() should print:
 10
 """
 
-
 def print_numbers_while():
-    # Your code here
-    pass
+    num = 1
+    while num<=10:
+        return num
+        num+=1
+print_numbers_while()
+
+
+
+
+
 
 
 """
@@ -126,8 +136,12 @@ is_even_or_odd(7) should return "Odd"
 
 
 def is_even_or_odd(n):
-    # Your code here
-    pass
+    if n%2==0:
+        return "Even"
+    else:
+        return "Odd"
+#print(is_even_or_odd(7))
+
 
 
 """
@@ -150,8 +164,16 @@ print_even_numbers() should print:
 
 
 def print_even_numbers():
-    # Your code here
-    pass
+    num=range(1,21)
+    for n in num:
+        if n%2==0:
+            return n
+print_even_numbers()
+
+
+
+
+
 
 
 """
@@ -165,8 +187,9 @@ check_positive(10) should return "Positive"
 
 
 def check_positive(n):
-    # Your code here
-    pass
+    a=f'Positive' if n==abs(n) else 'Non-positive'
+    return a
+#print(check_positive(5))
 
 
 """
@@ -181,9 +204,14 @@ basic_switch_case(3) should return "Three"
 
 
 def basic_switch_case(value):
-    # Your code here
-    pass
+    if value==1:
+        return "One"
+    elif value==2:
+        return "Two"
+    else:
+        return "Three"
 
+#print(basic_switch_case(2))
 
 """
 Problem 80:
@@ -204,8 +232,14 @@ skip_number_five() should print:
 
 
 def skip_number_five():
-    # Your code here
-    pass
+    num=0
+    while num<=9:
+        num+=1
+        if num==5:
+            continue
+        return num
+skip_number_five()
+
 
 
 """
@@ -222,8 +256,14 @@ break_at_five() should print:
 
 
 def break_at_five():
-    # Your code here
-    pass
+    num=0
+    while num<=10:
+        num+=1
+        if num==5:
+            break
+        return num
+break_at_five()
+
 
 
 """
@@ -237,8 +277,13 @@ search_list([1, 2, 3, 4, 5], 6) should return "Not found"
 
 
 def search_list(lst, target):
-    # Your code here
-    pass
+    for target in lst[0:len(lst)]:
+        return "Found"
+    else:
+        return "Not Found"
+#print(search_list([1,2,3,4,5],8))
+
+
 
 
 """
