@@ -58,8 +58,7 @@ within_100_of_1000_or_2000(100) should return False
 
 
 def within_100_of_1000_or_2000(number):
-    # Your code here
-    pass
+    return abs(1000 - number) <= 100 or abs(2000 - number) <= 100
 
 
 """
