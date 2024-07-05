@@ -98,9 +98,13 @@ new_string_with_is("Array") should return "IsArray"
 new_string_with_is("IsEmpty") should return "IsEmpty"
 """
 
-
-def new_string_with_is(s):
+def new_string_with_is(s="abc"):
     # Your code here
+    #if "Is" in s:
+    if s[0] == "I" and s[1] == "s":
+        return s
+    else:
+        return f"Is{s}"
     pass
 
 
@@ -116,6 +120,10 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 
 def repeat_string(s, n):
     # Your code here
+    if n >= 0:
+        return s * n
+    else:
+        return "Negative number entered"
     pass
 
 
@@ -132,6 +140,11 @@ even_or_odd(3) should return "3 is odd"
 
 def even_or_odd(number):
     # Your code here
+    if number % 2 == 0:
+        return f"Even number + {number}"
+
+    else:
+        return f"Odd number + {number}"
     pass
 
 
@@ -146,6 +159,11 @@ count_fours([1, 4, 6, 4, 7, 4]) should return 3
 
 def count_fours(lst):
     # Your code here
+    count = 0
+    for i in range(len(lst)):
+        if lst[i] == 4:
+            count = count+1
+    return count
     pass
 
 
