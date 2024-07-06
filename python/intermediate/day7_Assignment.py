@@ -8,7 +8,10 @@ flatten_list([1, [2, 3], [4, [5, 6]]]) should return [1, 2, 3, 4, 5, 6]
 
 
 def flatten_list(nested_list):
-    pass
+    if len(nested_list) > 5:
+        pass
+    else:
+        pass
 
 
 """
