@@ -51,8 +51,9 @@ adjust_recipe(2, 8) should return 4.0
 
 
 def adjust_recipe(original_sugar, people_served):
-    return people_served / original_sugar
+    return original_sugar/4 * people_served
 
+print(adjust_recipe(1,1))
 
 """
 Problem 4:

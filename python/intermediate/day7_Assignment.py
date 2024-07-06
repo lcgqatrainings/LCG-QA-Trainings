@@ -8,7 +8,6 @@ flatten_list([1, [2, 3], [4, [5, 6]]]) should return [1, 2, 3, 4, 5, 6]
 
 
 def flatten_list(nested_list):
-    # Your code here
     pass
 
 
@@ -22,8 +21,13 @@ unique_elements([1, 2, 2, 3, 4, 4, 5]) should return [1, 2, 3, 4, 5]
 
 
 def unique_elements(lst):
-    # Your code here
-    pass
+    for i in range(len(lst)):
+        if i == len(lst) - 1:
+            break
+        for j in range(i+1, len(lst)-1):
+            if lst[i] == lst[j]:
+                lst.pop(j)
+    return lst
 
 
 """

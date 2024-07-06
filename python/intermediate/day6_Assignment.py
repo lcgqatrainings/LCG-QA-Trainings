@@ -6,7 +6,7 @@ Example:
 sum_lambda = lambda x, y: ...
 """
 
-sum_lambda = lambda x, y: None  # Replace None with your lambda function
+sum_lambda = lambda x, y: x + y  # Replace None with your lambda function
 
 """
 Problem 96:
@@ -18,8 +18,7 @@ multiply(x=3, y=4) should return 12
 
 
 def multiply(x, y):
-    # Your code here
-    pass
+    return x * y
 
 
 """
@@ -41,9 +40,8 @@ greet(name="Alice", message="Hello") should return "Hello, Alice!"
 """
 
 
-def greet(name, message):
-    # Your code here
-    pass
+def greet(name, message='Hello'):
+    return message + ', ' + name
 
 
 """
@@ -54,7 +52,7 @@ Example:
 sqrt_lambda = lambda x: ...
 """
 
-sqrt_lambda = lambda x: None  # Replace None with your lambda function
+sqrt_lambda = lambda x: x ** 0.5  # Replace None with your lambda function
 
 """
 Problem 100:
@@ -66,8 +64,8 @@ apply_discount(price=100, discount=10) should return 90.0
 
 
 def apply_discount(price, discount):
-    # Your code here
-    pass
+    f_p = price - (price * discount/100)
+    return f_p
 
 
 """
@@ -78,7 +76,7 @@ Example:
 uppercase_lambda = lambda s: ...
 """
 
-uppercase_lambda = lambda s: None  # Replace None with your lambda function
+uppercase_lambda = lambda s: s.upper()  # Replace None with your lambda function
 
 """
 Problem 102:
@@ -90,8 +88,7 @@ power(base=2, exponent=3) should return 8
 
 
 def power(base, exponent):
-    # Your code here
-    pass
+    return base ** exponent
 
 
 """
@@ -102,7 +99,7 @@ Example:
 reverse_strings_lambda = lambda lst: ...
 """
 
-reverse_strings_lambda = lambda lst: None  # Replace None with your lambda function
+reverse_strings_lambda = lambda lst: lst[::-1]  # Replace None with your lambda function
 
 """
 Problem 104:
@@ -114,5 +111,4 @@ create_sentence(subject="The cat", verb="chased", object="the mouse") should ret
 
 
 def create_sentence(subject, verb, object):
-    # Your code here
-    pass
+    return F'{subject} {verb} {object}'

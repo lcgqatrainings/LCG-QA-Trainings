@@ -8,8 +8,7 @@ square(4) should return 16
 
 
 def square(x):
-    # Your code here
-    pass
+    return x ** 2
 
 
 """
@@ -23,8 +22,13 @@ is_palindrome("madam") should return True
 
 
 def is_palindrome(s):
-    # Your code here
-    pass
+    r_s = ''
+    for i in range(len(s)-1, -1, -1):
+        r_s = r_s + s[i]
+    if r_s == s:
+        return True
+    else:
+        return False
 
 
 """
@@ -37,8 +41,10 @@ factorial(5) should return 120
 
 
 def factorial(n):
-    # Your code here
-    pass
+    r = 1
+    for i in range(1, n+1):
+        r *= i
+    return r
 
 
 """
@@ -51,8 +57,12 @@ fibonacci(7) should return 13
 
 
 def fibonacci(n):
-    # Your code here
-    pass
+    if n == 0:
+        return 0
+    fib_sequence = [0, 1]
+    while len(fib_sequence) < n:
+        fib_sequence.append(fib_sequence[-1]+fib_sequence[-2])
+    return fib_sequence[-1] + fib_sequence[-2]
 
 
 """
@@ -66,8 +76,10 @@ is_even(7) should return False
 
 
 def is_even(n):
-    # Your code here
-    pass
+    if n % 2 == 0:
+        return True
+    else:
+        return False
 
 
 """
@@ -79,7 +91,7 @@ product = lambda a, b: a * b
 product(3, 4) should return 12
 """
 
-product = lambda a, b: None  # Replace None with your lambda function
+product = lambda a, b: a * b  # Replace None with your lambda function
 
 """
 Problem 90:
@@ -94,8 +106,11 @@ apply_function(increment, 5) should return 6
 
 
 def apply_function(func, value):
-    # Your code here
-    pass
+    return func(value)
+
+
+def increment(x):
+    return x + 1
 
 
 """
@@ -108,8 +123,11 @@ filter_even_numbers([1, 2, 3, 4, 5]) should return [2, 4]
 
 
 def filter_even_numbers(lst):
-    # Your code here
-    pass
+    lst_e = []
+    for i in lst:
+        if i % 2 == 0:
+            lst_e.append(i)
+    return lst_e
 
 
 """
@@ -122,7 +140,7 @@ greater_than_ten(15) should return True
 greater_than_ten(5) should return False
 """
 
-greater_than_ten = lambda x: None  # Replace None with your lambda function
+greater_than_ten = lambda x: x > 10  # Replace None with your lambda function
 
 """
 Problem 93:

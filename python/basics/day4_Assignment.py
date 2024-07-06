@@ -176,8 +176,14 @@ basic_switch_case(3) should return "Three"
 
 
 def basic_switch_case(value):
-    # Your code here
-    pass
+    if value == 1:
+        return 'One'
+    elif value == 2:
+        return 'Two'
+    elif value == 3:
+        return "Three"
+    else:
+        return "Unknown"
 
 
 """

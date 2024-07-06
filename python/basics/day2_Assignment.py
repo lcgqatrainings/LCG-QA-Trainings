@@ -117,8 +117,6 @@ def add_objects(a, b):
         return None
 
 
-print(add_objects(7, 9))
-
 """
 Problem 37:
 Write a Python program that displays your name, age, and address on three different lines.
@@ -133,7 +131,7 @@ Address: 123 Main St
 
 
 def display_personal_info(name, age, address):
-    return f"Name: {name} \nAge: {age} \nAddress: {address}"
+    return f"Name: {name}\nAge: {age}\nAddress: {address}"
 
 
 """
