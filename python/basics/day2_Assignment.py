@@ -41,11 +41,15 @@ compute_lcm(12, 15) should return 60
 
 def compute_lcm(x, y):
     gcd = compute_gcd(x, y)
+    lcm = 1
     for i in range(gcd, x if x < y else y):
         if x % i == 0 and y % i == 0:
-            c, d = x / i, y / i
-
-
+            c, d = x // i, y // i
+            if compute_gcd(c, d) == 1:
+                lcm = lcm * c * d * gcd
+            else:
+                compute_lcm(c, d)
+    return lcm
 
 
 """

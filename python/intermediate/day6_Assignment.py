@@ -29,7 +29,7 @@ Example:
 sort_desc = lambda lst: ...
 """
 
-sort_desc = lambda lst: None  # Replace None with your lambda function
+sort_desc = lambda lst: sorted(lst, reverse=True)  # Replace None with your lambda function
 
 """
 Problem 98:
@@ -99,7 +99,7 @@ Example:
 reverse_strings_lambda = lambda lst: ...
 """
 
-reverse_strings_lambda = lambda lst: lst[::-1]  # Replace None with your lambda function
+reverse_strings_lambda = lambda lst: list(map(lambda s: s[::-1], lst))  # Replace None with your lambda function
 
 """
 Problem 104:

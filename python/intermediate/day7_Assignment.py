@@ -8,10 +8,23 @@ flatten_list([1, [2, 3], [4, [5, 6]]]) should return [1, 2, 3, 4, 5, 6]
 
 
 def flatten_list(nested_list):
-    if len(nested_list) > 5:
-        pass
-    else:
-        pass
+    f_lst = []
+    # for i in range(len(nested_list)):
+    #     if isinstance(nested_list[i], list):
+    #         for j in range(len(nested_list[i])):
+    #             if isinstance(nested_list[i][j],list):
+    #                 for k in range(len(nested_list[i][j])):
+    #                     f_lst.append(nested_list[i][j][k])
+    #             else:
+    #                 f_lst.append(nested_list[i][j])
+    #     else:
+    #         f_lst.append(nested_list[i])
+    for item in nested_list:
+        if isinstance(item, list):
+            f_lst.extend(flatten_list(item))
+        else:
+            f_lst.append(item)
+    return f_lst
 
 
 """
@@ -27,7 +40,7 @@ def unique_elements(lst):
     for i in range(len(lst)):
         if i == len(lst) - 1:
             break
-        for j in range(i+1, len(lst)-1):
+        for j in range(i + 1, len(lst) - 1):
             if lst[i] == lst[j]:
                 lst.pop(j)
     return lst
@@ -41,9 +54,18 @@ Example:
 grade_students = lambda scores: ...
 grades = grade_students({'Alice': 85, 'Bob': 72, 'Charlie': 90})
 """
+# grades = lambda scores: ('A' if scores >= 90 else
+#                          'B' if scores >= 80 else
+#                          'c' if scores >= 70 else
+#                          'D' if scores >= 60 else
+#                          'E')
 
-grade_students = lambda scores: None  # Replace None with your lambda function
-
+grade_students = lambda scores: {name: ('A' if scores >= 90 else
+                                        'B' if scores >= 80 else
+                                        'c' if scores >= 70 else
+                                        'D' if scores >= 60 else
+                                        'E') for name, scores in scores.items()}  # Replace None with your lambda function
+print(grade_students({'Alice': 85, 'Bob': 72, 'Charlie': 90}))
 """
 Problem 108:
 Write a Python function called `transpose_matrix` that takes a 2D list (matrix) and returns its transpose.
@@ -134,4 +156,4 @@ filter_and_square = lambda lst: ...
 result = filter_and_square([5, 12, 9, 20])
 """
 
-filter_and_square = lambda lst: None  # Replace None with your lambda function
+filter_and_square = lambda lst: list(map(lambda x: x**2, filter(lambda x: x > 10, lst)))  # Replace None with your lambda function
