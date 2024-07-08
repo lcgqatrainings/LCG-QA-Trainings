@@ -109,8 +109,8 @@ print_numbers_while() should print:
 def print_numbers_while():
    i = 1
    while i < 11:
-      return i
-      i += 1
+    return i
+   i= i+1
 pass
 
 

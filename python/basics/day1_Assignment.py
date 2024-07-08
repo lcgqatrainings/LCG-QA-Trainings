@@ -73,8 +73,8 @@ sum_three_numbers(3, 3, 3) should return 27
 
 
 def sum_three_numbers(a, b, c):
-    # Your code here
-    pass
+   return ((a+b+c)*3) if a == b == c else (a+b+c)
+pass
 
 
 """
