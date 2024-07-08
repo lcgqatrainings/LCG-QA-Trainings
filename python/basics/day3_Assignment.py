@@ -10,6 +10,7 @@ sum_first_n_integers(5) should return 15
 
 def sum_first_n_integers(n):
     # Your code here
+    return n * (n + 1) / 2
     pass
 
 
