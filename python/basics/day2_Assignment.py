@@ -95,6 +95,13 @@ Write a Python program to add two objects if both objects are integers.
 Example:
 add_objects(10, 20) should return 30
 add_objects(10, "20") should return None
+""""""
+Problem 36:
+Write a Python program to add two objects if both objects are integers.
+
+Example:
+add_objects(10, 20) should return 30
+add_objects(10, "20") should return None
 """
 
 

@@ -65,9 +65,7 @@ list_length([1, 2, 3, 4, 5]) should return 5
 
 
 def list_length(lst):
-    # Your code here
-    pass
-
+    return len(lst)
 
 """
 Problem 74:

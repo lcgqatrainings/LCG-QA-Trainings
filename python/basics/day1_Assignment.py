@@ -150,7 +150,14 @@ repeat_first_two_chars("a", 3) should return "aaa"
 
 def repeat_first_two_chars(s, n):
     # Your code here
-    pass
+    if len(s) >= 2 and s[0:2]:
+        return s[0:2] * n
+    else:
+        return s * n
+
+
+print(repeat_first_two_chars("abcds",4))
+
 
 
 """
