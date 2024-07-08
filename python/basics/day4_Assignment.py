@@ -77,8 +77,9 @@ increment_list([1, 2, 3]) should return [2, 3, 4]
 
 
 def increment_list(lst):
-    # Your code here
-    pass
+    for i in range(0, len(lst)):
+        lst[i] += 1
+    return lst
 
 
 """
