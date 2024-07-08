@@ -143,7 +143,7 @@ Address: 123 Main St
 
 def display_personal_info(name, age, address):
     # Your code here
-    print("Name:{}\nAge:{}\nAddress:{}".format(name, age, address))
+    return "Name:{}\nAge:{}\nAddress:{}".format(name, age, address)
     pass
 
 
