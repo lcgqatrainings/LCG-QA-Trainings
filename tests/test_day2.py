@@ -20,7 +20,7 @@ def test_compute_gcd():
     assert compute_gcd(48, 64) == 16
     assert compute_gcd(54, 24) == 6
     assert compute_gcd(7, 13) == 1
-    # Add more test cases as needed
+    # Add more test cases as neede
 
 
 # Test cases for compute_lcm function
