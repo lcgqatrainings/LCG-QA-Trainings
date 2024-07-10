@@ -6,6 +6,7 @@ Formula: Area = 0.5 * base * height
 Example:
 calculate_triangle_area(10, 5) should return 25.0
 """
+import math
 
 
 def calculate_triangle_area(base, height):
@@ -23,7 +24,12 @@ compute_gcd(48, 64) should return 16
 
 
 def compute_gcd(x, y):
-    # Your code here
+    if y == 0:
+        return abs(x)
+    else:
+        x = y, x % y
+        return x
+
     pass
 
 
@@ -74,6 +80,7 @@ def sum_two_integers(a, b):
     if a+b >=15 and a+b <20:
         return 20
     else:
+
         return 12
     pass
 
@@ -142,7 +149,7 @@ compute_expression(4, 3) should return 49
 
 
 def compute_expression(x, y):
-    # Your code here
+    return (x+y) * (x+y)
     pass
 
 
@@ -158,7 +165,7 @@ compute_future_value(10000, 3.5, 7) should return 12722.79
 
 
 def compute_future_value(principal, rate, years):
-    # Your code here
+    return principal * (1 + rate / 100) ** years
     pass
 
 
@@ -173,5 +180,5 @@ calculate_distance(1, 2, 4, 6) should return 5.0
 
 
 def calculate_distance(x1, y1, x2, y2):
-    # Your code here
+    return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
     pass

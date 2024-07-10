@@ -6,10 +6,11 @@ Formula: Sum = n * (n + 1) / 2
 Example:
 sum_first_n_integers(5) should return 15
 """
+import math
 
 
 def sum_first_n_integers(n):
-    # Your code here
+    return n * (n + 1) / 2
     pass
 
 
@@ -24,7 +25,9 @@ convert_height_to_cm(5, 7) should return 170.18
 
 
 def convert_height_to_cm(feet, inches):
-    # Your code here
+    foot=feet*30.48
+    inch=inches*2.54
+    return foot+inch
     pass
 
 
@@ -39,7 +42,7 @@ calculate_hypotenuse(3, 4) should return 5.0
 
 
 def calculate_hypotenuse(base, height):
-    # Your code here
+    return math.sqrt((base * base) + (height * height))
     pass
 
 
@@ -54,7 +57,10 @@ convert_distance(5280) should return (63360, 1760, 1.0)
 
 
 def convert_distance(feet):
-    # Your code here
+    inches = feet * 12
+    yard = feet * 0.333333
+    mile = feet * 0.000189394
+    return int(inches), round(yard, 6), round(mile, 1)
     pass
 
 
@@ -69,8 +75,8 @@ calculate_bmi(70, 1.75) should return 22.86
 
 
 def calculate_bmi(weight, height):
-    # Your code here
-    pass
+    bmi = weight/(height*height)
+    return round(bmi, 2)
 
 
 """
@@ -87,8 +93,11 @@ convert_pressure(100) should return (14.5038, 750.062, 0.986923)
 
 
 def convert_pressure(kpa):
-    # Your code here
-    pass
+
+    psi = kpa * 0.145038
+    mmHg = kpa * 7.50062
+    atm = kpa * 0.00986923
+    return psi,mmHg, atm
 
 
 """
@@ -101,5 +110,7 @@ sum_of_digits(1234) should return 10
 
 
 def sum_of_digits(number):
-    # Your code here
+    total = str(number)
+    total = sum(int(s) for s in total)
+    return total
     pass
