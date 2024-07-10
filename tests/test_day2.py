@@ -1,11 +1,4 @@
 # test_assignment.py
-import math
-
-# Importing functions from the assignment file
-from python.basics.day2_Assignment import calculate_triangle_area, compute_gcd, compute_lcm, sum_three_numbers, \
-    sum_two_integers, check_values, add_objects, display_personal_info, compute_expression, compute_future_value, \
-    calculate_distance
-
 
 # Test cases for calculate_triangle_area function
 def test_calculate_triangle_area():

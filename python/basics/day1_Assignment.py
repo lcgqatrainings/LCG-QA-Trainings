@@ -7,14 +7,9 @@ calculate_area_of_circle(1.1) should return 3.8013271108436504
 """
 import math
 
-
 def calculate_area_of_circle(radius):
     area = math.pi * radius**2
     return area
-
-
-
-
 
 """
 Problem 2:
@@ -29,8 +24,6 @@ def get_sphere_volume(radius):
     volume= 4/3 * math.pi *radius**3
     return volume
 
-
-
 """
 Problem 3:
 Write a Python program to calculate the difference between a given number and 17. 
@@ -40,7 +33,6 @@ Example:
 difference_from_17(22) should return 10
 difference_from_17(14) should return 3
 """
-
 
 def difference_from_17(number):
     if number > 17:
@@ -60,9 +52,10 @@ within_100_of_1000_or_2000(100) should return False
 
 
 def within_100_of_1000_or_2000(number):
-    # Your code here
-    pass
-
+    if number>=900 and number<=2000:
+        return True
+    else:
+        return False
 
 """
 Problem 5:
@@ -122,7 +115,6 @@ even_or_odd(10) should return "10 is even"
 even_or_odd(3) should return "3 is odd"
 """
 
-
 def even_or_odd(number):
     if number%2==0:
         return(f"{number} is even")
@@ -139,9 +131,8 @@ count_fours([1, 4, 6, 4, 7, 4]) should return 3
 
 
 def count_fours(lst):
-    if 
 
-
+    pass
 """
 Problem 10:
 Write a Python program to get n (non-negative integer) copies of the first 2 characters of a given string. 
@@ -154,9 +145,7 @@ repeat_first_two_chars("a", 3) should return "aaa"
 
 
 def repeat_first_two_chars(s, n):
-    # Your code here
-    pass
-
+    return (s[0]*n)
 
 """
 Problem 11:
@@ -167,7 +156,9 @@ is_vowel("a") should return True
 is_vowel("b") should return False
 """
 
-
 def is_vowel(char):
-    # Your code here
-    pass
+    Vowel = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    if char in Vowel:
+        return True
+    else:
+        return False

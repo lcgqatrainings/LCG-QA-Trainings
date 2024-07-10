@@ -6,11 +6,12 @@ Formula: Area = 0.5 * base * height
 Example:
 calculate_triangle_area(10, 5) should return 25.0
 """
+import math
 
 
 def calculate_triangle_area(base, height):
-    # Your code here
-    pass
+    area_of_triangle= 1/2 *base*height
+    return(area_of_triangle)
 
 
 """
@@ -22,10 +23,10 @@ compute_gcd(48, 64) should return 16
 """
 
 
+import math
 def compute_gcd(x, y):
-    # Your code here
-    pass
-
+    gcd=math.gcd(x,y)
+    return gcd
 
 """
 Problem 32:
@@ -53,8 +54,10 @@ sum_three_numbers(2, 2, 3) should return 0
 
 
 def sum_three_numbers(a, b, c):
-    # Your code here
-    pass
+    if a==b or b==c or c==a:
+        return 0
+    else:
+        return a+b+c
 
 
 """
@@ -68,13 +71,15 @@ sum_two_integers(10, 2) should return 12
 
 
 def sum_two_integers(a, b):
-    # Your code here
-    pass
-
+    if a+b>=15 and a+b<=20:
+        return 20
+    else:
+        return a+b
 
 """
 Problem 35:
-Write a Python program that returns true if the two given integer values are equal or their sum or difference is 5.
+Write a Python program that returns true if the two given 
+integer values are equal or their sum or difference is 5.
 
 Example:
 check_values(10, 5) should return True
@@ -84,9 +89,10 @@ check_values(3, 8) should return False
 
 
 def check_values(a, b):
-    # Your code here
-    pass
-
+    if a==b or a+b==5 or a-b==-5 or a-b==5:
+        return 'true'
+    else:
+        return 'false'
 
 """
 Problem 36:
@@ -96,12 +102,11 @@ Example:
 add_objects(10, 20) should return 30
 add_objects(10, "20") should return None
 """
-
-
-def add_objects(a, b):
-    # Your code here
-    pass
-
+def sum_of_digits(a, b):
+    if type(a) == int and type(b) == int:
+        return (a + b)
+    else:
+        return 'none'
 
 """
 Problem 37:
@@ -117,7 +122,7 @@ Address: 123 Main St
 
 
 def display_personal_info(name, age, address):
-    # Your code here
+    #return ("Name:",{name})
     pass
 
 
@@ -131,11 +136,9 @@ Example:
 compute_expression(4, 3) should return 49
 """
 
-
 def compute_expression(x, y):
-    # Your code here
-    pass
-
+    result=(x+y)*(x+y)
+    return result
 
 """
 Problem 39:
@@ -149,8 +152,8 @@ compute_future_value(10000, 3.5, 7) should return 12722.79
 
 
 def compute_future_value(principal, rate, years):
-    # Your code here
-    pass
+    FutureValue= principal *(1+rate /100) ** years
+    return FutureValue
 
 
 """
@@ -162,7 +165,7 @@ Example:
 calculate_distance(1, 2, 4, 6) should return 5.0
 """
 
-
+import math
 def calculate_distance(x1, y1, x2, y2):
-    # Your code here
-    pass
+    Distance = math.sqrt((x2-x1)**2 + (y2-y1)**2)
+    return Distance

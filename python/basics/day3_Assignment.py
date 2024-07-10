@@ -7,10 +7,10 @@ Example:
 sum_first_n_integers(5) should return 15
 """
 
-
 def sum_first_n_integers(n):
-    # Your code here
-    pass
+    Sum = n * (n + 1) / 2
+    return Sum
+
 
 
 """
@@ -22,10 +22,10 @@ Example:
 convert_height_to_cm(5, 7) should return 170.18
 """
 
-
 def convert_height_to_cm(feet, inches):
-    # Your code here
-    pass
+    height_in_cm=feet*30.48 + inches*2.54
+    return height_in_cm
+#print(convert_height_to_cm(5,7))
 
 
 """
@@ -37,10 +37,11 @@ Example:
 calculate_hypotenuse(3, 4) should return 5.0
 """
 
-
+import math
 def calculate_hypotenuse(base, height):
-    # Your code here
-    pass
+    hypotenuse=math.sqrt(base**2+height**2)
+    return hypotenuse
+#print(calculate_hypotenuse(3,4))
 
 
 """
@@ -54,8 +55,10 @@ convert_distance(5280) should return (63360, 1760, 1.0)
 
 
 def convert_distance(feet):
-    # Your code here
+    distance_in_inch_yard_mile= [feet*12,feet*0.333333,feet*0.000189394]
+    return distance_in_inch_yard_mile
     pass
+
 
 
 """
@@ -69,7 +72,9 @@ calculate_bmi(70, 1.75) should return 22.86
 
 
 def calculate_bmi(weight, height):
-    # Your code here
+    BMI=weight/height**2
+    return ("%.2f"% BMI)
+#print(calculate_bmi(70,1.75))
     pass
 
 
