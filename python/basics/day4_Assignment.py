@@ -8,7 +8,7 @@ replicate_string("Hello", 3) should return "HelloHelloHello"
 
 
 def replicate_string(s, n):
-    # Your code here
+    return s*n
     pass
 
 
@@ -22,7 +22,7 @@ concatenate_strings("Alice", "Bob") should return "AliceBob"
 
 
 def concatenate_strings(s1, s2):
-    # Your code here
+    return s1 + s2
     pass
 
 
@@ -37,7 +37,10 @@ contains_substring("Hello, world!", "Python") should return False
 
 
 def contains_substring(s, sub):
-    # Your code here
+    if sub in s:
+        return True
+    else:
+        return False
     pass
 
 
@@ -51,7 +54,7 @@ string_to_int("123") should return 123
 
 
 def string_to_int(s):
-    # Your code here
+    return int(s)
     pass
 
 
@@ -65,7 +68,7 @@ list_length([1, 2, 3, 4, 5]) should return 5
 
 
 def list_length(lst):
-    # Your code here
+    return len(lst)
     pass
 
 
@@ -79,7 +82,12 @@ increment_list([1, 2, 3]) should return [2, 3, 4]
 
 
 def increment_list(lst):
-    # Your code here
+    lst1 = []
+    for i in lst:
+        j = i + 1
+        lst1.append(j)
+    return lst1
+
     pass
 
 
@@ -103,7 +111,13 @@ print_numbers_while() should print:
 
 
 def print_numbers_while():
-    # Your code here
+    i = 0
+    r = ''
+    while i >= 0 and i <= 9:
+        i = i + 1
+        r = r.__add__(str(i) + '\n')
+    return r
+
     pass
 
 
@@ -118,7 +132,10 @@ is_even_or_odd(7) should return "Odd"
 
 
 def is_even_or_odd(n):
-    # Your code here
+    if n % 2 ==0:
+        return "Even"
+    else:
+        return "Odd"
     pass
 
 
@@ -142,7 +159,9 @@ print_even_numbers() should print:
 
 
 def print_even_numbers():
-    # Your code here
+    for i in range(21):
+        if i % 2==0:
+            return i
     pass
 
 
@@ -157,7 +176,12 @@ check_positive(10) should return "Positive"
 
 
 def check_positive(n):
-    # Your code here
+    if str(n).__contains__("-") or n == 0:
+        return "Non-positive"
+    else:
+        return "Positive"
+
+
     pass
 
 
