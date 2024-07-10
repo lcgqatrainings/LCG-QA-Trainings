@@ -37,7 +37,12 @@ difference_from_17(14) should return 3
 
 
 def difference_from_17(number):
-    pass
+    if number > 17:
+        return (number - 17) * 2
+    else:
+        return 17 - number
+
+# Chandu
 
 """
 Problem 4:
