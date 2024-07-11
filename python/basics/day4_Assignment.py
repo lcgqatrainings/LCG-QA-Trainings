@@ -1,15 +1,15 @@
 """
 Problem 69:
-Write a Python program that takes a string and an integer n, and returns the string replicated n times.
+Write a Python program that takes a string and an integer n,
+and returns the string replicated n times.
 
 Example:
 replicate_string("Hello", 3) should return "HelloHelloHello"
 """
 
-
 def replicate_string(s, n):
-    # Your code here
-    pass
+    return s*n
+#print(replicate_string("anu",5))
 
 
 """
@@ -22,8 +22,8 @@ concatenate_strings("Alice", "Bob") should return "AliceBob"
 
 
 def concatenate_strings(s1, s2):
-    # Your code here
-    pass
+    return(s1,s2)
+#print("anu","sha")
 
 
 """
@@ -37,7 +37,6 @@ contains_substring("Hello, world!", "Python") should return False
 
 
 def contains_substring(s, sub):
-    # Your code here
     pass
 
 
@@ -51,8 +50,8 @@ string_to_int("123") should return 123
 
 
 def string_to_int(s):
-    # Your code here
-    pass
+    return int(s)
+#print(string_to_int("123"))
 
 
 """
@@ -65,13 +64,13 @@ list_length([1, 2, 3, 4, 5]) should return 5
 
 
 def list_length(lst):
-    # Your code here
-    pass
-
+    return len(lst)
+#print(list_length([1,2,3,4,5]))
 
 """
 Problem 74:
-Write a Python program that takes a list of integers and returns a new list with each integer incremented by 1 using a for loop.
+Write a Python program that takes a list of integers and returns a 
+new list with each integer incremented by 1 using a for loop.
 
 Example:
 increment_list([1, 2, 3]) should return [2, 3, 4]
@@ -79,8 +78,8 @@ increment_list([1, 2, 3]) should return [2, 3, 4]
 
 
 def increment_list(lst):
-    # Your code here
     pass
+
 
 
 """
@@ -103,8 +102,11 @@ print_numbers_while() should print:
 
 
 def print_numbers_while():
-    # Your code here
-    pass
+    i=1
+    while i<=10:
+        print(i)
+        i=i+1
+print(print_numbers_while())
 
 
 """
@@ -118,8 +120,11 @@ is_even_or_odd(7) should return "Odd"
 
 
 def is_even_or_odd(n):
-    # Your code here
-    pass
+    if n%2==0:
+        return "Even"
+    else:
+        return "Odd"
+#print(is_even_or_odd(40))
 
 
 """
@@ -142,8 +147,12 @@ print_even_numbers() should print:
 
 
 def print_even_numbers():
-    # Your code here
-    pass
+    for i in range(0, 22):
+        if i%2==0:
+            print(i)
+        else:
+            i=i+1
+print(print_even_numbers())
 
 
 """

@@ -80,7 +80,8 @@ def calculate_bmi(weight, height):
 
 """
 Problem 67:
-Write a Python program to convert pressure in kilopascals to pounds per square inch (psi), millimeters of mercury (mmHg), and atmosphere pressure (atm).
+Write a Python program to convert pressure in kilopascals to pounds per square
+ inch (psi), millimeters of mercury (mmHg), and atmosphere pressure (atm).
 Formulas: 
 1 kPa = 0.145038 psi
 1 kPa = 7.50062 mmHg
@@ -90,10 +91,9 @@ Example:
 convert_pressure(100) should return (14.5038, 750.062, 0.986923)
 """
 
-
 def convert_pressure(kpa):
-    # Your code here
-    pass
+    mylist = (kpa * 0.145038, kpa * 7.50062, kpa * 0.00986923)
+    return mylist
 
 
 """
@@ -105,6 +105,9 @@ sum_of_digits(1234) should return 10
 """
 
 
-def sum_of_digits(number):
-    # Your code here
-    pass
+def sum_of_digits(n):
+    sum=0
+    for i in str(n):
+        sum=sum + int(i)
+    return sum
+#print(sum_of_digits(1234))

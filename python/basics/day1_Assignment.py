@@ -131,8 +131,8 @@ count_fours([1, 4, 6, 4, 7, 4]) should return 3
 
 
 def count_fours(lst):
-
     pass
+
 """
 Problem 10:
 Write a Python program to get n (non-negative integer) copies of the first 2 characters of a given string. 

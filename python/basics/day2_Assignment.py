@@ -6,14 +6,9 @@ Formula: Area = 0.5 * base * height
 Example:
 calculate_triangle_area(10, 5) should return 25.0
 """
-import math
-
-
 def calculate_triangle_area(base, height):
     area_of_triangle= 1/2 *base*height
-    return(area_of_triangle)
-
-
+    return area_of_triangle
 """
 Problem 31:
 Write a Python program that computes the greatest common divisor (GCD) of two positive integers.
