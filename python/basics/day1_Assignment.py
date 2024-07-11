@@ -40,8 +40,8 @@ def difference_from_17(number):
     if number > 17:
         return (number - 17) * 2
     else:
-        return 17 - number
-
+        return 17 - number - number
+#chandu
 # Chandu
 
 """
