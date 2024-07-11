@@ -6,11 +6,11 @@ Formula: Area = 0.5 * base * height
 Example:
 calculate_triangle_area(10, 5) should return 25.0
 """
+import math
 
 
 def calculate_triangle_area(base, height):
-    # Your code here
-    pass
+    return 0.5 * base * height
 
 
 """
@@ -23,8 +23,7 @@ compute_gcd(48, 64) should return 16
 
 
 def compute_gcd(x, y):
-    # Your code here
-    pass
+    return math.gcd(x, y)
 
 
 """
@@ -38,8 +37,7 @@ compute_lcm(12, 15) should return 60
 
 
 def compute_lcm(x, y):
-    # Your code here
-    pass
+    return math.lcm(x, y)
 
 
 """
@@ -53,8 +51,12 @@ sum_three_numbers(2, 2, 3) should return 0
 
 
 def sum_three_numbers(a, b, c):
-    # Your code here
-    pass
+    if a == b or b == c:
+        return 0
+    elif a == c:
+        return 0
+    else:
+        return a + b + c
 
 
 """
@@ -68,8 +70,11 @@ sum_two_integers(10, 2) should return 12
 
 
 def sum_two_integers(a, b):
-    # Your code here
-    pass
+    sum1 = a + b
+    if 15 <= sum1 <= 20:
+        return 20
+    else:
+        return sum1
 
 
 """
@@ -84,8 +89,12 @@ check_values(3, 8) should return False
 
 
 def check_values(a, b):
-    # Your code here
-    pass
+    if a == b:
+        return True
+    elif a - b == 5 or b - a == 5:
+        return True
+    else:
+        return False
 
 
 """
@@ -99,8 +108,10 @@ add_objects(10, "20") should return None
 
 
 def add_objects(a, b):
-    # Your code here
-    pass
+    if type(a) is int and type(b) is int:
+        return a + b
+    else:
+        return None
 
 
 """
@@ -117,7 +128,6 @@ Address: 123 Main St
 
 
 def display_personal_info(name, age, address):
-    # Your code here
     pass
 
 
