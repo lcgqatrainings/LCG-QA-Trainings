@@ -173,7 +173,7 @@ is_vowel("b") should return False
 def is_vowel(char):
     mylist = ['a', 'e', 'i', 'o', 'u']
     if char in mylist:
-        return "True"
+        return True
     else:
-        return "False"
+        return False
 

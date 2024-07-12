@@ -128,7 +128,7 @@ Address: 123 Main St
 
 
 def display_personal_info(name, age, address):
-    pass
+    return f"Name:{name} \nAge:{age} \nAddress:{address}"
 
 
 """
@@ -146,6 +146,8 @@ def compute_expression(x, y):
     # Your code here
     pass
 
+
+#chandu
 
 """
 Problem 39:
