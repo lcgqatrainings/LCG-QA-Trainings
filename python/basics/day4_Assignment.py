@@ -78,7 +78,7 @@ increment_list([1, 2, 3]) should return [2, 3, 4]
 
 
 def increment_list(lst):
-    pass
+     pass
 
 
 """
@@ -101,8 +101,10 @@ print_numbers_while() should print:
 
 
 def print_numbers_while():
-    # Your code here
-    pass
+    i = 1
+    while i <= 10:
+        print(i)
+        i += 1
 
 
 """
@@ -116,8 +118,10 @@ is_even_or_odd(7) should return "Odd"
 
 
 def is_even_or_odd(n):
-    # Your code here
-    pass
+    if n % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
 
 
 """
@@ -140,8 +144,9 @@ print_even_numbers() should print:
 
 
 def print_even_numbers():
-    # Your code here
-    pass
+    for i in range(20):
+        if i % 2 == 0:
+            print(i)
 
 
 """
