@@ -22,8 +22,7 @@ concatenate_strings("Alice", "Bob") should return "AliceBob"
 
 
 def concatenate_strings(s1, s2):
-    # Your code here
-    pass
+    return s1 + s2
 
 
 """
