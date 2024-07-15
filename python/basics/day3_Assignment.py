@@ -86,8 +86,10 @@ convert_pressure(100) should return (14.5038, 750.062, 0.986923)
 
 
 def convert_pressure(kpa):
-    # Your code here
-    pass
+    psi = kpa * 0.14503773773020923
+    mmHg = kpa * 7.50062
+    atm = kpa / 101.325
+    return psi, mmHg, atm
 
 
 """
@@ -100,7 +102,4 @@ sum_of_digits(1234) should return 10
 
 
 def sum_of_digits(number):
-
     pass
-
-#chandu
