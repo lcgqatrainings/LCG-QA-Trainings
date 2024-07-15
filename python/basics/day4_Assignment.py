@@ -112,11 +112,9 @@ print_numbers_while() should print:
 
 def print_numbers_while():
     i = 0
-    r = ''
     while i >= 0 and i <= 9:
         i = i + 1
-        r = r.__add__(str(i) + '\n')
-    return r
+        print(i)
 
     pass
 
@@ -159,9 +157,9 @@ print_even_numbers() should print:
 
 
 def print_even_numbers():
-    for i in range(21):
+    for i in range(1,21):
         if i % 2==0:
-            return i
+            print(i)
     pass
 
 
@@ -197,7 +195,14 @@ basic_switch_case(3) should return "Three"
 
 
 def basic_switch_case(value):
-    # Your code here
+    if value == 1:
+        return "One"
+    elif value == 2:
+        return "Two"
+    elif value == 3:
+        return "Three"
+    else:
+        return "Unknown"
     pass
 
 
@@ -220,7 +225,11 @@ skip_number_five() should print:
 
 
 def skip_number_five():
-    # Your code here
+    i = 1
+    for i in range(1, 11):
+        if i == 5:
+            continue
+        print(i)
     pass
 
 
@@ -238,7 +247,11 @@ break_at_five() should print:
 
 
 def break_at_five():
-    # Your code here
+    i = 1
+    while i<5:
+        print(i)
+        i += 1
+
     pass
 
 
@@ -253,7 +266,11 @@ search_list([1, 2, 3, 4, 5], 6) should return "Not found"
 
 
 def search_list(lst, target):
-    # Your code here
+    if target in lst:
+        return "Found"
+    else:
+        return "Not found"
+
     pass
 
 
@@ -269,5 +286,5 @@ import sys
 
 
 def end_program_if_negative(n):
-    # Your code here
+    return exit(n)
     pass
