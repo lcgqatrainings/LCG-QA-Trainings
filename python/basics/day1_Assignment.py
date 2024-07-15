@@ -9,8 +9,8 @@ import math
 
 
 def calculate_area_of_circle(radius):
-    area=math.pi*(radius**2)
-    return area
+    return math.pi*(radius**2)
+
 
 """
 Problem 2:
@@ -22,7 +22,7 @@ get_sphere_volume(6) should return 904.7786842338603
 
 
 def get_sphere_volume(radius):
-    volume=((4/3)*(math.pi)*(radius**3))
+    volume = ((4/3)*math.pi*(radius**3))
     return volume
 
 
@@ -38,10 +38,10 @@ difference_from_17(14) should return 3
 
 
 def difference_from_17(number):
-    if number<=17:
-        return (17-number)
+    if number <= 17:
+        return 17-number
     else:
-        return (number*2)
+        return number*2
 
 
 """
@@ -56,10 +56,12 @@ within_100_of_1000_or_2000(100) should return False
 
 
 def within_100_of_1000_or_2000(number):
-    if 900<number<1000 or 1900<number<2100:
-       return True
+    if 900 < number < 1000 or 1900 < number < 2100:
+
+        return True
     else:
         return False
+
 
 """
 Problem 5:
@@ -73,10 +75,10 @@ sum_three_numbers(3, 3, 3) should return 27
 
 
 def sum_three_numbers(a, b, c):
-   if a!=b!=c:
-       return (a+b+c)
-   else:
-       return (a**3)
+    if a != b != c:
+        return a+b+c
+    else:
+        return a**3
 
 
 """
@@ -92,10 +94,9 @@ new_string_with_is("IsEmpty") should return "IsEmpty"
 
 def new_string_with_is(s):
     if s.startswith("Is"):
-        return (s)
+        return s
     else:
-        return ("Is"+s)
-
+        return "Is"+s
 
 
 """
@@ -109,11 +110,8 @@ repeat_string("xyz", 3) should return "xyzxyzxyz"
 
 
 def repeat_string(s, n):
-    # str1=(s*2)
-    # return str1
-    # str2=(n*3)
-    # return str2
-    pass
+    return s*n
+
 
 """
 Problem 8:
@@ -129,10 +127,9 @@ even_or_odd(3) should return "3 is odd"
 def even_or_odd(number):
 
     if number % 2 == 0:
-        return ("given number is Even")
+        return "given number is Even"
     else:
-        return ("given number is odd")
-
+        return "given number is odd"
 
 
 """
@@ -152,7 +149,6 @@ def count_fours(lst):
     return count
 
 
-
 """
 Problem 10:
 Write a Python program to get n (non-negative integer) copies of the first 2 characters of a given string. 
@@ -165,11 +161,12 @@ repeat_first_two_chars("a", 3) should return "aaa"
 
 
 def repeat_first_two_chars(s, n):
-    if len(s)>2:
-        z=s[:2]
-        return (z*n)
+    if len(s) > 2:
+        z = s[:2]
+        return z*n
     else:
-        return (s*n)
+        return s*n
+
 
 """
 Problem 11:
@@ -182,8 +179,8 @@ is_vowel("b") should return False
 
 
 def is_vowel(char):
-    list1 = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
-    if char in list1:
+    list1 = ["a", "e", "i", "o", "u"]
+    if char.lower() in list1:
         return True
     else:
         return False

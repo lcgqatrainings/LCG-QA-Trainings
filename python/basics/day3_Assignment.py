@@ -9,8 +9,10 @@ sum_first_n_integers(5) should return 15
 
 
 def sum_first_n_integers(n):
-    # Your code here
-    pass
+    result = 0
+    for i in range(n+1):
+        result += i
+    return result
 
 
 """
@@ -24,8 +26,7 @@ convert_height_to_cm(5, 7) should return 170.18
 
 
 def convert_height_to_cm(feet, inches):
-    # Your code here
-    pass
+    return feet * 30.48 + 2.54 * inches
 
 
 """
@@ -39,8 +40,7 @@ calculate_hypotenuse(3, 4) should return 5.0
 
 
 def calculate_hypotenuse(base, height):
-    # Your code here
-    pass
+    return (base ** 2 + height ** 2) ** 0.5
 
 
 """
@@ -54,8 +54,12 @@ convert_distance(5280) should return (63360, 1760, 1.0)
 
 
 def convert_distance(feet):
-    # Your code here
-    pass
+    if feet == 1:
+        return feet * 12, feet * 0.333333, feet * 0.000189394
+    elif 1 < feet <= 1000:
+        return feet * 12, round(feet * 0.333333, 3), feet * 0.000189394
+    else:
+        return feet * 12, round(feet * 0.333333), round(feet * 0.000189394, 1)
 
 
 """
@@ -69,8 +73,7 @@ calculate_bmi(70, 1.75) should return 22.86
 
 
 def calculate_bmi(weight, height):
-    # Your code here
-    pass
+    return round((weight / height ** 2), 2)
 
 
 """
@@ -87,8 +90,9 @@ convert_pressure(100) should return (14.5038, 750.062, 0.986923)
 
 
 def convert_pressure(kpa):
-    pressure=((0.145038*kpa),(7.50062*kpa),(0.00986923*kpa))
+    pressure = ((0.145038*kpa), (7.50062*kpa), (0.00986923*kpa))
     return pressure
+
 
 """
 Problem 68:
@@ -100,10 +104,9 @@ sum_of_digits(1234) should return 10
 
 
 def sum_of_digits(number):
-    sum = 0
+    sum1 = 0
     while number != 0:
         digit = number % 10
-        sum = sum + digit
+        sum1 = sum1 + digit
         number = number // 10
-    print(sum)
-sum_of_digits(1234)
+    return sum1
