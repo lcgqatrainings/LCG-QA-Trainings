@@ -6,11 +6,11 @@ Formula: Sum = n * (n + 1) / 2
 Example:
 sum_first_n_integers(5) should return 15
 """
+import math
 
 
 def sum_first_n_integers(n):
-    # Your code here
-    pass
+    return n * (n + 1) / 2
 
 
 """
@@ -24,8 +24,7 @@ convert_height_to_cm(5, 7) should return 170.18
 
 
 def convert_height_to_cm(feet, inches):
-    # Your code here
-    pass
+    return (feet * 12) + inches * 2.54
 
 
 """
@@ -39,8 +38,7 @@ calculate_hypotenuse(3, 4) should return 5.0
 
 
 def calculate_hypotenuse(base, height):
-    # Your code here
-    pass
+    return math.sqrt(base ^ 2 + height ^ 2)
 
 
 """
@@ -54,8 +52,10 @@ convert_distance(5280) should return (63360, 1760, 1.0)
 
 
 def convert_distance(feet):
-    # Your code here
-    pass
+    inch = feet / 12
+    yard = feet / 3
+    mile = feet * 0.0001894
+    return inch, yard, mile
 
 
 """
@@ -69,8 +69,7 @@ calculate_bmi(70, 1.75) should return 22.86
 
 
 def calculate_bmi(weight, height):
-    # Your code here
-    pass
+    return weight / height ^ 2
 
 
 """
@@ -101,5 +100,5 @@ sum_of_digits(1234) should return 10
 
 
 def sum_of_digits(number):
-    # Your code here
+
     pass

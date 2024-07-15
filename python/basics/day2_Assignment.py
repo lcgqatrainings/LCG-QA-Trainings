@@ -143,11 +143,8 @@ compute_expression(4, 3) should return 49
 
 
 def compute_expression(x, y):
-    # Your code here
-    pass
+    return (x + y) ** 2
 
-
-#chandu
 
 """
 Problem 39:
@@ -161,8 +158,7 @@ compute_future_value(10000, 3.5, 7) should return 12722.79
 
 
 def compute_future_value(principal, rate, years):
-    # Your code here
-    pass
+    return principal * (1 + rate / 100) ** years
 
 
 """
@@ -176,5 +172,4 @@ calculate_distance(1, 2, 4, 6) should return 5.0
 
 
 def calculate_distance(x1, y1, x2, y2):
-    # Your code here
-    pass
+    return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
