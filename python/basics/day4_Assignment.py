@@ -21,8 +21,7 @@ concatenate_strings("Alice", "Bob") should return "AliceBob"
 
 
 def concatenate_strings(s1, s2):
-    # Your code here
-    pass
+    return s1 + s2
 
 
 """
@@ -78,7 +77,12 @@ increment_list([1, 2, 3]) should return [2, 3, 4]
 
 
 def increment_list(lst):
-     pass
+    mylist = []
+    i = 0
+    while i < len(lst):
+        mylist = mylist + [lst[i] + 1]
+        i = i + 1
+    return mylist
 
 
 """
