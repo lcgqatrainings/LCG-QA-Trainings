@@ -55,7 +55,7 @@ within_100_of_1000_or_2000(100) should return False
 
 
 def within_100_of_1000_or_2000(number):
-    if number >= 900 or number <= 2100:
+    if 900 <= number <= 2100:
         return True
     else:
         return False
