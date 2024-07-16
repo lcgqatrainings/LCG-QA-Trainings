@@ -1,8 +1,6 @@
-import math
-def convert_pressure(kpa):
-    sum=0
-    for i in str(kpa):
-        sum+=int(i)
-    return sum
+import sys
+def end_program_if_negative(n):
+    if n==-1:
+        sys.exit("bye")
 
-print(convert_pressure(1234))
+print(end_program_if_negative(1))

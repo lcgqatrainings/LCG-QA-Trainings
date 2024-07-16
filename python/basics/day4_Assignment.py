@@ -8,7 +8,7 @@ replicate_string("Hello", 3) should return "HelloHelloHello"
 
 
 def replicate_string(s, n):
-    # Your code here
+    return s*n
     pass
 
 
@@ -22,7 +22,7 @@ concatenate_strings("Alice", "Bob") should return "AliceBob"
 
 
 def concatenate_strings(s1, s2):
-    # Your code here
+    return s1+s2
     pass
 
 
@@ -37,7 +37,10 @@ contains_substring("Hello, world!", "Python") should return False
 
 
 def contains_substring(s, sub):
-    # Your code here
+    if sub in s:
+        return True
+    else:
+        return False
     pass
 
 
@@ -51,7 +54,7 @@ string_to_int("123") should return 123
 
 
 def string_to_int(s):
-    # Your code here
+    return int(s)
     pass
 
 
@@ -65,7 +68,7 @@ list_length([1, 2, 3, 4, 5]) should return 5
 
 
 def list_length(lst):
-    # Your code here
+    return len(lst)
     pass
 
 
@@ -79,7 +82,10 @@ increment_list([1, 2, 3]) should return [2, 3, 4]
 
 
 def increment_list(lst):
-    # Your code here
+    newlist = []
+    for i in lst:
+        newlist.append(i + 1)
+    return newlist
     pass
 
 
@@ -103,7 +109,9 @@ print_numbers_while() should print:
 
 
 def print_numbers_while():
-    # Your code here
+    i=1
+    while i<=10:
+        return i
     pass
 
 
@@ -118,7 +126,10 @@ is_even_or_odd(7) should return "Odd"
 
 
 def is_even_or_odd(n):
-    # Your code here
+    if n%2==0:
+        return "Even"
+    else:
+        return "Odd"
     pass
 
 
@@ -142,7 +153,9 @@ print_even_numbers() should print:
 
 
 def print_even_numbers():
-    # Your code here
+    for i in range(1, 21):
+        if i % 2 == 0:
+            print(i)
     pass
 
 
@@ -157,7 +170,7 @@ check_positive(10) should return "Positive"
 
 
 def check_positive(n):
-    # Your code here
+    return ("Positive" if n>=0 else "Non-Positive")
     pass
 
 
@@ -173,7 +186,13 @@ basic_switch_case(3) should return "Three"
 
 
 def basic_switch_case(value):
-    # Your code here
+    if value==1:
+        return "One"
+    elif value==2:
+        return "Two"
+    else:
+        if value==3:
+            return "Three"
     pass
 
 
@@ -196,8 +215,10 @@ skip_number_five() should print:
 
 
 def skip_number_five():
-    # Your code here
-    pass
+    for i in range(1, 11):
+        if i == 5:
+            continue
+        print(i)
 
 
 """
@@ -214,7 +235,10 @@ break_at_five() should print:
 
 
 def break_at_five():
-    # Your code here
+    for i in range(1, 11):
+        if i == 5:
+            break
+        print(i)
     pass
 
 
@@ -229,7 +253,10 @@ search_list([1, 2, 3, 4, 5], 6) should return "Not found"
 
 
 def search_list(lst, target):
-    # Your code here
+    if target in lst:
+        return "Found"
+    else:
+        return "Not found"
     pass
 
 
@@ -245,5 +272,6 @@ import sys
 
 
 def end_program_if_negative(n):
-    # Your code here
+    if n==-1:
+        sys.exit()
     pass

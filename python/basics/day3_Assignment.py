@@ -56,10 +56,10 @@ convert_distance(5280) should return (63360, 1760, 1.0)
 
 
 def convert_distance(feet):
-    inch = feet * 12
-    yard = feet * 0.333333
-    mile = feet * 0.000189394
-    return inch, yard, mile
+    # inch = feet * 12
+    # yard = feet * 0.333333
+    # mile = feet * 0.000189394
+    return (round(feet * 12),round(feet * 0.333333),round(feet * 0.000189394))
     pass
 
 
