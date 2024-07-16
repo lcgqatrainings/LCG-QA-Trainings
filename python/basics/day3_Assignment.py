@@ -6,7 +6,7 @@ Formula: Sum = n * (n + 1) / 2
 Example:
 sum_first_n_integers(5) should return 15
 """
-
+import math
 
 def sum_first_n_integers(n):
     # Your code here
@@ -25,7 +25,7 @@ convert_height_to_cm(5, 7) should return 170.18
 
 
 def convert_height_to_cm(feet, inches):
-    # Your code here
+    return feet*30.48+inches*2.54
     pass
 
 
@@ -40,7 +40,8 @@ calculate_hypotenuse(3, 4) should return 5.0
 
 
 def calculate_hypotenuse(base, height):
-    # Your code here
+    Hypotenuse = math.sqrt(base ** 2 + height ** 2)
+    return Hypotenuse
     pass
 
 
@@ -55,7 +56,10 @@ convert_distance(5280) should return (63360, 1760, 1.0)
 
 
 def convert_distance(feet):
-    # Your code here
+    inch = feet * 12
+    yard = feet * 0.333333
+    mile = feet * 0.000189394
+    return inch, yard, mile
     pass
 
 
@@ -70,7 +74,8 @@ calculate_bmi(70, 1.75) should return 22.86
 
 
 def calculate_bmi(weight, height):
-    # Your code here
+    BMI = weight / height** 2
+    return round(BMI,2)
     pass
 
 
@@ -88,7 +93,10 @@ convert_pressure(100) should return (14.5038, 750.062, 0.986923)
 
 
 def convert_pressure(kpa):
-    # Your code here
+    PSI = 0.145038 * kpa
+    mmHg = 7.50062 * kpa
+    atm = 0.00986923 * kpa
+    return PSI, mmHg, atm
     pass
 
 
@@ -102,5 +110,8 @@ sum_of_digits(1234) should return 10
 
 
 def sum_of_digits(number):
-    # Your code here
+    sum = 0
+    for i in str(number):
+        sum += int(i)
+    return sum
     pass
