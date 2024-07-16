@@ -60,7 +60,6 @@ def convert_distance(feet):
     # yard = feet * 0.333333
     # mile = feet * 0.000189394
     print(round(feet * 12),round(feet * 0.333333),round(feet * 0.000189394))
-    pass
 
 
 """
