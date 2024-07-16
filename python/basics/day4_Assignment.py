@@ -164,8 +164,8 @@ check_positive(10) should return "Positive"
 
 
 def check_positive(n):
-    # Your code here
     pass
+
 
 
 """
