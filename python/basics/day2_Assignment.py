@@ -93,6 +93,8 @@ def check_values(a, b):
         return True
     elif a - b == 5 or b - a == 5:
         return True
+    elif a + b == 5 or b + a == 5:
+        return True
     else:
         return False
 
@@ -128,7 +130,7 @@ Address: 123 Main St
 
 
 def display_personal_info(name, age, address):
-    return f"Name:{name} \nAge:{age} \nAddress:{address}"
+    return f"Name: {name}\nAge: {age}\nAddress: {address}"
 
 
 """
