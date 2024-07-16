@@ -24,7 +24,7 @@ convert_height_to_cm(5, 7) should return 170.18
 
 
 def convert_height_to_cm(feet, inches):
-    return (feet * 12) + inches * 2.54
+    return (feet * 30.48) + (inches * 2.54)
 
 
 """
@@ -38,7 +38,7 @@ calculate_hypotenuse(3, 4) should return 5.0
 
 
 def calculate_hypotenuse(base, height):
-    return math.sqrt(base ^ 2 + height ^ 2)
+    return math.sqrt(base ** 2 + height ** 2)
 
 
 """
@@ -52,9 +52,9 @@ convert_distance(5280) should return (63360, 1760, 1.0)
 
 
 def convert_distance(feet):
-    inch = feet / 12
+    inch = feet * 12
     yard = feet / 3
-    mile = feet * 0.0001894
+    mile = feet / 5280
     return inch, yard, mile
 
 
@@ -69,7 +69,7 @@ calculate_bmi(70, 1.75) should return 22.86
 
 
 def calculate_bmi(weight, height):
-    return weight / height ^ 2
+    return weight / height ** 2
 
 
 """
@@ -86,10 +86,11 @@ convert_pressure(100) should return (14.5038, 750.062, 0.986923)
 
 
 def convert_pressure(kpa):
-    psi = kpa * 0.14503773773020923
+    psi = kpa * 0.145038
     mmHg = kpa * 7.50062
-    atm = kpa / 101.325
-    return psi, mmHg, atm
+    x = atm = kpa / 101.325
+    rounded_x = round(x, 6)
+    return psi, mmHg, rounded_x
 
 
 """
@@ -102,4 +103,7 @@ sum_of_digits(1234) should return 10
 
 
 def sum_of_digits(number):
-    pass
+    sum1 = 0
+    for num in str(number):
+        sum1 += int(num)
+    return sum1
