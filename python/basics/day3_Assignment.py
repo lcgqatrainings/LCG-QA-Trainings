@@ -54,8 +54,9 @@ convert_distance(5280) should return (63360, 1760, 1.0)
 def convert_distance(feet):
     inch = feet * 12
     yard = feet / 3
+    y = math.trunc(yard)
     mile = feet / 5280
-    return inch, yard, mile
+    return inch, y, mile
 
 
 """
@@ -69,7 +70,8 @@ calculate_bmi(70, 1.75) should return 22.86
 
 
 def calculate_bmi(weight, height):
-    return weight / height ** 2
+    s = weight / height ** 2
+    return round(s, 2)
 
 
 """
@@ -88,9 +90,9 @@ convert_pressure(100) should return (14.5038, 750.062, 0.986923)
 def convert_pressure(kpa):
     psi = kpa * 0.145038
     mmHg = kpa * 7.50062
-    x = atm = kpa / 101.325
-    rounded_x = round(x, 6)
-    return psi, mmHg, rounded_x
+    x = kpa / 101.325
+    # rounded_x = round(x, 6)
+    return psi, mmHg, x
 
 
 """
