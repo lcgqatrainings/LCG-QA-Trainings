@@ -109,10 +109,10 @@ print_numbers_while() should print:
 
 
 def print_numbers_while():
-    i=1
-    while i<=10:
-        return i
-    pass
+    i = 1
+    while i <= 10:
+        print(i)
+        i += 1
 
 
 """
@@ -170,7 +170,7 @@ check_positive(10) should return "Positive"
 
 
 def check_positive(n):
-    return ("Positive" if n>=0 else "Non-Positive")
+    return "Positive" if n>=0 else "Non-Positive"
     pass
 
 
@@ -191,8 +191,7 @@ def basic_switch_case(value):
     elif value==2:
         return "Two"
     else:
-        if value==3:
-            return "Three"
+        return "Three"
     pass
 
 

@@ -1,6 +1,6 @@
-import sys
-def end_program_if_negative(n):
-    if n==-1:
-        sys.exit("bye")
-
-print(end_program_if_negative(1))
+def print_numbers_while():
+    i=1
+    while i<=10:
+        print(i)
+        i+=1
+print(print_numbers_while())

@@ -59,7 +59,7 @@ def convert_distance(feet):
     # inch = feet * 12
     # yard = feet * 0.333333
     # mile = feet * 0.000189394
-    return (round(feet * 12),round(feet * 0.333333),round(feet * 0.000189394))
+    print(round(feet * 12),round(feet * 0.333333),round(feet * 0.000189394))
     pass
 
 
