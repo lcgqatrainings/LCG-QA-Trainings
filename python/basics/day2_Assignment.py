@@ -91,9 +91,9 @@ check_values(3, 8) should return False
 def check_values(a, b):
     if a == b:
         return True
-    elif a - b == 5 or b - a == 5:
+    elif a - b == 5:
         return True
-    elif a + b == 5 or b + a == 5:
+    elif a + b == 5:
         return True
     else:
         return False
