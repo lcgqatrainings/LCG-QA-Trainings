@@ -190,6 +190,7 @@ def check_positive(n):
     a=f'Positive' if n==abs(n) else 'Non-positive'
     return a
 #print(check_positive(5))
+#print(check_positive(5))
 
 
 """
@@ -298,5 +299,8 @@ import sys
 
 
 def end_program_if_negative(n):
-    # Your code here
-    pass
+    if n==abs(n):
+        return n
+    else:
+        sys.exit()
+#print(end_program_if_negative(5))

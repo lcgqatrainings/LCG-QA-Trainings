@@ -5,11 +5,14 @@ Write a Python function called `square` that takes a number as an argument and r
 Example:
 square(4) should return 16
 """
+import math
 
 
 def square(x):
+    print(x**2)
+#square(6)
     # Your code here
-    pass
+
 
 
 """
@@ -23,8 +26,16 @@ is_palindrome("madam") should return True
 
 
 def is_palindrome(s):
-    # Your code here
-    pass
+    x=s[::-1]
+    if x==s:
+        return True
+    else:
+        return False
+#print(is_palindrome("madam"))
+
+
+
+
 
 
 """
@@ -37,7 +48,8 @@ factorial(5) should return 120
 
 
 def factorial(n):
-    # Your code here
+
+
     pass
 
 
@@ -94,8 +106,7 @@ apply_function(increment, 5) should return 6
 
 
 def apply_function(func, value):
-    # Your code here
-    pass
+   pass
 
 
 """
