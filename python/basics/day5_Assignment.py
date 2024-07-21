@@ -8,7 +8,7 @@ square(4) should return 16
 
 
 def square(x):
-    # Your code here
+    return x**2
     pass
 
 
@@ -23,7 +23,11 @@ is_palindrome("madam") should return True
 
 
 def is_palindrome(s):
-    # Your code here
+
+    if s[::-1] == s:
+        return True
+    else:
+        return False
     pass
 
 
@@ -37,7 +41,10 @@ factorial(5) should return 120
 
 
 def factorial(n):
-    # Your code here
+    fact = 1
+    for i in range(1, n + 1):
+        fact = fact * i
+    return fact
     pass
 
 
@@ -51,7 +58,13 @@ fibonacci(7) should return 13
 
 
 def fibonacci(n):
-    # Your code here
+    a = 0
+    b = 1
+    for i in range(1, n):
+        c = a + b
+        a = b
+        b = c
+    return b
     pass
 
 
@@ -66,7 +79,10 @@ is_even(7) should return False
 
 
 def is_even(n):
-    # Your code here
+    if n%2==0:
+        return True
+    else:
+        return False
     pass
 
 
@@ -79,7 +95,8 @@ product = lambda a, b: a * b
 product(3, 4) should return 12
 """
 
-product = lambda a, b: None  # Replace None with your lambda function
+product = lambda a, b: a*b  # Replace None with your lambda function
+
 
 """
 Problem 90:
@@ -93,9 +110,11 @@ apply_function(increment, 5) should return 6
 """
 
 
-def apply_function(func, value):
-    # Your code here
-    pass
+def increment(x):
+    return x + 1
+def apply_function(increment, value):
+    return increment(value)
+
 
 
 """
@@ -108,7 +127,11 @@ filter_even_numbers([1, 2, 3, 4, 5]) should return [2, 4]
 
 
 def filter_even_numbers(lst):
-    # Your code here
+    newlst = []
+    for i in lst:
+        if i % 2 == 0:
+            newlst.append(i)
+    return newlst
     pass
 
 
@@ -122,7 +145,7 @@ greater_than_ten(15) should return True
 greater_than_ten(5) should return False
 """
 
-greater_than_ten = lambda x: None  # Replace None with your lambda function
+greater_than_ten = lambda x: x>10  # Replace None with your lambda function
 
 """
 Problem 93:
@@ -134,8 +157,9 @@ sort_list([3, 1, 4, 1, 5, 9]) should return [1, 1, 3, 4, 5, 9]
 
 
 def sort_list(lst):
-    # Your code here
-    pass
+    return fun(lst)
+fun = lambda lst: sorted(lst)
+
 
 
 """
@@ -148,5 +172,8 @@ apply_lambda(lambda x: x * 2, [1, 2, 3]) should return [2, 4, 6]
 
 
 def apply_lambda(func, lst):
-    # Your code here
-    pass
+    newlist = []
+    for i in lst:
+        newlist.append(func(i))
+    return newlist
+func = lambda x: x * 2
