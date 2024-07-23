@@ -65,7 +65,7 @@ grade_students = lambda scores: {name: ('A' if scores >= 90 else
                                         'c' if scores >= 70 else
                                         'D' if scores >= 60 else
                                         'E') for name, scores in scores.items()}  # Replace None with your lambda function
-print(grade_students({'Alice': 85, 'Bob': 72, 'Charlie': 90}))
+
 """
 Problem 108:
 Write a Python function called `transpose_matrix` that takes a 2D list (matrix) and returns its transpose.
@@ -76,8 +76,20 @@ transpose_matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]]) should return [[1, 4, 7], [2
 
 
 def transpose_matrix(matrix):
-    # Your code here
-    pass
+    # ([[1, 2], [3, 4], [5, 6]]) == [[1, 3, 5], [2, 4, 6]]
+    # s = []
+    # s.append([matrix[0][0], matrix[1][0], matrix[2][0]])
+    # s.append([matrix[0][1], matrix[1][1], matrix[2][1]])
+    # s.append([matrix[0][2], matrix[1][2], matrix[2][2]])
+    if len(matrix[0]) == 0:
+        return matrix
+    k = []
+    for c in range(0, len(matrix[0])):
+        r1 = []
+        for j in range(0, len(matrix)):
+            r1.append(matrix[j][c])
+        k.append(r1)
+    return k
 
 
 """
@@ -103,7 +115,10 @@ sort_by_age = lambda data: ...
 sorted_names = sort_by_age([("Alice", 25), ("Bob", 20), ("Charlie", 23)])
 """
 
-sort_by_age = lambda data: None  # Replace None with your lambda function
+sort_by_age = lambda data: list(map(lambda x: x[0], sorted(data, key=lambda x: x[1])))  # Replace None with your lambda function
+
+# sort_by_age2 = lambda data: [name for name,age in sorted(data, key=lambda x : x[1])]
+
 
 """
 Problem 111:
@@ -113,10 +128,16 @@ Example:
 filter_dict({'a': 1, 'b': 2, 'c': 3}, lambda k, v: v > 1) should return {'b': 2, 'c': 3}
 """
 
+predicate = lambda key, value: value > 1
+
 
 def filter_dict(d, predicate):
-    # Your code here
-    pass
+    filtered_d = {}
+    for key, value in d.items():
+        if predicate(key, value):
+            filtered_d[key] = value
+    # return {key: value for key, value in d.items() if predicate(key, value)}
+    return filtered_d
 
 
 """
@@ -129,8 +150,10 @@ merge_dictionaries([{'a': 1, 'b': 2}, {'b': 3, 'c': 4}]) should return {'a': 1, 
 
 
 def merge_dictionaries(dicts):
-    # Your code here
-    pass
+    c = {}
+    for d in dicts:
+        c.update(d)
+    return c
 
 
 """
@@ -143,8 +166,11 @@ nested_sum([[1, 2, 3], [4, 5], [6]]) should return 21
 
 
 def nested_sum(lst):
-    # Your code here
-    pass
+    sum_ = 0
+    for i in range(0, len(lst)):
+        for j in lst[i]:
+            sum_ += j
+    return sum_
 
 
 """
@@ -156,4 +182,5 @@ filter_and_square = lambda lst: ...
 result = filter_and_square([5, 12, 9, 20])
 """
 
-filter_and_square = lambda lst: list(map(lambda x: x**2, filter(lambda x: x > 10, lst)))  # Replace None with your lambda function
+filter_and_square = lambda lst: list(map(lambda x: x**2, filter(lambda x: x > 10, lst)))
+# Replace None with your lambda function

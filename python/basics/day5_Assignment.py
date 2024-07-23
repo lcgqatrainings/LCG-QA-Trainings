@@ -152,8 +152,7 @@ sort_list([3, 1, 4, 1, 5, 9]) should return [1, 1, 3, 4, 5, 9]
 
 
 def sort_list(lst):
-    # Your code here
-    pass
+    return sorted(lst, key=lambda v: v)
 
 
 """
@@ -165,6 +164,8 @@ apply_lambda(lambda x: x * 2, [1, 2, 3]) should return [2, 4, 6]
 """
 
 
+func_ = lambda x: x * 2
+
+
 def apply_lambda(func, lst):
-    # Your code here
-    pass
+    return [func(x) for x in lst]
