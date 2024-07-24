@@ -5,9 +5,10 @@ Write a Python lambda function that takes two arguments x and y and returns thei
 Example:
 sum_lambda = lambda x, y: ...
 """
+import math
 
-sum_lambda = lambda x, y: None  # Replace None with your lambda function
-
+sum_lambda = lambda x, y: x+y  # Replace None with your lambda function
+sum_lambda(4, 5)
 """
 Problem 96:
 Write a Python function called `multiply` that takes two arguments x and y and returns their product. Use keyword arguments to specify the values of x and y.
@@ -18,8 +19,9 @@ multiply(x=3, y=4) should return 12
 
 
 def multiply(x, y):
-    # Your code here
-    pass
+   z=x*y
+   return z
+multiply(x=3,y=4)
 
 
 """
@@ -30,7 +32,8 @@ Example:
 sort_desc = lambda lst: ...
 """
 
-sort_desc = lambda lst: None  # Replace None with your lambda function
+sort_desc = lambda lst: sorted(lst, reverse=True)  # Replace None with your lambda function
+sort_desc([5,10,-3,0,11])
 
 """
 Problem 98:
@@ -42,8 +45,8 @@ greet(name="Alice", message="Hello") should return "Hello, Alice!"
 
 
 def greet(name, message):
-    # Your code here
-    pass
+    return f"{message},{name}!"
+greet(name="Alice",message="Hello")
 
 
 """
@@ -53,8 +56,9 @@ Write a Python lambda function that takes a number and returns its square root.
 Example:
 sqrt_lambda = lambda x: ...
 """
-
-sqrt_lambda = lambda x: None  # Replace None with your lambda function
+import math
+sqrt_lambda = lambda x: math.sqrt(x)  # Replace None with your lambda function
+print(sqrt_lambda(25))
 
 """
 Problem 100:
@@ -66,8 +70,9 @@ apply_discount(price=100, discount=10) should return 90.0
 
 
 def apply_discount(price, discount):
-    # Your code here
-    pass
+    final_price=price-discount
+    return float(final_price)
+apply_discount(price=100,discount=10)
 
 
 """
@@ -90,8 +95,9 @@ power(base=2, exponent=3) should return 8
 
 
 def power(base, exponent):
-    # Your code here
-    pass
+    power=base**exponent
+    return power
+power(base=2,exponent=3)
 
 
 """
@@ -114,5 +120,5 @@ create_sentence(subject="The cat", verb="chased", object="the mouse") should ret
 
 
 def create_sentence(subject, verb, object):
-    # Your code here
-    pass
+    return f"{subject} {verb} {object}."
+create_sentence(subject="The cat",verb="chased",object="the mouse")

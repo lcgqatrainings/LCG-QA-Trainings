@@ -48,9 +48,11 @@ factorial(5) should return 120
 
 
 def factorial(n):
-
-
     pass
+    
+# print(x)
+
+
 
 
 """
@@ -103,6 +105,7 @@ def increment(x):
 
 apply_function(increment, 5) should return 6
 """
+
 
 
 def apply_function(func, value):
