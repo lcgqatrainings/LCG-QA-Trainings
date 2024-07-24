@@ -1,6 +1,3 @@
-def print_numbers_while():
-    i=1
-    while i<=10:
-        print(i)
-        i+=1
-print(print_numbers_while())
+def create_sentence(subject, verb, object):
+    return f"{subject} {verb} {object}"
+print(create_sentence(subject="The cat", verb="chased", object="the mouse"))
