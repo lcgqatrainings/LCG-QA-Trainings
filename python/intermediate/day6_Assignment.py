@@ -58,7 +58,7 @@ sqrt_lambda = lambda x: ...
 """
 import math
 sqrt_lambda = lambda x: math.sqrt(x)  # Replace None with your lambda function
-print(sqrt_lambda(25))
+sqrt_lambda(25)
 
 """
 Problem 100:
@@ -83,7 +83,8 @@ Example:
 uppercase_lambda = lambda s: ...
 """
 
-uppercase_lambda = lambda s: None  # Replace None with your lambda function
+uppercase_lambda = lambda s: s.upper()  # Replace None with your lambda function
+uppercase_lambda("1234ab")
 
 """
 Problem 102:
@@ -108,7 +109,9 @@ Example:
 reverse_strings_lambda = lambda lst: ...
 """
 
-reverse_strings_lambda = lambda lst: None  # Replace None with your lambda function
+reverse_strings_lambda = lambda lst: lst[::-1]# Replace None with your lambda function
+
+reverse_strings_lambda(["MOON","AYAAN"])
 
 """
 Problem 104:
