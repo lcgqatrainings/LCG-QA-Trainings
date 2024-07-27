@@ -61,11 +61,11 @@ convert_distance(5280) should return (63360, 1760, 1.0)
 
 
 def convert_distance(feet):
-    distance_in_inches=round(feet*12)
-    distance_in_yards=round(feet*0.333333)
-    distance_in_miles=round(feet*0.000189394,1)
+    distance_in_inches=feet*12
+    distance_in_yards=feet*0.333333
+    distance_in_miles=feet*0.000189394
     return distance_in_inches,distance_in_yards,distance_in_miles
-#print(convert_distance(5280))
+print(convert_distance(1000))
 
 
 
