@@ -40,8 +40,8 @@ greet(name="Alice", message="Hello") should return "Hello, Alice!"
 """
 
 
-def greet(name, message='Hello'):
-    return message + ', ' + name
+def greet(name, message):
+    return f'{message}, {name}!'
 
 
 """
@@ -111,4 +111,4 @@ create_sentence(subject="The cat", verb="chased", object="the mouse") should ret
 
 
 def create_sentence(subject, verb, object):
-    return F'{subject} {verb} {object}'
+    return F'{subject} {verb} {object}.'

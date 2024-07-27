@@ -38,11 +38,18 @@ unique_elements([1, 2, 2, 3, 4, 4, 5]) should return [1, 2, 3, 4, 5]
 
 def unique_elements(lst):
     for i in range(len(lst)):
-        if i == len(lst) - 1:
-            break
-        for j in range(i + 1, len(lst) - 1):
+        if i == len(lst) and i == 2:
+            if lst[0] == lst[1]:
+                lst.pop(1)
+        if i == len(lst)-1:
+            if lst[i] == lst[0]:
+                lst.pop(i)
+                break
+        for j in range(i+1, len(lst)-1):
             if lst[i] == lst[j]:
                 lst.pop(j)
+            if j == len(lst):
+                break
     return lst
 
 
@@ -62,7 +69,7 @@ grades = grade_students({'Alice': 85, 'Bob': 72, 'Charlie': 90})
 
 grade_students = lambda scores: {name: ('A' if scores >= 90 else
                                         'B' if scores >= 80 else
-                                        'c' if scores >= 70 else
+                                        'C' if scores >= 70 else
                                         'D' if scores >= 60 else
                                         'E') for name, scores in scores.items()}  # Replace None with your lambda function
 
@@ -102,8 +109,24 @@ most_common_words(["the cat in the hat", "the quick brown fox", "the fox jumps o
 
 
 def most_common_words(strings):
-    # Your code here
-    pass
+    if len(strings) == 0:
+        return strings
+    common_words = {}
+    ref_string = None
+    i = 0
+    for sen in strings:
+        if len(sen.split(" ")) > i:
+            i = len(sen.split(" "))
+            ref_string = sen
+    ref = ref_string.split(" ")
+    for j in ref:
+        c = 0
+        for sen in strings:
+            if j in sen:
+                c += 1
+        if c >= 2:
+            common_words[j] = c
+    return common_words
 
 
 """
