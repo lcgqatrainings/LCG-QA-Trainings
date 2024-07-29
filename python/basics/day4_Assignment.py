@@ -103,7 +103,7 @@ def print_numbers_while():
     while i<=10:
         print(i,end="\n")
         i+=1
-    print('"""')
+    #print('"""')
 
 """
 Problem 76:
@@ -117,8 +117,8 @@ is_even_or_odd(7) should return "Odd"
 
 def is_even_or_odd(n):
     if n % 2 == 0:
-        return '"Even"'
-    else: return '"Odd"'
+        return 'Even'
+    else: return 'Odd'
 
 """
 Problem 77:
@@ -142,7 +142,7 @@ print_even_numbers() should print:
 def print_even_numbers():
     for i in range(2,21,2):
         print(i,end="\n")
-    print('"""')
+    #print('"""')
 
 """
 Problem 78:
@@ -169,9 +169,9 @@ basic_switch_case(3) should return "Three"
 
 
 def basic_switch_case(value):
-    if value==1: return '"One"'
-    elif value==2: return '"Two"'
-    else: return '"Three"'
+    if value==1: return 'One'
+    elif value==2: return 'Two'
+    else: return 'Three'
 
 """
 Problem 80:
@@ -196,7 +196,7 @@ def skip_number_five():
         if i!=5:
             print(i)
         else: continue
-    print('"""')
+    #print('"""')
 
 """
 Problem 81:

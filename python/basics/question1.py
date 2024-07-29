@@ -49,7 +49,9 @@ adjust_recipe(2, 8) should return 4.0
 
 
 def adjust_recipe(original_sugar, people_served):
-    return people_served/original_sugar
+    if original_sugar!=0:
+        return people_served/original_sugar
+    else: return original_sugar
 #print(adjust_recipe(2,8))
 
 """
