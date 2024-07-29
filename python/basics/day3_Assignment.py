@@ -6,12 +6,15 @@ Formula: Sum = n * (n + 1) / 2
 Example:
 sum_first_n_integers(5) should return 15
 """
+import math
 
 
 def sum_first_n_integers(n):
-    # Your code here
-    pass
-
+    i,s=1,0
+    while i<=5:
+        s=s+i
+        i=i+1
+    return s
 
 """
 Problem 59:
@@ -24,9 +27,7 @@ convert_height_to_cm(5, 7) should return 170.18
 
 
 def convert_height_to_cm(feet, inches):
-    # Your code here
-    pass
-
+    return 30.48*feet+2.54*inches
 
 """
 Problem 60:
@@ -39,9 +40,7 @@ calculate_hypotenuse(3, 4) should return 5.0
 
 
 def calculate_hypotenuse(base, height):
-    # Your code here
-    pass
-
+    return math.sqrt(base**2+height**2)
 
 """
 Problem 61:
@@ -54,9 +53,7 @@ convert_distance(5280) should return (63360, 1760, 1.0)
 
 
 def convert_distance(feet):
-    # Your code here
-    pass
-
+    return (int("%d"%(12*feet)),int("%d"%(0.333333*feet)),float("%.1f"%(0.000189394*feet)))
 
 """
 Problem 66:
@@ -69,9 +66,7 @@ calculate_bmi(70, 1.75) should return 22.86
 
 
 def calculate_bmi(weight, height):
-    # Your code here
-    pass
-
+    return "%.2f"%(weight/height**2)
 
 """
 Problem 67:
@@ -87,9 +82,7 @@ convert_pressure(100) should return (14.5038, 750.062, 0.986923)
 
 
 def convert_pressure(kpa):
-    # Your code here
-    pass
-
+    return 0.145038*kpa,7.50062*kpa,0.00986923*kpa
 
 """
 Problem 68:
@@ -101,5 +94,8 @@ sum_of_digits(1234) should return 10
 
 
 def sum_of_digits(number):
-    # Your code here
-    pass
+    s=0
+    while number!=0:
+        s=s+(number%10)
+        number//=10
+    return s

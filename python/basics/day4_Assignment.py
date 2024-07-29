@@ -8,9 +8,7 @@ replicate_string("Hello", 3) should return "HelloHelloHello"
 
 
 def replicate_string(s, n):
-    # Your code here
-    pass
-
+    return s*n
 
 """
 Problem 70:
@@ -22,8 +20,7 @@ concatenate_strings("Alice", "Bob") should return "AliceBob"
 
 
 def concatenate_strings(s1, s2):
-    # Your code here
-    pass
+    return s1+s2
 
 
 """
@@ -37,9 +34,9 @@ contains_substring("Hello, world!", "Python") should return False
 
 
 def contains_substring(s, sub):
-    # Your code here
-    pass
-
+    if s.__contains__(sub):
+        return True
+    else: return False
 
 """
 Problem 72:
@@ -51,9 +48,9 @@ string_to_int("123") should return 123
 
 
 def string_to_int(s):
-    # Your code here
-    pass
-
+    if s.isdigit():
+        return int(s)
+    else: return ord(s)
 
 """
 Problem 73:
@@ -65,9 +62,7 @@ list_length([1, 2, 3, 4, 5]) should return 5
 
 
 def list_length(lst):
-    # Your code here
-    pass
-
+    return len(lst)
 
 """
 Problem 74:
@@ -79,9 +74,10 @@ increment_list([1, 2, 3]) should return [2, 3, 4]
 
 
 def increment_list(lst):
-    # Your code here
-    pass
-
+    l=[]
+    for i in range(len(lst)):
+        l.append(lst[i]+1)
+    return l
 
 """
 Problem 75:
@@ -103,9 +99,11 @@ print_numbers_while() should print:
 
 
 def print_numbers_while():
-    # Your code here
-    pass
-
+    i=1
+    while i<=10:
+        print(i,end="\n")
+        i+=1
+    print('"""')
 
 """
 Problem 76:
@@ -118,9 +116,9 @@ is_even_or_odd(7) should return "Odd"
 
 
 def is_even_or_odd(n):
-    # Your code here
-    pass
-
+    if n % 2 == 0:
+        return '"Even"'
+    else: return '"Odd"'
 
 """
 Problem 77:
@@ -142,9 +140,9 @@ print_even_numbers() should print:
 
 
 def print_even_numbers():
-    # Your code here
-    pass
-
+    for i in range(2,21,2):
+        print(i,end="\n")
+    print('"""')
 
 """
 Problem 78:
@@ -157,9 +155,7 @@ check_positive(10) should return "Positive"
 
 
 def check_positive(n):
-    # Your code here
-    pass
-
+    return "Positive" if n>=0 else "Non-positive"
 
 """
 Problem 79:
@@ -173,9 +169,9 @@ basic_switch_case(3) should return "Three"
 
 
 def basic_switch_case(value):
-    # Your code here
-    pass
-
+    if value==1: return '"One"'
+    elif value==2: return '"Two"'
+    else: return '"Three"'
 
 """
 Problem 80:
@@ -196,9 +192,11 @@ skip_number_five() should print:
 
 
 def skip_number_five():
-    # Your code here
-    pass
-
+    for i in range(1,11):
+        if i!=5:
+            print(i)
+        else: continue
+    print('"""')
 
 """
 Problem 81:
@@ -214,8 +212,10 @@ break_at_five() should print:
 
 
 def break_at_five():
-    # Your code here
-    pass
+    for i in range(1,10):
+        if i!=5:
+            print(i)
+        else: break
 
 
 """
@@ -229,9 +229,13 @@ search_list([1, 2, 3, 4, 5], 6) should return "Not found"
 
 
 def search_list(lst, target):
-    # Your code here
-    pass
-
+    t=""
+    for i in range(len(lst)):
+        if lst[i]==target:
+            t="Found"
+            break
+    else: t="Not found"
+    return t
 
 """
 Problem 83:
@@ -245,5 +249,4 @@ import sys
 
 
 def end_program_if_negative(n):
-    # Your code here
-    pass
+    if n<=0: sys.exit()
