@@ -53,8 +53,8 @@ convert_distance(5280) should return (63360, 1760, 1.0)
 
 
 def convert_distance(feet):
-    return (int("%d"%(12*feet)),int("%d"%(0.333333*feet+1)),float("%.1f"%(0.000189394*feet)))
-#print(convert_distance(5280))
+    return ("%d"%(12*feet)),float(0.333333*feet),float("%f"%(0.000189394*feet))
+print(convert_distance(5280))
 """
 Problem 66:
 Write a Python program to calculate the body mass index (BMI).
