@@ -25,11 +25,14 @@ compute_gcd(48, 64) should return 16
 
 def compute_gcd(x, y):
     l=0
+    temp=0
     for i in range(2,x):
         if x%i==0 and y%i==0:
             l=i
+    if l==0:
+        l=1
     return l
-
+#print(compute_gcd(54,24))
 """
 Problem 32:
 Write a Python program to find the least common multiple (LCM) of two positive integers.
@@ -133,7 +136,8 @@ Address: 123 Main St
 
 
 def display_personal_info(name, age, address):
-    print(name,age,address,sep="\n")
+    return f"Name: {name}\nAge: {age}\nAddress: {address}"
+#print(display_personal_info("John",25,"123"))
 
 """
 Problem 38:
