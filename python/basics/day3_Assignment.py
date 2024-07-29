@@ -11,11 +11,11 @@ import math
 
 def sum_first_n_integers(n):
     i,s=1,0
-    while i<=5:
+    while i<=n:
         s=s+i
         i=i+1
     return s
-
+#print(sum_first_n_integers(10))
 """
 Problem 59:
 Write a Python program to convert height (in feet and inches) to centimeters.
@@ -53,8 +53,8 @@ convert_distance(5280) should return (63360, 1760, 1.0)
 
 
 def convert_distance(feet):
-    return (int("%d"%(12*feet)),int("%d"%(0.333333*feet)),float("%.1f"%(0.000189394*feet)))
-
+    return (int("%d"%(12*feet)),int("%d"%(0.333333*feet+1)),float("%.1f"%(0.000189394*feet)))
+#print(convert_distance(5280))
 """
 Problem 66:
 Write a Python program to calculate the body mass index (BMI).
@@ -66,8 +66,8 @@ calculate_bmi(70, 1.75) should return 22.86
 
 
 def calculate_bmi(weight, height):
-    return "%.2f"%(weight/height**2)
-
+    return float("%.2f"%(weight/height**2))
+#print(calculate_bmi(70, 1.7))
 """
 Problem 67:
 Write a Python program to convert pressure in kilopascals to pounds per square inch (psi), millimeters of mercury (mmHg), and atmosphere pressure (atm).
