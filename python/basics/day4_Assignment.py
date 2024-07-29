@@ -48,9 +48,11 @@ string_to_int("123") should return 123
 
 
 def string_to_int(s):
-    if s.isdigit():
+    temp=s
+    t=int(s)
+    if type(t) is int:
         return int(s)
-    else: return ord(s)
+#print(string_to_int("P"))
 
 """
 Problem 73:
@@ -155,7 +157,7 @@ check_positive(10) should return "Positive"
 
 
 def check_positive(n):
-    return "Positive" if n>=0 else "Non-positive"
+    return "Positive" if n>0 else "Non-positive"
 
 """
 Problem 79:
@@ -171,7 +173,8 @@ basic_switch_case(3) should return "Three"
 def basic_switch_case(value):
     if value==1: return 'One'
     elif value==2: return 'Two'
-    else: return 'Three'
+    elif value==3: return 'Three'
+    else: return "Unknown"
 
 """
 Problem 80:

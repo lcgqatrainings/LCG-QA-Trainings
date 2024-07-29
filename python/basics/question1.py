@@ -52,7 +52,7 @@ def adjust_recipe(original_sugar, people_served):
     if original_sugar!=0:
         return people_served/original_sugar
     else: return original_sugar
-#print(adjust_recipe(2,8))
+#print(adjust_recipe(1,1))
 
 """
 Problem 4:
