@@ -157,4 +157,4 @@ filter_and_square = lambda lst: ...
 result = filter_and_square([5, 12, 9, 20])
 """
 
-filter_and_square = lambda lst: list(filter(lambda i: i is not None,[i*i if(i*i)>10 else None for i in lst]))  # Replace None with your lambda function
+filter_and_square = lambda lst: list(filter(lambda i: i is not None,[i*i if(i*i)>10 else None for i in lst]))   # Replace None with your lambda function
